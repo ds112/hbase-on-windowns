@@ -25,26 +25,34 @@ Run Hadoop, Hbase on windowns 7/8/8.1/10
     <img src="image/42838109_2126046430980954_8981678705097048064_n.jpg">
     <h1>Create table and insert data</h1>
     <a href="data" target="_blank">
-        <h1>Data (SACH,TACGIASACH,TACGIA,NXB)</h1>
+        <h1>Data (SACH,TACGIASACH,TACGIA,NXB)</h1> https://github.com/ds112/hbase-on-windowns/tree/master/data
     </a>
     <a href="script" target="_blank">
-            <h1>Script (SACH,TACGIASACH,TACGIA,NXB) *using python3</h1>
+            <h1>Script (SACH,TACGIASACH,TACGIA,NXB) *using python3</h1> https://github.com/ds112/hbase-on-windowns/tree/master/script
     </a>
     <h1>Or u can see here</h1>
     <a href="data/putSach.txt" target="_blank">
-    <h4>SACH</h4>
+    <h4>SACH</h4> 
+    https://github.com/ds112/hbase-on-windowns/blob/master/data/putSach.txt
+    https://github.com/ds112/hbase-on-windowns/blob/master/data/putSach.txt?raw=true
     </a>
     <a href="data/putTacGia.txt" target="_blank">
     <h4>TACGIA</h4>
+    https://github.com/ds112/hbase-on-windowns/blob/master/data/putTacGia.txt
+    https://github.com/ds112/hbase-on-windowns/blob/master/data/putTacGiaSach.txt?raw=true
     </a>
     <a href="data/putTacGiaSach.txt" target="_blank">
     <h4>TACGIASACH</h4>
+    https://github.com/ds112/hbase-on-windowns/blob/master/data/putTacGiaSach.txt
+    https://github.com/ds112/hbase-on-windowns/blob/master/data/putTacGiaSach.txt?raw=true
     </a>
     <a href="data/putNXB.txt" target="_blank">
+    https://github.com/ds112/hbase-on-windowns/blob/master/data/putNXB.txt
+    https://github.com/ds112/hbase-on-windowns/blob/master/data/putNXB.txt?raw=true
     <h4>NXB</h4>
     </a>
     <h1>Tip: Documment
         <a href="documment" target="_blank">
-            <h1>click here</h1>
+            <h1>click here</h1> https://github.com/ds112/hbase-on-windowns/tree/master/documment
         </a>
     </h1>
