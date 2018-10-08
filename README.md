@@ -47,12 +47,13 @@ Run Hadoop, Hbase on windowns 7/8/8.1/10
     https://github.com/ds112/hbase-on-windowns/blob/master/data/putTacGiaSach.txt?raw=true
     </a>
     <a href="data/putNXB.txt" target="_blank">
+    <h4>NXB</h4>
     https://github.com/ds112/hbase-on-windowns/blob/master/data/putNXB.txt
     https://github.com/ds112/hbase-on-windowns/blob/master/data/putNXB.txt?raw=true
-    <h4>NXB</h4>
     </a>
     <h1>Tip: Documment
         <a href="documment" target="_blank">
-            <h1>click here</h1> https://github.com/ds112/hbase-on-windowns/tree/master/documment
+            <h1>click here</h1> 
+            https://github.com/ds112/hbase-on-windowns/tree/master/documment
         </a>
     </h1>
