@@ -1,7 +1,7 @@
 # hbase-on-windowns
-Run Hadoop, Hbase on windowns 7/8/8.1/10
-<img src="http://hbase.apache.org/images/hbase_logo_with_orca_large.png">
-<img src="https://www.tutorialspoint.com/hbase/images/table.jpg">
+Run Hadoop, Hbase on windowns 7/8/8.1/10<br>
+<img align="center" src="http://hbase.apache.org/images/hbase_logo_with_orca_large.png">
+<img align="center" src="https://www.tutorialspoint.com/hbase/images/table.jpg">
 <h1>Installation Hbase</h1>
     <h2>Step 1</h2>
     <h4>Go to https://www.syncfusion.com/products/big-data</h4>
