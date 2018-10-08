@@ -1,0 +1,11 @@
+# Command to disable a table
+disable'Customers'
+
+# Command to drop a table
+drop 'Customers'
+
+# Command to create a new HBase table
+create 'Customers','Info'
+
+# Command to disables, drops and recreates the specified table
+truncate 'Customers'

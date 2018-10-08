@@ -1,0 +1,16 @@
+# Command to create a new HBase table
+create 'NewTable',{NAME=>'ColumnFamily1',VERSIONS=>5}
+
+# Command to describe a table
+describe 'NewTable'
+
+# Command to alter a table by adding a new column family
+alter_async 'NewTable',NAME=>'ColumnFamily2',VERSIONS=>5
+
+describe 'NewTable'
+
+# Command to disable a table
+disable 'NewTable' 
+
+# Command to drop a table
+drop 'NewTable'

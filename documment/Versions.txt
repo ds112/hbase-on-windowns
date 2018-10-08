@@ -1,0 +1,28 @@
+# Command to disable a table
+disable 'Customers'
+
+# Command to drop a table
+drop 'Customers'
+
+# Command to create a new HBase table
+create 'Customers',{NAME=>'Info',VERSIONS=>5}
+
+# updated the 'Info:companyName' column.
+put 'Customers','ALFKI','Info:companyName','Alfreds Futterkiste'
+put 'Customers','ALFKI','Info:contactName','Maria'
+put 'Customers','ALFKI','Info:contactName','Maria Anders'
+put 'Customers','ALFKI','Info:contactName','Maria Anderson'
+put 'Customers','ALFKI','Info:contactName','Maria Anderson John'
+put 'Customers','ALFKI','Info:contactTIT','Sales Representative'
+put 'Customers','ALFKI','Info:address','Obere Str 57'
+put 'Customers','ALFKI','Info:city','Berlin'
+put 'Customers','ALFKI','Info:region',''
+put 'Customers','ALFKI','Info:postalCode','12209'
+put 'Customers','ALFKI','Info:country','Germany'
+put 'Customers','ALFKI','Info:phone','030-0074321'
+put 'Customers','ALFKI','Info:phone','030-0074322'
+put 'Customers','ALFKI','Info:fax','030-0076545'
+
+
+# Command to check the various versions of the column 'Info:contactName'
+scan 'Customers',{VERSIONS=>5,COLUMNS=>'Info:contactName'}

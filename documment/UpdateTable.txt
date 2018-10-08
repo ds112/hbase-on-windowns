@@ -1,0 +1,40 @@
+# Command to disable a table
+disable 'Customers'
+
+# Command to drop a table
+drop 'Customers'
+
+# Command to create a new HBase table
+create 'Customers','Info'
+
+# Updated the 'Info:contactName' and 'Info:phone' column values
+put 'Customers','ALFKI','Info:companyName','Alfreds Futterkiste'
+put 'Customers','ALFKI','Info:contactName','Maria Anders'
+put 'Customers','ALFKI','Info:contactName','Maria'
+put 'Customers','ALFKI','Info:contactTIT','Sales Representative'
+put 'Customers','ALFKI','Info:address','Obere Str 57'
+put 'Customers','ALFKI','Info:city','Berlin'
+put 'Customers','ALFKI','Info:region',''
+put 'Customers','ALFKI','Info:postalCode','12209'
+put 'Customers','ALFKI','Info:country','Germany'
+put 'Customers','ALFKI','Info:phone','030-0074321'
+put 'Customers','ALFKI','Info:phone','030-0074322'
+put 'Customers','ALFKI','Info:fax','030-0076545'
+
+# Updated the 'Info:contactTIT'
+
+put 'Customers','DRACD','Info:companyName','Drachenblut Delikatessen'
+put 'Customers','DRACD','Info:contactName','Sven Ottlieb'
+put 'Customers','DRACD','Info:contactName','Sven'
+put 'Customers','DRACD','Info:contactTIT','Order Administrator'
+put 'Customers','DRACD','Info:contactTIT','Owner'
+put 'Customers','DRACD','Info:address','Walserweg 21'
+put 'Customers','DRACD','Info:city','Aachen'
+put 'Customers','DRACD','Info:region',''
+put 'Customers','DRACD','Info:postalCode','52066'
+put 'Customers','DRACD','Info:country','Germany'
+put 'Customers','DRACD','Info:phone','0241-039123'
+put 'Customers','DRACD','Info:fax','0241-059428'
+
+# Command to scan a table and retrieved the values based on the specified column name
+scan 'Customers',{COLUMN =>['Info:contactName','Info:phone','Info:contactName','Info:contactTIT']}
