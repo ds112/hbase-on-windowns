@@ -33,22 +33,22 @@ Run Hadoop, Hbase on windowns 7/8/8.1/10
     <h1>Or u can see here</h1>
     <a href="data/putSach.txt" target="_blank">
     <h4>SACH</h4> 
-    https://github.com/ds112/hbase-on-windowns/blob/master/data/putSach.txt
+    https://github.com/ds112/hbase-on-windowns/blob/master/data/putSach.txt<br>
     https://github.com/ds112/hbase-on-windowns/blob/master/data/putSach.txt?raw=true
     </a>
     <a href="data/putTacGia.txt" target="_blank">
     <h4>TACGIA</h4>
-    https://github.com/ds112/hbase-on-windowns/blob/master/data/putTacGia.txt
+    https://github.com/ds112/hbase-on-windowns/blob/master/data/putTacGia.txt<br>
     https://github.com/ds112/hbase-on-windowns/blob/master/data/putTacGiaSach.txt?raw=true
     </a>
     <a href="data/putTacGiaSach.txt" target="_blank">
     <h4>TACGIASACH</h4>
-    https://github.com/ds112/hbase-on-windowns/blob/master/data/putTacGiaSach.txt
+    https://github.com/ds112/hbase-on-windowns/blob/master/data/putTacGiaSach.txt<br>
     https://github.com/ds112/hbase-on-windowns/blob/master/data/putTacGiaSach.txt?raw=true
     </a>
     <a href="data/putNXB.txt" target="_blank">
     <h4>NXB</h4>
-    https://github.com/ds112/hbase-on-windowns/blob/master/data/putNXB.txt
+    https://github.com/ds112/hbase-on-windowns/blob/master/data/putNXB.txt<br>
     https://github.com/ds112/hbase-on-windowns/blob/master/data/putNXB.txt?raw=true
     </a>
     <h1>Tip: Documment
