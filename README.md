@@ -1,6 +1,7 @@
 # hbase-on-windowns
 Run Hadoop, Hbase on windowns 7/8/8.1/10<br>
-<img align="center" src="http://hbase.apache.org/images/hbase_logo_with_orca_large.png">
+<img align="center" src="http://hbase.apache.org/images/hbase_logo_with_orca_large.png"><br>
+<h2>As an example, we are going to create the following table in HBase.</h2>
 <img align="center" src="https://www.tutorialspoint.com/hbase/images/table.jpg">
 <h1>Installation Hbase</h1>
     <h2>Step 1</h2>
