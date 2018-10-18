@@ -1,5 +1,7 @@
 # hbase-on-windowns
 
+# Update Samples version 1810.18.03.20.PM https://github.com/ds112/hbase-on-windowns/blob/master/Samples
+
 Run Hadoop, Hbase on windowns 7/8/8.1/10<br>
 <img align="center" src="http://hbase.apache.org/images/hbase_logo_with_orca_large.png"><br>
 <h2>Structure and model in Hbase.</h2>
@@ -63,10 +65,13 @@ Run Hadoop, Hbase on windowns 7/8/8.1/10<br>
         </a>
     </h1>
     <h1> Join table on Hbase use Hive</h1>
-    <h4>You can test with query join table: 
+    <h4>You can test with query join table:</h4>
+    <h4>
     https://github.com/ds112/hbase-on-windowns/blob/master/Hive/HiveHBase/testJoin.hql
     https://github.com/ds112/hbase-on-windowns/blob/master/Hive/HiveHBase/join_table.txt
     </h4>
-# more: 
+# More
+
 # https://www.tutorialspoint.com/hbase
 
+# https://github.com/ds112/hbase-on-windowns/blob/master/Samples
