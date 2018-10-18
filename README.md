@@ -62,4 +62,11 @@ Run Hadoop, Hbase on windowns 7/8/8.1/10<br>
             https://github.com/ds112/hbase-on-windowns/tree/master/documment
         </a>
     </h1>
-# more: https://www.tutorialspoint.com/hbase
+    <h1> Join table on Hbase use Hive</h1>
+    <h4>You can test with query join table: 
+    https://github.com/ds112/hbase-on-windowns/blob/master/Hive/HiveHBase/testJoin.hql
+    https://github.com/ds112/hbase-on-windowns/blob/master/Hive/HiveHBase/join_table.txt
+    </h4>
+# more: 
+# https://www.tutorialspoint.com/hbase
+
