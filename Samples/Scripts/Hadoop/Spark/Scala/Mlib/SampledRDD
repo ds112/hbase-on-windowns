@@ -1,0 +1,3 @@
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\scala\org\apache\spark\examples\mllib\SampledRDDs
+spark-submit --class org.apache.spark.examples.mllib.SampledRDDs --master yarn %SYNCBDP_HOME%\SDK\Spark\jars\spark-examples_2.11-2.0.0.jar --input /Data/Spark/MLLib/Sample_Binary_Classification_Data.txt

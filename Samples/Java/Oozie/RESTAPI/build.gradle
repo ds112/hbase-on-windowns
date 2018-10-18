@@ -1,0 +1,30 @@
+/* For the first time set SYNCBDP_HOME as System environment variable with below path based on your installation location.
+ * "<Install Drive>\Syncfusion\BigData\<Install Version>\BigDataSDK"
+ */
+
+ext.syncfusionPath =  "$System.env.SYNCBDP_HOME"
+ext.syncfusionHadoopSDKPath = "$syncfusionPath/SDK/Hadoop"
+
+print("$syncfusionHadoopSDKPath/lib")
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'OozieRestGradle'
+sourceCompatibility = 1.7
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Oozie Gradle',
+                   'Main-Class': 'OozieRestGradle'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+run{
+    if(project.hasProperty("arguments")) {
+        args(arguments.split(' '))
+    }
+}

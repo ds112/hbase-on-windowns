@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Products>
+
+<!--Region ShowCase-->
+<ShowcaseSample Name="DateTime Demo" SourcePath="CSharp\C# MapReduce Samples\Samples\DateTime Demo\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+<ShowcaseSample Name="Filtering Demo" SourcePath="CSharp\C# MapReduce Samples\Samples\Filtering Demo\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+<ShowcaseSample Name="Foreach Demo" SourcePath="CSharp\C# MapReduce Samples\Samples\Foreach Demo\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+<ShowcaseSample Name="Grouping Demo" SourcePath="CSharp\C# MapReduce Samples\Samples\Grouping Demo\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+<ShowcaseSample Name="FindReplace Demo" SourcePath="CSharp\C# MapReduce Samples\Samples\FindReplace Demo\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+<ShowcaseSample Name="Regex Demo" SourcePath="CSharp\C# MapReduce Samples\Samples\Regex Demo\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+<ShowcaseSample Name="Search Demo" SourcePath="CSharp\C# MapReduce Samples\Samples\Search Demo\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+<ShowcaseSample Name="Sorting Demo" SourcePath="CSharp\C# MapReduce Samples\Samples\Sorting Demo\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+<ShowcaseSample Name="String Operations Demo" SourcePath="CSharp\C# MapReduce Samples\Samples\String Operations Demo\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+<ShowcaseSample Name="WordCount Demo" SourcePath="CSharp\C# MapReduce Samples\Samples\WordCount Demo\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+</Products>

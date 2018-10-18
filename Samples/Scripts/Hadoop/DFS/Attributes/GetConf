@@ -1,0 +1,14 @@
+REM Gets configuration information from the configuration directory, post-processing.
+REM getting IP for following nodes
+   hdfs getconf -namenodes
+   hdfs getconf -secondaryNameNodes
+   hdfs getconf -backupNodes
+   hdfs getconf -nnRpcAddresses
+   
+REM getting file information
+   hdfs getconf -includeFile
+   hdfs getconf -excludeFile
+
+REM getting configuration property values for hadoop using key
+REM [Usage:  hdfs getconf -confKey [key] ]
+	 hdfs getconf -confKey mapreduce.framework.name

@@ -1,0 +1,46 @@
+REM 1. setfacl: Sets Access Control Lists (ACLs) of files and directories.
+REM Syntax: hdfs dfs -setfacl <inputpath>
+hdfs dfs -setfacl -m default:user:hadoop:r-x /Data/Products
+
+REM 2. setfattr: Sets an extended attribute name and value for a file or directory.
+REM Syntax: hdfs dfs -setattr n name [-v value] | -x name <inputfilepath>
+hdfs dfs -setfattr -n user.myAttr -v myValue /Data/Products
+
+REM 3. setrep: Changes the replication factor of a file.
+REM Syntax: hdfs dfs -setrep  [-w] <numReplicas> <inputfilepath>
+hdfs dfs -setrep 3 /Data/Sudoku.txt
+
+REM 4. Balancer: Runs a cluster balancing utility.
+REM Syntax: hdfs balancer [-threshold <threshold>] [-policy <policy>]
+hdfs balancer -threshold 2 -policy datanode
+
+REM 5. daemonlog: Get/Set the log level for each daemon. Specify active name node hostname/IP address in place of {hostname} in below line to access data from the cluster.
+REM Syntax: hadoop daemonlog -getlevel <hostname:port> <name>
+REM Syntax: hadoop daemonlog -getlevel <hostname:port> <name> level
+hadoop daemonlog -getlevel localhost:50070 SYSTEM
+hadoop daemonlog -setlevel localhost:50070 SYSTEM INFO
+
+REM 6. report: Reports basic filesystem information and statistics.
+REM Syntax: hdfs dfsadmin [-report]
+hdfs dfsadmin -report
+
+REM 7. metasave filename: Save Namenode's primary data structures to <filename> in the directory specified by hadoop.log.dir property.
+REM Syntax: hdfs dfsadmin [-metasavefilename]
+hdfs dfsadmin -metasavefilename
+
+REM 8. Dump JMX information from a service.
+REM syntax: hdfs jmxget [-localVM ConnectorURL | -port port | -server mbeanserver | -service service]
+hdfs jmxget -service namenode
+hdfs jmxget -service datanode
+
+REM 9. getfacl: Displays the Access Control Lists (ACLs) of files and directories.
+REM Syntax: hdfs dfs -getfacl <inputfilepath>
+hdfs dfs -getfacl /Data/WarPeace.txt
+
+REM 10. getfattr: Displays the extended attribute names and values (if any) for a file or directory.
+REM Syntax: hdfs dfs -getfattr -d <inputfilepath>
+hdfs dfs -getfattr -d /Data/WarPeace.txt
+
+REM 11. getmerge: Takes a source directory and a destination file as input and concatenates files in src into the destination local file.
+REM Syntax: hdfs dfs -getmerge  
+hdfs dfs -getmerge /Data/WarPeace.txt /ShowcaseSamples/KeywordDensity/Input/Input1/KenInTheJungle.txt

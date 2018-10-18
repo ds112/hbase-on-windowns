@@ -1,0 +1,33 @@
+<workflow-app xmlns="uri:oozie:workflow:0.2" name="hive-wf">
+    <start to="hive-node"/>
+
+    <action name="hive-node">
+        <hive2 xmlns="uri:oozie:hive2-action:0.1">
+            <job-tracker>${jobTracker}</job-tracker>
+            <name-node>${nameNode}</name-node>
+            <prepare>
+                <delete path="${nameNode}/Data/Oozie/Output/Hive"/>
+                <mkdir path="${nameNode}/Data/Oozie/Output"/>
+            </prepare>
+            <configuration>
+                <property>
+                    <name>mapred.job.queue.name</name>
+                    <value>${queueName}</value>
+                </property>
+            </configuration>
+			<jdbc-url>jdbc:hive2://${hiveHost}:10000/default;</jdbc-url>
+            <password>${password}</password>
+            <script>Script.q</script>
+            <param>INPUT=/Data/Oozie/Input/Table</param>
+            <param>OUTPUT=/Data/Oozie/Output/Hive</param>
+        </hive2>
+        <ok to="end"/>
+        <error to="fail"/>
+    </action>
+
+    <kill name="fail">
+        <message>Hive failed, error message[${wf:errorMessage(wf:lastErrorNode())}]</message>
+    </kill>
+    <end name="end"/>
+</workflow-app>
+ 

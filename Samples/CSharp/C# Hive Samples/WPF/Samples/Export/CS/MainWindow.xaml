@@ -1,0 +1,121 @@
+﻿<Window x:Class="Export.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Export"
+         xmlns:syncfusion="clr-namespace:Syncfusion.Windows;assembly=Syncfusion.Shared.Wpf"
+        Title="MainWindow"  Height="293.955" Width="644.474" WindowStartupLocation="CenterScreen" WindowState="Normal" WindowStyle="None" ResizeMode="NoResize" Icon="/Assets/BigData.ico">
+    <syncfusion:WindowChrome.WindowChrome>
+        <syncfusion:WindowChrome />
+    </syncfusion:WindowChrome.WindowChrome>
+    <Border BorderThickness="0.7"  BorderBrush="#666665">
+
+        <Grid Background="#FCFCFC">
+
+            <Rectangle Height="30" Grid.Row="0"   VerticalAlignment="Top" Fill="#FCFCFC"></Rectangle>
+            <TextBlock Text="Export" Height="30" Foreground="#2382C3" FontFamily="Segoe UI Semibold" Margin="30,5,0,0"  VerticalAlignment="Top" Grid.Row="0"  HorizontalAlignment="Left" FontSize="16"/>
+            <Image Source="/Assets/BigData.ico" Grid.Column="0" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" Height="20"></Image>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"
+                        VerticalAlignment="Top" Margin="0 10 10 0" Grid.Column="3"
+                        syncfusion:WindowChrome.IsHitTestVisibleInChrome="True">
+
+
+                <Button Width="20"  BorderThickness="0"   Content="0" Click="Minimize" FontFamily="Webdings">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Foreground" Value="#2382C3" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="Background" Value="Gray"></Setter>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+                <Button Width="20"  Background="Transparent" Content="1" Foreground="White" BorderThickness="0"  FontFamily="Webdings">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Foreground" Value="#2382C3" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+
+                                    <Setter Property="Background" Value="Transparent"></Setter>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button Width="20"  BorderThickness="0"  Content="r" FontFamily="Webdings" 
+                         Click="Close">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Foreground" Value="#2382C3" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="Background" Value="Gray"></Setter>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </StackPanel>
+            <RadioButton x:Name="rdbExcel"  Content="Excel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="31,109,0,0" IsChecked="True" Width="70" Foreground="#545453" RenderTransformOrigin="0.521,-2.189" FontSize="16"/>
+            <RadioButton x:Name="rdbWord" Checked="rdbWord_Checked" Unchecked="rdbWord_Unchecked"  Content="Word" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,109,0,0" RenderTransformOrigin="0.5,0.5" Width="64" Height="20" Foreground="#545453" FontSize="16"/>
+            <GroupBox x:Name="groupBox1" Header="Save As" Foreground="#545453" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,156,0,0" Height="103" Width="387" FontSize="16">
+                <Grid>
+                    <RadioButton   x:Name="rdbCsv" Content="CSV" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Height="17" RenderTransformOrigin="0.5,0.5" Width="74" Foreground="#545453"/>
+                    <RadioButton  x:Name="rdbExcel97" Content="Excel 97" HorizontalAlignment="Left" VerticalAlignment="Top" Height="19" Width="88" Margin="127,10,0,0" Foreground="#545453"/>
+                    <RadioButton x:Name="rdbExcel2007"  Content="Excel 2007" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="247,13,0,0" Height="19" Width="99" Foreground="#545453"/>
+                    <RadioButton x:Name="rdbExcel2010" Content="Excel 2010" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="100" Margin="10,40,0,0" Foreground="#545453"/>
+                    <RadioButton x:Name="rdbExcel2013" Content="Excel 2013" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="127,40,0,0" Height="25" Width="97" IsChecked="True" Foreground="#545453"/>
+                </Grid>
+            </GroupBox>
+            <Button x:Name="button1" Content="Export" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Margin="533,226,0,0" Click="button1_Click" Background="#2382C3" Foreground="White" FontSize="16" Height="32" />
+            <GroupBox x:Name="groupBox2" Header="Save As" Foreground="#545453" HorizontalAlignment="Left" VerticalAlignment="Top" Height="103" Width="386" Margin="30,155,0,0" FontSize="16">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="16*"/>
+                        <ColumnDefinition Width="171*"/>
+                    </Grid.ColumnDefinitions>
+                    <RadioButton x:Name="rdbWord2007" Content="Word 2007" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="104.474,10,0,0" Foreground="#545453" Grid.Column="1"/>
+                    <RadioButton x:Name="rdbWord2010" Content="Word 2010" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,40,0,0" Foreground="#545453" Grid.ColumnSpan="2"/>
+                    <RadioButton x:Name="rdbWord2013" Content="Word 2013" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="104.474,40,0,0" IsChecked="True" Foreground="#545453" Grid.Column="1"/>
+                    <RadioButton x:Name="rdbWord2003" Content="Word 2003" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Foreground="#545453" Grid.ColumnSpan="2"/>
+                </Grid>
+            </GroupBox>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text=" This sample demonstrates the export of Hive table as Excel and Word documents." VerticalAlignment="Top" Margin="31,44,0,0" Height="50" Width="584" Foreground="#545453" FontSize="16"/>
+        </Grid>
+    </Border>
+</Window>

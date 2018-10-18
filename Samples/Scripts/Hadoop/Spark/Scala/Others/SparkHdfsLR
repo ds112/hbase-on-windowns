@@ -1,0 +1,7 @@
+REM Logistic regression based classification.
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\scala\org\apache\spark\examples\SparkHdfsLR
+REM For more conventional use, please refer to either org.apache.spark.mllib.classification.LogisticRegressionWithSGD or
+REM org.apache.spark.mllib.classification.LogisticRegressionWithLBFGS based on your needs.
+REM Usage: SparkHdfsLR <file> <iters>
+spark-submit --class org.apache.spark.examples.SparkHdfsLR --master yarn %SYNCBDP_HOME%\SDK\Spark\jars\spark-examples_2.11-2.0.0.jar /Data/Spark/MLLib/LR_Data.txt 0

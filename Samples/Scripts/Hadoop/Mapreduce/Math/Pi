@@ -1,0 +1,7 @@
+REM pi: A map/reduce program that estimates pi using a quasi-Monte Carlo method.
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK 
+REM Sample source code is available at %SYNCBDP_HOME%\Samples\Java\MapReduce\NativeMapReduce\src\main\java\org\apache\hadoop\examples\pi\math
+REM Hadoop jar %SYNCBDP_HOME%\SDK\Hadoop\share\hadoop\mapreduce\hadoop-mapreduce-examples-<version>.jar pi <Numberofmaps> <SamplesperMap>
+REM Command to build with Gradle : gradle -p %SYNCBDP_HOME%\Samples\Java\MapReduce\NativeMapReduce build
+REM Command to run with Gradle : gradle -p %SYNCBDP_HOME%\Samples\Java\MapReduce\NativeMapReduce RunJar  -Parguments="pi 16 100000"
+hadoop jar %SYNCBDP_HOME%\SDK\Hadoop\share\hadoop\mapreduce\hadoop-mapreduce-examples-*.jar pi 16 100000

@@ -1,0 +1,51 @@
+/* For the first time set SYNCBDP_HOME as System environment variable with below path based on your installation location.
+ * "<Install Drive>\Syncfusion\BigData\<Install Version>\BigDataSDK"
+ */
+
+ext.syncfusionPath = "$System.env.SYNCBDP_HOME"
+
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'RestApiSample'
+sourceCompatibility = 7
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'RESTAPI Gradle',
+                   'Main-Class': 'RestApiSample'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+
+
+run{
+    if(project.hasProperty("arguments")) {
+        args arguments.split(' ')
+    }
+}
+
+task runJar(type:Exec) {
+    if(project.hasProperty("arguments")) {
+        args arguments.split(' ')
+    }
+    workingDir 'src/main/java'
+    environment 'JAVA_HOME' , "$syncfusionPath/Java/jdk1.7.0_51"
+if(args.size()==2)
+{
+commandLine 'cmd', '/c', "$syncfusionPath/Java/jdk1.7.0_51/bin/java -cp $projectDir/build/libs/RESTAPI.jar RestApiSample", args[0], args[1]
+}
+if(args.size()==3)
+{
+    commandLine 'cmd', '/c', "$syncfusionPath/Java/jdk1.7.0_51/bin/java -cp $projectDir/build/libs/RESTAPI.jar RestApiSample", args[0], args[1], args[2]
+}
+
+    
+}

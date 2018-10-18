@@ -1,0 +1,6 @@
+REM Python package should be install to run python job
+REM Randomly sampled RDDs.
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK 
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\python\mllib\sampled_rdds
+REM Usage: sampled_rdds <libsvm data file>
+spark-submit --master yarn %SYNCBDP_HOME%\SDK\Spark\examples\src\main\python\mllib\sampled_rdds.py /Data/Spark/MLLib/Sample_Binary_Classification_Data.txt

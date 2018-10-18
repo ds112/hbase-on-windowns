@@ -1,0 +1,14 @@
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\scala\org\apache\spark\examples\mllib\PowerIterationClusteringExample
+REM * Run with
+REM * {{{
+REM * ./bin/run-example mllib.PowerIterationClusteringExample [options]
+REM *
+REM * Where options include:
+REM *   k:  Number of circles/clusters
+REM *   n:  Number of sampled points on innermost circle.. There are proportionally more points
+REM *      within the outer/larger circles
+REM *   maxIterations:   Number of Power Iterations
+REM *   outerRadius:  radius of the outermost of the concentric circles
+REM * }}}
+spark-submit --class org.apache.spark.examples.mllib.PowerIterationClusteringExample --master yarn %SYNCBDP_HOME%\SDK\Spark\jars\spark-examples_2.11-2.0.0.jar

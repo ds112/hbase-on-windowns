@@ -1,0 +1,10 @@
+REM Produces a count of events received from Flume.
+REM This should be used in conjunction with the Spark Sink running in a Flume agent
+REM See the Spark Streaming programming guide for more details.
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\scala\org\apache\spark\examples\Streaming\FlumePollingEventCount
+REM Specify active name node hostname/IP address in place of <hostname> in below line to access data from the cluster.
+REM Usage: FlumePollingEventCount <hostname> <port>
+REM `host` is the host on which the Spark Sink is running.
+REM `port` is the port at which the Spark Sink is listening.
+ spark-submit --class org.apache.spark.examples.streaming.FlumePollingEventCount --master yarn %SYNCBDP_HOME%\SDK\Spark\jars\spark-examples_2.11-2.0.0.jar 127.0.1.1 9999

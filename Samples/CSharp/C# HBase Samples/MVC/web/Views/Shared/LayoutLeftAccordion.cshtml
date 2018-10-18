@@ -1,0 +1,78 @@
+﻿@{ var iisvalue = @Url.Content("~/");}
+<div class="accordion-panel cols-fixed-sidebar">
+    <div class="search">
+        @Html.EJ().Autocomplete("auto").WatermarkText("Search").ShowPopupButton(false).FilterType(FilterOperatorType.Contains).Template("<a href= " + iisvalue + "${id} class='anchorclass'><div> ${text}</div></a>").ClientSideEvents(cs => cs.Select("onSelectSearchItem")).Width("183px")
+        <span class="navigation"></span>
+    </div>
+    <div id="scrollcontainer">
+        <div>
+            <div id="sbdashboard" class="dashboard dashboarddiv highlighttextbg itemselected">
+                <span>Data Binding</span>
+            </div>
+
+            <div class="accordion" id="accordion2"></div>
+
+            <script id="accordionTmpl" type="text/x-jsrender">
+                <div id="{{>id}}" class="anchorclass mainlevel" hashbang="/{{>controller}}/{{>action}}">
+                    <a href=@Url.Content("~/"){{>controller}}/{{>action}}>
+                                    <div class="dashboard">
+                                        <span class="anchor">{{>name}}</span>
+                                        {{if type}} <span class="samplestatus {{>type}}"></span>{{/if}}
+                                        <span class="arrow"></span>
+                                    </div>
+                    </a>
+                </div>
+            </script>
+            <div class="accordion samplesCollection" id="samplesDiv"></div>
+            <script type="text/x-jsrender" id="accordionTmplchild">
+                <div id="{{>id}}" class="samples">
+                    <div id="{{>id}}_back" class="firstlevelback">
+                        <a href=@Url.Content("~/")Introduction/IntroductionDefault class="dashboard">
+                            <span class="arrowback"></span><span class="anchor sbheading">HBase Samples</span>
+                        </a>
+                    </div>
+                    {{for samples ~pId=id}}
+                                        <div class="anchorclass subsamples samples" hashbang="/{{>~pId}}/{{>action}}">
+                                            <div id="{{>id}}" class="firstlevelload" childcount="{{>childcount}}" controller="{{>~pId}}" action="{{>action}}">
+                                                <a href=  @Url.Content("~/"){{>~pId}}/{{>action}} class="dashboard">
+                                                <span class="anchor">{{>name}}</span>
+                                                    {{if type}} <span class="samplestatus {{>type}}"></span>{{/if}}
+                                               {{if arrowclass}} <span class="{{>arrowclass}}"></span>{{/if}}
+                                                </a>
+                                                <div id="subControls">
+                                                    <div class="firstlevelback  dashboardheader">
+
+                                                        <a href=@Url.Content("~/")Introduction/IntroductionDefault class="dashboard">
+                                                            <span class="arrowback"></span><span class="anchor sbheading">All Controls</span>
+                                                        </a>
+                                                    </div>
+                                                    <div id="{{>id}}">
+                                                        <div id="{{>id}}_back" class="secondlevelback dashboardheader">
+                                                            @* {{if #index=='0'}}*@
+                                                            <a id="sec_back" href=@Url.Content("~/"){{>~pId}} class="dashboard">
+                                <span class="arrowback"></span><span class="anchor sbheading">{{>name}}</span>
+                                                            </a>
+                                                            @*{{/if}}*@
+                                                        </div>
+                                                        {{for samples ~rId=~pId ~sId=name}}
+                                                    <div id="{{>id}}" hashbang="/{{>~sId}}/{{>action}}" class="secondlevelload" childcount="{{>childcount}}" controller="{{>controller}}" action="{{>action}}">
+                                                        <a href=@Url.Content("~/"){{>controller}}/{{>action}}>
+                                                        <div class="dashboard">
+                                                            <span class="anchor">{{>name}}</span>
+                                                            {{if type}} <span class="samplestatus {{>type}}"></span>{{/if}}
+                                                        </div>
+                                                        </a>
+                                                    </div>
+                                                        {{/for}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                    {{/for}}
+                </div>
+            </script>
+            <div id="subsamplesDiv" style="display: none">
+            </div>
+        </div>
+    </div>
+</div>

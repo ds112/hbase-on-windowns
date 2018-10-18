@@ -1,0 +1,4 @@
+REM JavaCrossValidatorExample: A simple example demonstrating model selection using CrossValidator
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\scala\org\apache\spark\examples\graphx\Analytics
+spark-submit --master yarn --class org.apache.spark.examples.graphx.Analytics %SYNCBDP_HOME%\SDK\Spark\jars\spark-examples_2.11-2.0.0.jar cc /Data/Spark/MLLib/PageRank_Data.txt --numEPart=3

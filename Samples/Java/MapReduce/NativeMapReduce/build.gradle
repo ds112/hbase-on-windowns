@@ -1,0 +1,58 @@
+/* For the first time set SYNCBDP_HOME as System environment variable with below path based on your installation location.
+ * "<Install Drive>\Syncfusion\BigData\<Install Version>\BigDataSDK"
+ */
+
+ext.syncfusionPath = "$System.env.SYNCBDP_HOME"
+ext.syncfusionHadoopSDKPath = "$syncfusionPath/SDK/Hadoop"
+
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'org.apache.hadoop.examples.ExampleDriver'
+sourceCompatibility = 7
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Quickstart',
+                   'Main-Class': 'org.apache.hadoop.examples.ExampleDriver'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/etc/hadoop", include: '*.*')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/common", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/common/lib", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/hdfs", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/yarn", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/tools", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/mapreduce", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/mapreduce/lib", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/mapreduce/lib-examples", include: '*.jar')
+}
+
+
+run{
+environment 'HADOOP_HOME', '$syncfusionHadoopSDKPath'
+environment 'HADOOP_CONF_DIR', '$syncfusionHadoopSDKPath/etc/hadoop'
+    if(project.hasProperty('arguments')) {
+        args(arguments.split(' '))
+    }
+}
+
+task runJar (type:Exec){
+ if(project.hasProperty("arguments")) {
+        args arguments.split(' ')
+    }
+	environment 'JAVA_HOME', '$syncfusionPath/Java/jdk1.7.0_51'
+	environment 'HADOOP_HOME', '$syncfusionHadoopSDKPath'
+	environment 'HADOOP_CONF_DIR', '$syncfusionHadoopSDKPath/etc/hadoop'
+    if(project.hasProperty('arguments')) {
+    	commandLine 'cmd', '/c', "$syncfusionHadoopSDKPath/bin/hadoop jar $projectDir/build/libs/NativeMapReduce.jar $arguments "
+    }
+	
+}

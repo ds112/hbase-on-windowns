@@ -1,0 +1,11 @@
+REM 1. chgrp:Change group association of files.
+REM Syntax: hdfs dfs -chgrp [-R] <NewGroupName> <file or directory name>
+hdfs dfs -chgrp -R /users /Data/WarPeace.txt
+
+REM 2. chmod: Change the permissions of files.
+REM Syntax: hdfs dfs -chmod [-R] <mode | octal mode> <file or directory name>
+hdfs dfs -chmod -R 1777 /Data/WarPeace.txt
+
+REM 3. chown:Change the owner of files.
+REM Syntax:hdfs dfs -chown [-R] <NewOwnerName>[:NewGroupName] <file or directory name>
+hdfs dfs -chown -R /users /Data/WarPeace.txt

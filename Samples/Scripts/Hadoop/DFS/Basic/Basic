@@ -1,0 +1,40 @@
+REM 1. ls: List all directories
+hdfs dfs -ls /
+
+REM 2. ls -R: Recursive version of ls
+hdfs dfs -ls -R /
+
+REM 3. tail: Displays last kilobyte of the file
+REM Syntax: hdfs dfs -tail <inputpath>
+hdfs dfs -tail /Data/Sudoku.txt
+
+REM 4. count: Count the number of directories, files and bytes under the paths that match the specified file pattern.
+REM Syntax: hdfs dfs -count <inputpath>
+hdfs dfs -count /Data/
+
+REM 5. du: Displays sizes of files and directories contained in the given directory
+REM Syntax: hdfs dfs -du 
+hdfs dfs -du /Data/WarPeace.txt
+
+REM 6. expunge: Empty the Trash.
+REM Syntax: hdfs dfs -expunge
+hdfs dfs -expunge
+
+REM 7. touchz: Create a file of zero length.
+REM Syntax: hdfs dfs -touchz <filename>
+hdfs dfs -touchz /newfile
+
+REM 8. mkdir: To make a directory
+REM Syntax: hdfs dfs -mkdir <path>
+hdfs dfs -mkdir /input
+
+REM 9. help: Displays help for the given command or all commands if none is specified.
+REM Syntax: [hdfs | hadoop | yarn |mapred] -help
+hdfs -help
+
+REM 10. command to interact and view Job Queue information
+REM Syntax: mapred queue [-list] | [-info <job-queue-name> [-showJobs]] | [-showacls]
+mapred queue -list
+
+REM 11. To view hadoop version
+hadoop version

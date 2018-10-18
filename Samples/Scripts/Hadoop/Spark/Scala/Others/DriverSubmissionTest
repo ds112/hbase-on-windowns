@@ -1,0 +1,5 @@
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\scala\org\apache\spark\examples\DriverSubmissionTest
+REM Prints out environmental information, sleeps, and then exits. Made to test driver submission in the standalone scheduler
+REM Usage: DriverSubmissionTest <seconds-to-sleep>
+spark-submit --class org.apache.spark.examples.DriverSubmissionTest --master yarn %SYNCBDP_HOME%\SDK\Spark\jars\spark-examples_2.11-2.0.0.jar 1

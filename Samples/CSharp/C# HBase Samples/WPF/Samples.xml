@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Products>
+
+<!--Region ShowCase-->
+<ShowcaseSample Name="Iteration" SourcePath="CSharp\C# HBase Samples\WPF\Samples\Iteration\CS"  />
+<ShowcaseSample Name="Data Binding" SourcePath="CSharp\C# HBase Samples\WPF\Samples\Data Binding\CS"  />
+<ShowcaseSample Name="Strongly Typed Binding" SourcePath="CSharp\C# HBase Samples\WPF\Samples\Strongly Typed Binding\CS" />
+<ShowcaseSample Name="Export" SourcePath="CSharp\C# HBase Samples\WPF\Samples\Export\CS" />
+<ShowcaseSample Name="Asynchronous" SourcePath="CSharp\C# HBase Samples\WPF\Samples\Asynchronous\CS" />
+<ShowcaseSample Name="Filter" SourcePath="CSharp\C# HBase Samples\WPF\Samples\Filter\CS" />
+</Products>

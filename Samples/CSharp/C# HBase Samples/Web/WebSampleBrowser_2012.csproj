@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F4B278D5-BC80-4354-9339-DAC208EA6A0B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebSampleBrowser</RootNamespace>
+    <AssemblyName>WebSampleBrowser</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.SignalR.Core">
+      <HintPath>bin\Microsoft.AspNet.SignalR.Core.1.1.4\lib\net40\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Owin">
+      <HintPath>bin\Microsoft.AspNet.SignalR.Owin.1.1.4\lib\net45\Microsoft.AspNet.SignalR.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb">
+      <HintPath>bin\Microsoft.AspNet.SignalR.SystemWeb.1.1.4\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>bin\Microsoft.Owin.Host.SystemWeb.1.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>bin\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.Base, Version=12.4450.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Core, Version=12.4450.0.24, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Syncfusion.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DocIO.Base, Version=12.4450.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Syncfusion.DocIO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.EJ, Version=12.4450.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Syncfusion.EJ.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.EJ.Web, Version=12.4450.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Syncfusion.EJ.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Linq.Base, Version=12.4450.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Syncfusion.Linq.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.ThriftHBase.Base, Version=2.1400.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Syncfusion Helper Assemblies\4.5\Syncfusion.ThriftHBase.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.XlsIO.Base, Version=12.4450.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Syncfusion.XlsIO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <Private>True</Private>
+      <HintPath>bin\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http">
+      <Private>True</Private>
+      <HintPath>bin\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <Private>True</Private>
+      <HintPath>bin\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Asynchronous\Default.aspx" />
+    <Content Include="Export\Default.aspx" />
+	<Content Include="Filter\Default.aspx" />
+    <Content Include="Iteration\Default.aspx" />
+    <Content Include="Content\bootstrap-notify.css" />
+    <Content Include="Content\images\Schedule\basketball.png" />
+    <Content Include="Content\images\Schedule\beach.png" />
+    <Content Include="Content\images\Schedule\bell.png" />
+    <Content Include="Content\images\Schedule\cake.png" />
+    <Content Include="Content\images\Schedule\doctor.png" />
+    <Content Include="Content\images\Schedule\guitar.png" />
+    <Content Include="Content\images\Schedule\music.png" />
+    <Content Include="Content\images\Schedule\print.png" />
+    <Content Include="Content\images\Schedule\rugby.png" />
+    <Content Include="Content\images\ui-icons\ui-icons-active.png" />
+    <Content Include="Content\images\ui-icons\ui-icons-default.png" />
+    <Content Include="Content\images\accordion\baked-chicken-and-cheese.png" />
+    <Content Include="Content\images\accordion\chicken-delite.png" />
+    <Content Include="Content\images\accordion\chicken-tikka.png" />
+    <Content Include="Content\images\accordion\corn-and-spinach-05.png" />
+    <Content Include="Content\images\accordion\corn-and-spinach.png" />
+    <Content Include="Content\images\accordion\forum-grey.png" />
+    <Content Include="Content\images\accordion\forum-white.png" />
+    <Content Include="Content\images\accordion\garden-fresh.png" />
+    <Content Include="Content\images\accordion\garden-veggie.png" />
+    <Content Include="Content\images\accordion\grey_logos.png" />
+    <Content Include="Content\images\accordion\paneer-tikka.png" />
+    <Content Include="Content\images\accordion\white_logos.png" />
+    <Content Include="Content\images\accordion\zesty-mushroons-and-tomatoes.png" />
+    <Content Include="Content\images\autocomplete\flags.png" />
+    <Content Include="Content\images\chart\back.png" />
+    <Content Include="Content\images\chart\eficon.png" />
+    <Content Include="Content\images\chart\export.png" />
+    <Content Include="Content\images\chart\grain.png" />
+    <Content Include="Content\images\chart\icon_investments.png" />
+    <Content Include="Content\images\chart\wheat.png" />
+    <Content Include="Content\images\datepicker\daterange-bg.png" />
+    <Content Include="Content\images\diagram\Clayton.png" />
+    <Content Include="Content\images\diagram\eric.png" />
+    <Content Include="Content\images\diagram\female.png" />
+    <Content Include="Content\images\diagram\image12.png" />
+    <Content Include="Content\images\diagram\image2.png" />
+    <Content Include="Content\images\diagram\image3.png" />
+    <Content Include="Content\images\diagram\image50.png" />
+    <Content Include="Content\images\diagram\image51.png" />
+    <Content Include="Content\images\diagram\image53.png" />
+    <Content Include="Content\images\diagram\image54.png" />
+    <Content Include="Content\images\diagram\image55.png" />
+    <Content Include="Content\images\diagram\image56.png" />
+    <Content Include="Content\images\diagram\image57.png" />
+    <Content Include="Content\images\diagram\images7.png" />
+    <Content Include="Content\images\diagram\images9.png" />
+    <Content Include="Content\images\diagram\Jenny.png" />
+    <Content Include="Content\images\diagram\John.png" />
+    <Content Include="Content\images\diagram\male.png" />
+    <Content Include="Content\images\diagram\Maria.png" />
+    <Content Include="Content\images\diagram\moreinfo.png" />
+    <Content Include="Content\images\diagram\Paul.png" />
+    <Content Include="Content\images\diagram\Robin.png" />
+    <Content Include="Content\images\diagram\smith.png" />
+    <Content Include="Content\images\diagram\Thomas.png" />
+    <Content Include="Content\images\dialog\6.png" />
+    <Content Include="Content\images\dialog\8.png" />
+    <Content Include="Content\images\dialog\audiq3-1.png" />
+    <Content Include="Content\images\dialog\audiq3-2.png" />
+    <Content Include="Content\images\dialog\r8-coupe.png" />
+    <Content Include="Content\images\dropdownlist\3.png" />
+    <Content Include="Content\images\dropdownlist\6.png" />
+    <Content Include="Content\images\dropdownlist\7.png" />
+    <Content Include="Content\images\dropdownlist\8.png" />
+    <Content Include="Content\images\dropdownlist\iconsapps.png" />
+    <Content Include="Content\images\Employee\3.png" />
+    <Content Include="Content\images\Employee\6.png" />
+    <Content Include="Content\images\Employee\7.png" />
+    <Content Include="Content\images\Employee\8.png" />
+    <Content Include="Content\images\mail\mailicons.png" />
+    <Content Include="Content\images\mail\mailicons_gray.png" />
+    <Content Include="Content\images\map\backtext.png" />
+    <Content Include="Content\images\map\mappath.png" />
+    <Content Include="Content\images\map\pin.png" />
+    <Content Include="Content\images\menu\books-bg.png" />
+    <Content Include="Content\images\menu\digital-bg.png" />
+    <Content Include="Content\images\menu\menu-bg.png" />
+    <Content Include="Content\images\menu\movies-bg.png" />
+    <Content Include="Content\images\menu\mp3-bg.png" />
+    <Content Include="Content\images\menu\toy-bg.png" />
+    <Content Include="Content\images\progressbar\water.png" />
+    <Content Include="Content\images\rating\mos.png" />
+    <Content Include="Content\images\rating\mu.png" />
+    <Content Include="Content\images\rating\wwz.png" />
+    <Content Include="Content\images\rotator\bird.jpg" />
+    <Content Include="Content\images\rotator\bread.jpg" />
+    <Content Include="Content\images\rotator\card.jpg" />
+    <Content Include="Content\images\rotator\green.jpg" />
+    <Content Include="Content\images\rotator\machine.jpg" />
+    <Content Include="Content\images\rotator\nature.jpg" />
+    <Content Include="Content\images\rotator\night.jpg" />
+    <Content Include="Content\images\rotator\rose.jpg" />
+    <Content Include="Content\images\rotator\sculpture.jpg" />
+    <Content Include="Content\images\rotator\sea.jpg" />
+    <Content Include="Content\images\rotator\seaview.jpg" />
+    <Content Include="Content\images\rotator\snow.jpg" />
+    <Content Include="Content\images\rotator\snowfall.jpg" />
+    <Content Include="Content\images\rotator\tablet.jpg" />
+    <Content Include="Content\images\rotator\wheat.jpg" />
+    <Content Include="Content\images\tab\flags.png" />
+    <Content Include="Content\images\tab\mos.png" />
+    <Content Include="Content\images\tab\mu.png" />
+    <Content Include="Content\images\tab\wwz.png" />
+    <Content Include="Content\images\TreeMap\Archery.png" />
+    <Content Include="Content\images\TreeMap\Boxing.png" />
+    <Content Include="Content\images\TreeMap\circle.png" />
+    <Content Include="Content\images\TreeMap\Cycling.png" />
+    <Content Include="Content\images\TreeMap\Diving.png" />
+    <Content Include="Content\images\TreeMap\Gymnastics.png" />
+    <Content Include="Content\images\TreeMap\Shooting.png" />
+    <Content Include="Content\images\TreeMap\Soccer.png" />
+    <Content Include="Content\images\TreeMap\Swimming.png" />
+    <Content Include="Content\images\TreeMap\TrackAndField.png" />
+    <Content Include="Content\images\TreeMap\Wrestling.png" />
+    <Content Include="Scripts\bootstrap-notify.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\canvg.js" />
+    <Content Include="Scripts\ej\cultures\globalize.culture.de-DE.min.js" />
+    <Content Include="Scripts\ej\cultures\globalize.culture.en-US.min.js" />
+    <Content Include="Scripts\ej\cultures\globalize.culture.fr-FR.min.js" />
+    <Content Include="Scripts\ej\cultures\globalize.culture.vi-VN.min.js" />
+    <Content Include="Scripts\ej\cultures\globalize.culture.zh-CN.min.js" />
+    <Content Include="Scripts\rgbcolor.js" />
+    <Content Include="Scripts\StackBlur.js" />
+    <Content Include="Sourcetabfiles.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\images\arrow.png" />
+    <Content Include="Content\images\arrow2.png" />
+    <Content Include="Content\images\arrowcollapse.png" />
+    <Content Include="Content\images\arrowdown.png" />
+    <Content Include="Content\images\arrowleft.png" />
+    <Content Include="Content\images\arrowup.png" />
+    <Content Include="Content\images\azure-logo.png" />
+    <Content Include="Content\images\closebutton-hover.png" />
+    <Content Include="Content\images\closebutton.png" />
+    <Content Include="Content\images\colapse.png" />
+    <Content Include="Content\images\dark left side tab bg.png" />
+    <Content Include="Content\images\dark left side tab hover.png" />
+    <Content Include="Content\images\dark right side BG texture.png" />
+    <Content Include="Content\images\dark-arrow2.png" />
+    <Content Include="Content\images\dark-arrowleft.png" />
+    <Content Include="Content\images\dark-evttracer.png" />
+    <Content Include="Content\images\dark-evttracerhover.png" />
+    <Content Include="Content\images\dark-left-side-tab-header.png" />
+    <Content Include="Content\images\dark-search.png" />
+    <Content Include="Content\images\dark-theme-blue-icon.png" />
+    <Content Include="Content\images\dark-theme-green-icon.png" />
+    <Content Include="Content\images\dark-theme-icon.png" />
+    <Content Include="Content\images\dark-theme-orange-icon.png" />
+    <Content Include="Content\images\divider-line.png" />
+    <Content Include="Content\images\down-product.png" />
+    <Content Include="Content\images\download-icon.png" />
+    <Content Include="Content\images\evttracer.png" />
+    <Content Include="Content\images\evttracerhover.png" />
+    <Content Include="Content\images\expand.png" />
+    <Content Include="Content\images\favicon.ico" />
+    <Content Include="Content\images\footer.png" />
+    <Content Include="Content\images\left side tab bg.png" />
+    <Content Include="Content\images\left side tab hover.png" />
+    <Content Include="Content\images\left-side-tab-header.png" />
+    <Content Include="Content\images\right side BG texture.png" />
+    <Content Include="Content\images\sbloading-popup-light.gif" />
+    <Content Include="Content\images\sbtooltip.png" />
+    <Content Include="Content\images\treeview\products.png" />
+    <Content Include="Content\images\treeview\remove-icon.png" />
+    <Content Include="Content\images\treeview\template-image-1.png" />
+    <Content Include="Content\images\treeview\template-image-2.png" />
+    <Content Include="Content\images\treeview\template-image-3.png" />
+    <EmbeddedResource Include="Content\images\WaitingPopup\js_logo.png" />
+    <EmbeddedResource Include="Content\images\WaitingPopup\load_dark.gif" />
+    <EmbeddedResource Include="Content\images\WaitingPopup\load_light.gif" />
+    <Content Include="Content\sampleBrowserSite-responsive.css" />
+    <Content Include="Content\sampleBrowserSite.css" />
+    <Content Include="Content\SourceTabFormatter.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="LayoutHeader.ascx" />
+    <Content Include="LeftColumn.ascx" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\ej\ej.web.all.min.js" />
+    <Content Include="Scripts\ej\ej.webform.min.js" />
+    <Content Include="Scripts\ej\ej.widget.angular.min.js" />
+    <Content Include="Scripts\ej\ej.widget.ko.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery.easing-1.3.min.js" />
+    <Content Include="Scripts\jquery.globalize.min.js" />
+    <Content Include="Scripts\jquery.signalR-1.1.4.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jsondata.min.js" />
+    <Content Include="Scripts\jsrender.min.js" />
+    <Content Include="Scripts\jsviews.min.js" />
+    <Content Include="Scripts\knockout-min.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\properties.js" />
+    <Content Include="Scripts\sampleBrowserSite.js" />
+    <Content Include="Scripts\sampleslist.js" />
+    <Content Include="SourceCodeTab\Sourcecodetab.ascx" />
+    <Content Include="Global.asax" />
+    <Content Include="StronglyTypedBinding\Default.aspx" />
+    <Content Include="Web_2012.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Asynchronous\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asynchronous\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerData.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Export\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Export\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+	<Compile Include="Filter\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Filter\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Iteration\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Iteration\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Samplebrowser.Master.cs">
+      <DependentUpon>Samplebrowser.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Samplebrowser.Master.designer.cs">
+      <DependentUpon>Samplebrowser.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutHeader.ascx.cs">
+      <DependentUpon>LayoutHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LayoutHeader.ascx.designer.cs">
+      <DependentUpon>LayoutHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LeftColumn.ascx.cs">
+      <DependentUpon>LeftColumn.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeftColumn.ascx.designer.cs">
+      <DependentUpon>LeftColumn.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Layout.Master.cs">
+      <DependentUpon>Layout.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layout.Master.designer.cs">
+      <DependentUpon>Layout.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCodeTab\Sourcecodetab.ascx.cs">
+      <DependentUpon>Sourcecodetab.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SourceCodeTab\Sourcecodetab.ascx.designer.cs">
+      <DependentUpon>Sourcecodetab.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCodeTab\Formatter\CLikeFormat.cs" />
+    <Compile Include="SourceCodeTab\Formatter\CodeFormat.cs" />
+    <Compile Include="SourceCodeTab\Formatter\CSharpFormat.cs" />
+    <Compile Include="SourceCodeTab\Formatter\HtmlFormat.cs" />
+    <Compile Include="SourceCodeTab\Formatter\JavaScriptFormat.cs" />
+    <Compile Include="SourceCodeTab\Formatter\SourceFormat.cs" />
+    <Compile Include="SourceCodeTab\Formatter\VisualBasicFormat.cs" />
+    <Compile Include="SourceCodeTab\SourceCodeTab.cs" />
+    <Compile Include="StronglyTypedBinding\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StronglyTypedBinding\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Samplebrowser.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Layout.Master" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="BeforeBuild">
+    <Copy Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU' Or '$(Configuration)|$(Platform)' == 'Release|AnyCPU'" SourceFiles="$(ProjectDir)Web_2012.config" DestinationFiles="$(ProjectDir)Web.config">
+    </Copy>
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62879</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55342/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>cd "$(SolutionDir)bin"
+del *.dll
+xcopy "$(SolutionDir)bin_2012\*.*" "$(SolutionDir)bin\" /Y/D
+copy "$(ProjectDir)Web_2012.config" "$(ProjectDir)Web.config" /Y</PreBuildEvent>
+  </PropertyGroup>
+</Project>

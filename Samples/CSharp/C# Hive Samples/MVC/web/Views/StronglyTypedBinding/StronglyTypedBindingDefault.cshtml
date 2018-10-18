@@ -1,0 +1,36 @@
+
+   <div class="sampleheadingtext">
+       </div>
+@section ControlsSection{
+<h5><strong>This sample demonstrates, how to convert the Hive results to a strongly typed data and bind it to a grid  for viewing</strong></h5> 
+   <div style="color:red;padding-top:3px;padding-bottom:10px">@MVCSampleBrowser.Controllers.StronglyTypedBindingController.ErrorMessage </div>
+
+     @(Html.EJ().Grid<MVCSampleBrowser.Models.StronglyBindedCustomersData>("FlatGrid")
+        .Datasource((IList<MVCSampleBrowser.Models.PersonDetail>)ViewBag.datasource)
+        .AllowSorting()
+        .AllowResizeToFit()
+           .AllowScrolling()
+           .ScrollSettings(scroll => { scroll.AllowVirtualScrolling().Height(300).Width(0).VirtualScrollMode(VirtualScrollMode.Normal); })
+
+        .Columns(col =>
+        {
+            col.Field("ContactId").HeaderText("ContactID").TextAlign(TextAlign.Center).Width(100).Add();
+            col.Field("FullName").HeaderText("Full Name").TextAlign(TextAlign.Center).Width(200).Add();
+            col.Field("Age").HeaderText("Age").TextAlign(TextAlign.Center).Width(50).Add();
+            col.Field("EmailId").HeaderText("Email ID").TextAlign(TextAlign.Center).Width(220).Add();
+            col.Field("PhoneNumber").HeaderText("Phone Number").TextAlign(TextAlign.Center).Width(200).Add();
+            col.Field("ModifiedDate").HeaderText("Modified Date").TextAlign(TextAlign.Center).Width(200).Add();
+        }))
+        <script type="text/javascript">
+            window.onresize = function () {
+                if ($("#VirtualScrolling .e-gridcontent").data("ejScroller"))
+                    $("#VirtualScrolling .e-gridcontent").ejScroller("refresh");
+            };
+            $("#VirtualScrolling").ejGrid("option", { "scrollSettings": { "virtualScrollMode": "normal" } });
+
+
+            $("#sampleProperties").ejPropertiesPanel();
+        </script>
+    }
+
+

@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="sampleheadingtext">
+    <span class="sampletitle">Filters</span>
+</div>
+@section ControlsSection{
+
+    <input type="radio" id="rowid  " name="filter" onclick="show()" checked="checked" /><strong>
+        Row Filter &nbsp; &nbsp;
+    </strong>
+    <input type="radio" id="singlecolumnid  " name="filter" onclick="hide()" /><strong>
+        SingleColumnValue Filter
+    </strong>
+
+    <h5><strong>This sample demonstrates,  how the result of the HBase can be bound to a grid for viewing</strong></h5>
+    <div style="color: red; padding-top: 3px; padding-bottom: 10px">@MVCSampleBrowser.Controllers.IntroductionController.ErrorMessage</div>
+           <div class="rowfilter">
+                @if (ViewBag.datasource != null)
+            {
+                @(Html.EJ().Grid<MVCSampleBrowser.Models.Customers>("FlatGrid1")
+                                   .Datasource((List<Customers>)ViewBag.datasource[0])
+       .AllowSorting()
+       .AllowScrolling()
+       .ScrollSettings(scroll => { scroll.AllowVirtualScrolling().Height(300).Width(930).VirtualScrollMode(VirtualScrollMode.Normal); })
+            .Columns(col =>
+            {
+                col.Field("ContactId").HeaderText("ContactId").TextAlign(TextAlign.Center).Width(150).Add();
+                col.Field("FullName").HeaderText("info:FullName").TextAlign(TextAlign.Center).Width(150).Add();
+                col.Field("Age").HeaderText("info:Age").TextAlign(TextAlign.Center).Width(150).Add();
+                col.Field("EmailId").HeaderText("contact:EmailId").TextAlign(TextAlign.Center).Width(220).Add();
+                col.Field("PhoneNumber").HeaderText("contact:PhoneNumer").TextAlign(TextAlign.Center).Width(150).Add();
+                col.Field("ModifiedDate").HeaderText("others:ModifiedDate").TextAlign(TextAlign.Center).Width(150).Add();
+            }))
+                }
+            </div>
+    <div class="singlecolumnvaluefilter">
+@if (ViewBag.datasource != null)
+{
+        @(Html.EJ().Grid<MVCSampleBrowser.Models.Customers>("FlatGrid2")
+                                                   .Datasource((List<Customers>)ViewBag.datasource[1])
+       .AllowSorting()
+       .AllowScrolling()
+       .ScrollSettings(scroll => { scroll.AllowVirtualScrolling().Height(300).Width(930).VirtualScrollMode(VirtualScrollMode.Normal); })
+            .Columns(col =>
+            {
+                col.Field("ContactId").HeaderText("ContactId").TextAlign(TextAlign.Center).Width(150).Add();
+                col.Field("FullName").HeaderText("info:FullName").TextAlign(TextAlign.Center).Width(150).Add();
+                col.Field("Age").HeaderText("info:Age").TextAlign(TextAlign.Center).Width(150).Add();
+                col.Field("EmailId").HeaderText("contact:EmailId").TextAlign(TextAlign.Center).Width(220).Add();
+                col.Field("PhoneNumber").HeaderText("contact:PhoneNumer").TextAlign(TextAlign.Center).Width(150).Add();
+                col.Field("ModifiedDate").HeaderText("others:ModifiedDate").TextAlign(TextAlign.Center).Width(150).Add();
+            }))
+}
+    </div>
+}
+
+@section ScriptSection{
+    <script type="text/javascript">
+        window.onresize = function () {
+            if ($("#VirtualScrolling .e-gridcontent").data("ejScroller"))
+                $("#VirtualScrolling .e-gridcontent").ejScroller("refresh");
+        };
+
+        $("#VirtualScrolling").ejGrid("option", { "scrollSettings": { "virtualScrollMode": "normal" } });
+
+        $("#sampleProperties").ejPropertiesPanel();
+        $("#VirtualScrolling")
+        function show() {
+            debugger
+            $(".singlecolumnvaluefilter").css("display", "none");
+            $(".rowfilter").css("display", "block");
+        }
+        function hide() {
+            debugger
+            $(".rowfilter").css("display", "none");
+            $(".singlecolumnvaluefilter").css("display", "block");
+        }
+        $(document).ready(function () {
+            $(".singlecolumnvaluefilter").css("display", "none");
+        });
+    </script>
+}

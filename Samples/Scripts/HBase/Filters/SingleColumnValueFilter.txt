@@ -1,0 +1,67 @@
+# Command to disable a table
+disable 'Customers'
+
+# Command to drop a table
+drop 'Customers'
+
+# Command to create a new HBase table
+create 'Customers','Info'
+
+# Command to insert values into the created HBase table
+put 'Customers','ALFKI','Info:companyName','Alfreds Futterkiste'
+put 'Customers','ALFKI','Info:contactName','Maria Anders'
+put 'Customers','ALFKI','Info:contactTIT','Sales Representative'
+put 'Customers','ALFKI','Info:address','Obere Str 57'
+put 'Customers','ALFKI','Info:city','Berlin'
+put 'Customers','ALFKI','Info:region',''
+put 'Customers','ALFKI','Info:postalCode','12209'
+put 'Customers','ALFKI','Info:country','Germany'
+put 'Customers','ALFKI','Info:phone','030-0074321'
+put 'Customers','ALFKI','Info:fax','030-0076545'
+
+put 'Customers','DRACD','Info:companyName','Drachenblut Delikatessen'
+put 'Customers','DRACD','Info:contactName','Sven Ottlieb'
+put 'Customers','DRACD','Info:contactTIT','Order Administrator'
+put 'Customers','DRACD','Info:address','Walserweg 21'
+put 'Customers','DRACD','Info:city','Aachen'
+put 'Customers','DRACD','Info:region',''
+put 'Customers','DRACD','Info:postalCode','52066'
+put 'Customers','DRACD','Info:country','Germany'
+put 'Customers','DRACD','Info:phone','0241-039123'
+put 'Customers','DRACD','Info:fax','0241-059428'
+
+put 'Customers','BONAP','Info:companyName','Bon app'
+put 'Customers','BONAP','Info:contactName','Laurence Lebihan'
+put 'Customers','BONAP','Info:contactTIT','Owner'
+put 'Customers','BONAP','Info:address','"12'
+put 'Customers','BONAP','Info:city','rue des Bouchers'
+put 'Customers','BONAP','Info:region','Marseille'
+put 'Customers','BONAP','Info:postalCode','13008'
+put 'Customers','BONAP','Info:country','France'
+put 'Customers','BONAP','Info:phone','91.24.45.40'
+put 'Customers','BONAP','Info:fax',''
+
+put 'Customers','BOTTM','Info:companyName','Bottom-Dollar Markets'
+put 'Customers','BOTTM','Info:contactName','Elizabeth Lincoln'
+put 'Customers','BOTTM','Info:contactTIT','Accounting Manager'
+put 'Customers','BOTTM','Info:address','23 Tsawassen Blvd'
+put 'Customers','BOTTM','Info:city','Tsawassen'
+put 'Customers','BOTTM','Info:region','BC'
+put 'Customers','BOTTM','Info:postalCode','T2F 8M4'
+put 'Customers','BOTTM','Info:country','Canada'
+put 'Customers','BOTTM','Info:phone','(604) 555-4729'
+put 'Customers','BOTTM','Info:fax','(604) 555-3745'
+
+put 'Customers','FRANR','Info:companyName','France restauration'
+put 'Customers','FRANR','Info:contactName','Carine Schmitt'
+put 'Customers','FRANR','Info:contactTIT','Marketing Manager'
+put 'Customers','FRANR','Info:address','54	 rue Royale'
+put 'Customers','FRANR','Info:city','Nantes'
+put 'Customers','FRANR','Info:region',''
+put 'Customers','FRANR','Info:postalCode','8010'
+put 'Customers','FRANR','Info:country','Austria'
+put 'Customers','FRANR','Info:phone','7675-3425'
+put 'Customers','FRANR','Info:fax','7675-3426'
+
+# Command will retrieve the single column value based on the given value in it
+scan 'Customers',{ FILTER => "SingleColumnValueFilter('Info','contactName',=,'binary:Elizabeth Lincoln')"}

@@ -1,0 +1,43 @@
+REM 1. Copy from Local: Copy the source file to hdfs
+REM Syntax: hdfs dfs -copyFromLocal <localinputpath> <hdfsoutputpath>
+hdfs dfs -copyFromLocal %SYNCBDP_HOME%\Samples\Data\WarPeace.txt /Data/Sample1.txt
+
+REM 2. Copy to Local: Copy the hdfs file to local system
+REM Syntax: hdfs dfs -copyToLocal <hdfspath><localpath>
+hdfs dfs -copyToLocal /Data/WarPeace.txt %SYNCBDP_HOME%\Samples\Data\Sample1.txt
+
+REM 3. Appendfile: Append single src, or multiple srcs from local file system to the destination file system.
+REM Syntax: hdfs dfs -appendToFile <localinputpath><hdfsoutputpath>
+hdfs dfs -appendToFile %SYNCBDP_HOME%\Samples\Data\WarPeace.txt /Data/Sample1.txt
+
+REM 4. rm: Only deletes files
+REM Syntax: hdfs dfs -rm <inputdirectory>
+hdfs dfs -rm /Data/Sample1.txt
+
+REM 5. rmr: Recursive version of delete. The rmr command recursively deletes the directory and any content under it
+REM Syntax: hdfs dfs -rm -r <inputdirectory>
+hdfs dfs -rm -r /Data/Sample
+
+REM 6. Get: Copies the files from hdfs to the local file system.
+REM Syntax: hdfs dfs -get <hdfspath> <localpath>
+hdfs dfs -get /Data/WarPeace.txt %SYNCBDP_HOME%\Samples\Data\Sample2.txt
+
+REM 7. moveFromLocal: Moves a file from local file system to the hdfs directory.
+REM Syntax: hdfs dfs -moveFromLocal <localinputpath> <hdfsoutputapth>
+hdfs dfs -moveFromLocal %SYNCBDP_HOME%\Samples\Data\WarPeace.txt /Data/Sample1.txt
+
+REM 8. put: Copy single src, or multiple srcs from local file system to the destination file system.
+REM Syntax: hdfs dfs -put <localinputpath> <hdfsoutputpath>
+hdfs dfs -put %SYNCBDP_HOME%\Samples\Data\WarPeace.txt /Data/Sample2.txt
+
+REM 9. cp: Copy files from source to destination in hdfs
+REM Syntax: hdfs dfs -cp <sourcefilepath> <destinationfilepath>
+hdfs dfs -cp /Data/WarPeace.txt /Data/Sample3.txt
+
+REM 10. mv: Moves files from source to destination in hdfs
+REM Syntax: hdfs dfs -mv <sourcefilepath> <destinationfilepath>
+hdfs dfs -mv /Data/Sample1.txt /Data/Sample4.txt
+
+REM 11. Copy file or directories recursively.
+REM Syntax: hadoop distcp <srcurl> <desturl>
+hadoop distcp /Data/WarPeace.txt /Data/Sample5.txt

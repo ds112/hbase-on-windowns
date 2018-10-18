@@ -1,0 +1,46 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+                    xmlns:synctitlebar="clr-namespace:Syncfusion.Windows.Shared;assembly=Syncfusion.Shared.Wpf"
+                    xmlns:local="clr-namespace:KMeansModel">
+
+    <!--<local:ColorConverter x:Key="ColorConverter"/>
+    <local:TextConverter x:Key="TextConverter"/>-->
+
+    <Style x:Key="customCellStyle"  TargetType="syncfusion:GridCell">
+        
+        <Setter Property="BorderBrush" Value="#FF7fd0de" />
+        <Setter Property="BorderThickness" Value="0,0,1,1" />
+        <Setter Property="Padding" Value="5,0,0,3" />
+        <Setter Property="FontFamily" Value=" Segoe UI" />
+        <Setter Property="Foreground" Value="#FF2A2A2A" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Margin" Value="0"></Setter>
+    </Style>
+
+    <Style x:Key="predictedColumnColor"  TargetType="syncfusion:GridCell">
+        <Setter Property="Background" Value="#d6d3d1" />
+      <Setter Property="BorderBrush" Value="#FF7fd0de" />
+      <Setter Property="BorderThickness" Value="0,0,1,1" />
+      <Setter Property="Padding" Value="5,0,0,3" />
+      <Setter Property="FontFamily" Value=" Segoe UI" />
+      <Setter Property="Foreground" Value="#FF2A2A2A" />
+      <Setter Property="FontSize" Value="12" />
+      <Setter Property="Margin" Value="0"></Setter>
+    </Style>
+
+    <Style x:Key="headerCellStyle" TargetType="syncfusion:GridHeaderCellControl">
+
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="#FF7fd0de" />
+        <Setter Property="BorderThickness" Value="0,0,1,3" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="Padding" Value="5,3,3,3" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Foreground" Value="#FF5E5B5C" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+
+    </Style>
+</ResourceDictionary>

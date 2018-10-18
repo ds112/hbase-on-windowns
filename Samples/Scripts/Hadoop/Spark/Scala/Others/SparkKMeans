@@ -1,0 +1,7 @@
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\scala\org\apache\spark\examples\SparkKMeans
+REM For more conventional use, please refer to org.apache.spark.mllib.clustering.KMeans
+REM Usage: SparkKMeans <file> <k> <convergeDist>
+REM To build with Gradle run following command 
+REM gradle -p %SYNCBDP_HOME%\Samples\Scala\Spark\Others\SparkKMeans build
+spark-submit --class org.apache.spark.examples.SparkKMeans --master yarn %SYNCBDP_HOME%\SDK\Spark\jars\spark-examples_2.11-2.0.0.jar /Data/Spark/MLLib/KMeans_Data.txt 2 42

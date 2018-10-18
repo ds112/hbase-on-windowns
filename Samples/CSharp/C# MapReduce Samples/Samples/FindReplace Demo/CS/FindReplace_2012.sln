@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindReplace_2012", "FindReplace_2012.csproj", "{FABF55A6-D5C0-464E-A4CC-8E3A4AE0CF68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FABF55A6-D5C0-464E-A4CC-8E3A4AE0CF68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FABF55A6-D5C0-464E-A4CC-8E3A4AE0CF68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FABF55A6-D5C0-464E-A4CC-8E3A4AE0CF68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FABF55A6-D5C0-464E-A4CC-8E3A4AE0CF68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

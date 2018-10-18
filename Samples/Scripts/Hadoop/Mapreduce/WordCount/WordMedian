@@ -1,0 +1,7 @@
+REM wordmedian: A map/reduce program that counts the median length of the words in the input files 
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK 
+REM Sample source code is available at %SYNCBDP_HOME%\Samples\Java\MapReduce\NativeMapReduce\src\main\java\org\apache\hadoop\examples
+REM Hadoop jar %SYNCBDP_HOME%\SDK\Hadoop\share\hadoop\mapreduce\hadoop- mapreduce-examples-<version>.jar wordmedian <input_file> <output_file>
+REM Command to build with Gradle : gradle -p %SYNCBDP_HOME%\Samples\Java\MapReduce\NativeMapReduce build
+REM Command to run with Gradle : gradle -p %SYNCBDP_HOME%\Samples\Java\MapReduce\NativeMapReduce RunJar  -Parguments="wordmedian /Data/WarPeace.txt /WordMedianOutput"
+hadoop jar %SYNCBDP_HOME%\SDK\Hadoop\share\hadoop\mapreduce\hadoop-mapreduce-examples-*.jar wordmedian /Data/WarPeace.txt /WordMedianOutput

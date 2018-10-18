@@ -1,0 +1,4 @@
+REM Python package should be install to run python job
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK 
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\python\avro_inputformat
+spark-submit --jars %SPARK_HOME%\\jars\\spark-examples_2.11-2.0.0.jar,..\\..\\Pig\\lib\\avro-1.7.5.jar --master yarn %SYNCBDP_HOME%\\SDK\\Spark\\examples\\src\\main\\python\\avro_inputformat.py /Data/Spark/Resources/Users.avro

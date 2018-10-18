@@ -1,0 +1,6 @@
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK
+REM Sample source code is available at %SYNCBDP_HOME%\Samples\Scala\Spark\GettingStarted\Regex
+REM To run in Remote cluster,follow the comments in the sample which is in the above mentioned location. Build the sample and submit job.
+REM To build with Gradle run following command 
+REM gradle -p %SYNCBDP_HOME%\Samples\Scala\Spark\GettingStarted\Regex build
+spark-submit --class com.syncfusion.regex --master yarn %SYNCBDP_HOME%\Samples\Scala\Spark\GettingStarted\Regex\build\libs\Regex.jar

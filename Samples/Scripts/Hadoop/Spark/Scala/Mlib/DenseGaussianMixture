@@ -1,0 +1,3 @@
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\scala\org\apache\spark\examples\mllib\DenseGaussianMixture
+spark-submit --class org.apache.spark.examples.mllib.DenseGaussianMixture --master yarn %SYNCBDP_HOME%\SDK\Spark\jars\spark-examples_2.11-2.0.0.jar /Data/Spark/MLLib/GMM_Data.txt 2 0.9

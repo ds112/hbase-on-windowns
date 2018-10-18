@@ -1,0 +1,100 @@
+<div class="sampleheadingtext">
+   
+</div>
+@section ControlsSection{
+<h5><strong>Asynchronously fetches the data from Hive Database for every page and binds it in grid</strong></h5>
+<script type="text/x-jsrender" id="pagerTemplate">
+ <a id="prev" class="e-disable" onclick="gotoPage(this)" style="border: none;height:25px; text-decoration:none;cursor: pointer"><img src=@Url.Content("~/Content/images/arrow.png") style="vertical-align:text-bottom" alt="Previous" width="14" height="16" /></a>
+    <a onclick="gotoPage(this)" id="next" style="border: none;text-decoration:none; cursor: pointer" ><img src=@Url.Content("~/Content/images/rightarrow.png") style="vertical-align:text-bottom" alt="Next" width="14" height="16" /></a>
+</script>
+    <div style="color:red;padding-top:3px;padding-bottom:10px">@MVCSampleBrowser.Controllers.AsynchronousController.ErrorMessage</div>
+
+        @(Html.EJ().Grid<MVCSampleBrowser.Models.PersonDetail>("Paging")
+    
+    
+    .Datasource(ds => ds.URL(Url.Content("~/Asynchronous/Data")).Adaptor("UrlAdaptor"))
+         .AllowPaging()
+         .PageSettings(page => page.EnableTemplates().Template("#pagerTemplate"))
+       
+        .Columns(col =>
+        {
+            col.Field("ContactId").HeaderText("ContactID").TextAlign(TextAlign.Center).Width(100).Add();
+            col.Field("FullName").HeaderText("Full Name").TextAlign(TextAlign.Center).Width(200).Add();
+            col.Field("Age").HeaderText("Age").TextAlign(TextAlign.Center).Width(50).Add();
+            col.Field("EmailId").HeaderText("Email ID").TextAlign(TextAlign.Center).Width(220).Add();
+            col.Field("PhoneNumber").HeaderText("Phone Number").TextAlign(TextAlign.Center).Width(200).Add();
+            col.Field("ModifiedDate").HeaderText("Modified Date").TextAlign(TextAlign.Center).Width(200).Add();
+        }).ClientSideEvents(e=>e.Load("load").ActionComplete("actionComplete"))
+        )
+}
+@section ScriptSection{
+   <script type="text/javascript">
+      
+       function gotoPage(sender) {
+           var gridObj = $("#Paging").data("ejGrid");
+           var gridObj1 = $("#Paging").data("ejGrid");
+           var val = $("#txtPageNumber").val();
+           var currentPage = gridObj.model.pageSettings.currentPage
+               if (sender.id == "prev") {
+                   if ($("#prev").hasClass('e-disable'))
+                       return false;
+                   gridObj.gotoPage(parseInt(currentPage) - 1);
+                   $("#next").removeClass('e-disable');
+               }
+               else {
+                   if ($("#next").hasClass('e-disable'))
+                       return false;
+                   gridObj.gotoPage(parseInt(currentPage) + 1);
+               }
+               if (gridObj.model.pageSettings.currentPage == 1)
+                   $("#prev").addClass('e-disable');
+               else
+                   $("#prev").removeClass('e-disable');
+               $("#txtPageNumber").val(gridObj.model.pageSettings.currentPage) 
+       }
+
+       var customs = new ej.UrlAdaptor().extend({
+           processResponse: function (data, ds, query, xhr, request, changes) {
+               var pvt = request.ejPvtData || {};
+               if (xhr && xhr.getResponseHeader("Content-Type").indexOf("xml") != -1 && data.nodeType == 9)
+                   return query._requiresCount ? { result: [], count: 0 } : [];
+               var d = JSON.parse(request.data);
+               if (d && d.action === "batch" && data.added) {
+                   changes.added = data.added;
+                   return changes;
+               }
+               if (data.d)
+                   data = data.d;
+               if (data.hasRows != undefined)
+                   window.disablePage = data.hasRows;
+               if (pvt.groups && pvt.groups.length) {
+                   var groups = pvt.groups, args = {};
+                   if (data["count"]) args.count = data.count;
+                   if (data["result"]) data = data.result;
+                   for (var i = 0; i < groups.length; i++)
+                       data = ej.group(data, groups[i]);
+                   if (args.count)
+                       args.result = data;
+                   else
+                       args = data;
+                   return args;
+               }
+               return data;
+           }
+       });
+
+       function load(args) {
+
+           this.model.dataSource.adaptor = new customs();
+       }
+       function actionComplete(args) {
+           if (args.requestType == "paging" && window.disablePage != undefined) {
+               $("#next").addClass('e-disable');
+               delete window.disablePage;
+           }
+       }
+</script>
+
+
+
+}

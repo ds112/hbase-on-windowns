@@ -1,0 +1,99 @@
+﻿@*@using Syncfusion.JavaScript.DataVisualization
+@{
+    ViewBag.Title = "Default";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}*@
+@*<h2>Thrift Hive Sample</h2><br />*@
+<div class="sampleheadingtext">
+    <span class="sampletitle">Export as Excel/Word</span>
+</div>
+@section ControlsSection{
+
+<script>
+    $(document).ready(function () {
+        $(".Word").hide();
+        $("#Excel").click(function () {
+            $(".Word").hide();
+            $(".Excel").show();                    
+        });
+        $("#Word").click(function () {
+            $(".Word").show();
+            $(".Excel").hide();           
+        });
+    });
+</script>
+<div class="rowdiv">
+    <label>
+        This sample demonstrates the export of Hive table as Excel and Word documents
+    </label>
+    <div style="color:red;padding-top:3px;padding-bottom:10px">@MVCSampleBrowser.Controllers.ExportController.ErrorMessage</div>
+</div><br />
+<input type="radio" id="Excel" name="Group1" value="Excel" checked="checked" /><b>Excel</b>&nbsp; &nbsp; 
+<input type="radio" id="Word" name="Group1" value="Word" /><b>Word</b>
+<div class="Excel">
+   
+    @{Html.BeginForm("ExportDefault", "Export", FormMethod.Post);
+    {
+        <div class="Common">
+            <div class="tablediv">                
+                <br />
+                <div class="rowdiv">
+                    <div class="celldiv">
+                        <label>
+                            <strong> Save As:</strong>
+                        </label><br />
+                        <p>
+                            <input id="rbtnCSV" type="radio" name="SaveOption" value="CSV" />  <b>CSV</b>&nbsp; &nbsp;
+                            <input id="rbtn2003" type="radio" name="SaveOption" value="Excel 2003" />  <b>Excel 2003</b>&nbsp; &nbsp;
+                            <input id="rbtn2007" type="radio" name="SaveOption" value="Excel 2007" />  <b>Excel 2007</b>&nbsp; &nbsp;
+                            <input id="rbtn2010" type="radio" name="SaveOption" value="Excel 2010" />  <b>Excel 2010</b>&nbsp; &nbsp;
+                            <input id="rbtn2013" type="radio" name="SaveOption" value="Excel 2013" checked="checked" />  <b>Excel 2013</b><br />
+                        </p>
+                    </div>
+                    <br />
+                    <div class="celldiv">
+                        <input class="buttonStyle" type="submit" value="Export" style=" width:200px;" />
+                    </div>
+                    
+                </div>
+                <br />
+            </div>
+        </div>
+        Html.EndForm();
+
+    }
+    
+}
+</div>
+   
+
+<div class="Word">
+  
+    @{Html.BeginForm("ExportDefault", "Export", FormMethod.Post);
+{
+    <div class="Common">
+        <div class="tablediv">           
+            <br />
+            <div class="rowdiv">
+                <div class="celldiv">
+                    <label>
+                        <strong>Save As </strong>
+                    </label><br />
+                    <p>
+                        <input type="radio" id="rdButtonWord97To2003" name="SaveOption" value="Word 97-2003" />  <b>Word 97-2003</b>&nbsp; &nbsp;
+                        <input type="radio" id="rdButtonWord2007" name="SaveOption" value="Word 2007" /> <b>Word 2007</b>&nbsp; &nbsp;
+                        <input type="radio" id="rdButtonWord2010" name="SaveOption" value="Word 2010" /> <b>Word 2010</b>&nbsp; &nbsp;
+                        <input type="radio" id="rdButtonWord2013" name="SaveOption" value="Word 2013" checked="checked" />   <b>Word 2013</b><br />
+                    </p>
+
+                </div>
+                <br />
+                <div class="celldiv">
+                    <input class="buttonStyle" type="submit" value="Export" style="width: 200px;" />
+                </div>
+            </div>
+            <br />
+        </div>
+    </div>
+    Html.EndForm();
+}}</div>}

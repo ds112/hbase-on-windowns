@@ -1,0 +1,13 @@
+REM Receives text from multiple rawNetworkStreams and counts how many '\n' delimited
+REM lines have the word 'the' in them. This is useful for benchmarking purposes. This
+REM will only work with spark.streaming.util.RawTextSender running on all worker nodes
+REM and with Spark using Kryo serialization (set Java property "spark.serializer" to
+REM "org.apache.spark.serializer.KryoSerializer").
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\scala\org\apache\spark\examples\Streaming\RawNetworkGrep
+REM Specify active name node hostname/IP address in place of <hostname> in below line to access data from the cluster.
+REM Usage: RawNetworkGrep <numStreams> <hostname> <port> <batchMillis>
+REM <numStream> is the number rawNetworkStreams, which should be same as number of work nodes in the cluster
+REM <port> is the port on which RawTextSender is running in the worker nodes.
+REM <batchMillise> is the Spark Streaming batch duration in milliseconds.
+spark-submit --class org.apache.spark.examples.streaming.RawNetworkGrep --master yarn %SYNCBDP_HOME%\SDK\Spark\jars\spark-examples_2.11-2.0.0.jar 10 localhost 9898 10

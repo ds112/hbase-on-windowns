@@ -1,0 +1,6 @@
+REM JavaBinarizerExample: A simple example demonstrating ways to specify parameters for Estimators and Transformers
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\java\org\apache\spark\examples\ml\JavaBinarizerExample
+REM To build with Gradle run following command 
+REM gradle -p %SYNCBDP_HOME%\Samples\Java\Spark\Ml\JavaBinarizerExample build
+spark-submit --class org.apache.spark.examples.ml.JavaBinarizerExample --master yarn %SYNCBDP_HOME%\SDK\Spark\jars\spark-examples_2.11-2.0.0.jar 

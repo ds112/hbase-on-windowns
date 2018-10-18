@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SourceTabSettings>
+  <!--<Controls foldername ="Rotator">	
+		<Samples name ="APIs" >
+		     //sample name which was same as in samplelist.js file 
+			<dependantfiles displayname ="Properties.Js" url="~\Rotator\Scripts\Properties.js"/>
+			//displayname = Title of the tab
+			// url = page to load on that tab content
+		</Samples>
+	</Controls>-->
+
+  <Controls foldername ="Rotator">
+    <Samples name ="APIs" >
+      <dependantfiles displayname ="Js" url="~\Scripts\Rotator\Properties.js"/>
+      <dependantfiles displayname ="Css" url="~\Content\Rotator\API.css"/>
+    </Samples>
+    <Samples name ="ImagewithContent" >
+      <dependantfiles displayname ="Css" url="~\Content\Rotator\ImagewithContent.css"/>
+    </Samples>
+    <Samples name ="Keyboard-Interaction" >
+      <dependantfiles displayname ="Js" url="~\Scripts\Rotator\KeyboardInteraction.js"/>
+    </Samples>
+    <Samples name ="KnockoutSupport" >
+      <dependantfiles displayname ="Js" url="~\Scripts\Rotator\KnockoutSupport.js"/>
+    </Samples>
+    <Samples name ="Thumbnail" >
+      <dependantfiles displayname ="Css" url="~\Content\Rotator\Thumbnail.css"/>
+    </Samples>
+  </Controls>
+
+  <Controls foldername ="ProgressBar">
+    <Samples name ="APIs" >
+      <dependantfiles displayname ="Js" url="~\Scripts\ProgressBar\events.js"/>
+    </Samples>
+  </Controls>
+  <Controls foldername ="TreeView">
+    <Samples name ="Icons">
+      <dependantfiles displayname ="CSS" url="~\Content\TreeView\Icons.css"/>
+    </Samples>
+    <Samples name ="Template" >
+      <dependantfiles displayname ="CSS" url="~\Content\TreeView\Template.css"/>
+    </Samples>
+    <Samples name ="Events" >
+      <dependantfiles displayname ="Js" url="~\Scripts\TreeView\Events.js"/>
+    </Samples>
+    <Samples name ="APIs" >
+      <dependantfiles displayname ="Js" url="~\Scripts\TreeView\APIs.js"/>
+    </Samples>
+  </Controls>
+  <Controls foldername ="AutoComplete">
+    <Samples name ="Template">
+      <dependantfiles displayname ="CSS" url="~\Content\AutoComplete\Template.css"/>
+    </Samples>
+    <Samples name ="KnockoutSupport" >
+      <dependantfiles displayname ="Js" url="~\Scripts\AutoComplete\KnockoutSupport.js"/>
+    </Samples>
+    <Samples name ="Events" >
+      <dependantfiles displayname ="Js" url="~\Scripts\AutoComplete\Events.js"/>
+    </Samples>
+  </Controls>
+  <Controls foldername ="Textboxes">
+    <Samples name ="KnockoutSupport">
+      <dependantfiles displayname ="Js" url="~\Scripts\TextBox\KnockoutSupport.js"/>
+    </Samples>
+    <Samples name ="APIs" >
+      <dependantfiles displayname ="Js" url="~\Scripts\TextBox\APIs.js"/>
+    </Samples>
+    <Samples name ="ClientSideEvents" >
+      <dependantfiles displayname ="Events.js" url="~\Scripts\TextBox\Events.js"/>
+    </Samples>
+  </Controls>
+  <Controls foldername ="TagCloud">
+    <Samples name ="Events">
+      <dependantfiles displayname ="Js" url="~\Scripts\TagCloud\Events.js"/>
+    </Samples>
+  </Controls>
+  <Controls foldername="RichTextEditor" >
+    <Samples name ="API" >
+      <dependantfiles displayname ="API.js" url="~\Scripts\RichTextEditor\APIJs.js"/>
+    </Samples>
+    <Samples name ="Events" >
+      <dependantfiles displayname ="Events.js" url="~\Scripts\RichTextEditor\Events.js"/>
+    </Samples>
+    <Samples name ="Localization" >
+      <dependantfiles displayname ="Localization.js" url="~\Scripts\RichTextEditor\localizationScripts.js"/>
+    </Samples>
+  </Controls>
+  <Controls foldername="Splitter" >
+    <Samples name ="DefaultFunctionalities" >
+      <dependantfiles displayname ="Js" url="~\Scripts\Splitter\API.js"/>
+    </Samples>
+    <Samples name ="Orientation" >
+      <dependantfiles displayname ="js" url="~\Scripts\Splitter\Orientation.js"/>
+    </Samples>
+    <Samples name ="APIs" >
+      <dependantfiles displayname ="js" url="~\Scripts\Splitter\API.js"/>
+    </Samples>
+    <Samples name ="Events" >
+      <dependantfiles displayname ="js" url="~\Scripts\Splitter\Events.js"/>
+    </Samples>
+    <Samples name ="Keyboard-Interaction" >
+      <dependantfiles displayname ="js" url="~\Scripts\Splitter\Keyboardinteraction.js"/>
+    </Samples>
+  </Controls>
+  <Controls foldername ="Accordion">
+    <Samples name ="API" >
+      <dependantfiles displayname ="Script" url="~\Scripts\Accordion\AccordionAPI.js"/>
+    </Samples>
+    <Samples name ="DefaultFunctionalities" >
+      <dependantfiles displayname ="Css" url="~\Content\Accordion\defaultfunctionalities.css"/>
+    </Samples>
+    <Samples name ="Icons" >
+      <dependantfiles displayname ="Css" url="~\Content\Accordion\icons.css"/>
+    </Samples>
+    <Samples name ="Events" >
+      <dependantfiles displayname ="Js" url="~\Scripts\Accordion\events.js"/>
+    </Samples>
+  </Controls>
+  <Controls foldername ="Toolbar">
+    <Samples name ="AngularSupport" >
+      <dependantfiles displayname ="CSS" url="~\Content\Toolbar\angularsupport.css"/>
+    </Samples>
+    <Samples name ="DataBinding-LocalData" >
+      <dependantfiles displayname ="CSS" url="~\Content\Toolbar\databinding-localdata.css"/>
+    </Samples>
+    <Samples name ="DataBinding-ObjectData" >
+      <dependantfiles displayname ="CSS" url="~\Content\Content\Toolbar\ObjectTool.css"/>
+    </Samples>
+    <Samples name ="DataBinding-LinqToSql" >
+      <dependantfiles displayname ="CSS" url="~\Content\Toolbar\rtl.css"/>
+    </Samples>
+    <Samples name ="DataBinding-RemoteData" >
+      <dependantfiles displayname ="CSS" url="~\Content\Toolbar\databinding-remotedata.css"/>
+    </Samples>
+    <Samples name ="DataBinding-XML" >
+      <dependantfiles displayname ="CSS" url="~\Content\Toolbar\BasicTool.css"/>
+    </Samples>
+    <Samples name ="DataBinding-SqlData" >
+      <dependantfiles displayname ="CSS" url="~\Content\Toolbar\rtl.css"/>
+    </Samples>
+    <Samples name ="DefaultFunctionalities" >
+      <dependantfiles displayname ="CSS" url="~\Content\Toolbar\defaultfunctionalites.css"/>
+    </Samples>
+    <Samples name ="Events" >
+      <dependantfiles displayname ="CSS" url="~\Content\Toolbar\events.css"/>
+      <dependantfiles displayname ="JS" url="~\Scripts\Toolbar\toolbarevent.js"/>
+    </Samples>
+    <Samples name ="API">
+      <dependantfiles displayname ="CSS" url="~\Content\Toolbar\API.css"/>
+      <dependantfiles displayname ="JS" url="~\Scripts\Toolbar\toolbarapi.js"/>
+    </Samples>
+    <Samples name ="KeyboardInteraction" >
+      <dependantfiles displayname ="CSS" url="~\Content\Toolbar\keyboardinteraction.css"/>
+    </Samples>
+    <Samples name ="KnockoutSupport" >
+      <dependantfiles displayname ="CSS" url="~\Content\Toolbar\knockoutsupport.css"/>
+    </Samples>
+    <Samples name ="Orientation" >
+      <dependantfiles displayname ="CSS" url="~\Content\Toolbar\orientation.css"/>
+    </Samples>
+    <Samples name ="RTL" >
+      <dependantfiles displayname ="CSS" url="~\Content\Toolbar\rtl.css"/>
+    </Samples>
+    <Samples name ="Template" >
+      <dependantfiles displayname ="CSS" url="~\Content\Toolbar\template.css"/>
+    </Samples>
+  </Controls>
+  <Controls foldername ="Menu">
+    <Samples name ="APIs">
+      <dependantfiles displayname ="Js" url="~\Scripts\Menu\API.js"/>
+    </Samples>
+    <Samples name ="Templates" >
+      <dependantfiles displayname ="CSS" url="~\Content\Menu\Template.css"/>
+    </Samples>
+
+  </Controls>
+  <Controls foldername ="Dialog">
+    <Samples name ="API">
+      <dependantfiles displayname ="JS" url="~\Content\Dialog\API.js"/>
+    </Samples>
+    <Samples name ="AjaxContent">
+      <dependantfiles displayname ="Js" url="~\Scripts\Dialog\AjaxContent.js"/>
+    </Samples>
+    <Samples name ="DefaultFunctionalities">
+      <dependantfiles displayname ="Js" url="~\Scripts\Dialog\DefaultFunctionalities.js"/>
+    </Samples>
+    <Samples name ="CustomAction" >
+      <dependantfiles displayname ="Js" url="~\Scripts\Dialog\CustomAction.js"/>
+    </Samples>
+    <Samples name ="Events">
+      <dependantfiles displayname ="Js" url="~\Scripts\Dialog\Events.js"/>
+    </Samples>
+    <Samples name ="KeyboardIntraction" >
+      <dependantfiles displayname ="Js" url="~\Scripts\Dialog\KeyboardInteraction.js"/>
+    </Samples>
+    <Samples name ="ModelDialog" >
+      <dependantfiles displayname ="Js" url="~\Scripts\Dialog\ModalDialog.js"/>
+    </Samples>
+    <Samples name ="RTL" >
+      <dependantfiles displayname ="Js" url="~\Scripts\Dialog\RTL.js"/>
+    </Samples>
+  </Controls>
+  <Controls foldername ="OlapChart">
+    <Samples name ="Default">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapChartService.svc.cs"/>
+    </Samples>
+    <Samples name ="AngularBinding">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapChartService.svc.cs"/>
+    </Samples>
+    <Samples name ="ChartTypes">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapChartService.svc.cs"/>
+    </Samples>
+    <Samples name ="KOModelBinding">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapChartService.svc.cs"/>
+    </Samples>
+    <Samples name ="Localization">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapChartService.svc.cs"/>
+    </Samples>
+    <Samples name ="Events">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapChartService.svc.cs"/>
+    </Samples>
+  </Controls>
+
+  <Controls foldername ="OlapClient">
+    <Samples name ="Default">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapClientService.svc.cs"/>
+    </Samples>
+    <Samples name ="AngularBinding">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapClientService.svc.cs"/>
+    </Samples>
+    <Samples name ="Customization">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapClientService.svc.cs"/>
+    </Samples>
+    <Samples name ="KOModelBinding">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapClientService.svc.cs"/>
+    </Samples>
+    <Samples name ="Localization">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapClientService.svc.cs"/>
+    </Samples>
+  </Controls>
+
+  <Controls foldername ="OlapGauge">
+    <Samples name ="Default">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapGaugeService.svc.cs"/>
+    </Samples>
+    <Samples name ="AngularBinding">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapGaugeService.svc.cs"/>
+    </Samples>
+    <Samples name ="Events">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapGaugeService.svc.cs"/>
+    </Samples>
+    <Samples name ="KOModelBinding">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapGaugeService.svc.cs"/>
+    </Samples>
+    <Samples name ="Layout">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapGaugeService.svc.cs"/>
+    </Samples>
+    <Samples name ="Localization">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapGaugeService.svc.cs"/>
+    </Samples>
+    <Samples name ="Pointer">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapGaugeService.svc.cs"/>
+    </Samples>
+    <Samples name ="Range">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapGaugeService.svc.cs"/>
+    </Samples>
+    <Samples name ="Scale">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapGaugeService.svc.cs"/>
+    </Samples>
+  </Controls>
+
+  <Controls foldername ="OlapGrid">
+    <Samples name ="Default">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapGridService.svc.cs"/>
+    </Samples>
+    <Samples name ="AngularBinding">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapGridService.svc.cs"/>
+    </Samples>
+    <Samples name ="CellContext">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapGridService.svc.cs"/>
+    </Samples>
+    <Samples name ="KOModelBinding">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapGridService.svc.cs"/>
+    </Samples>
+    <Samples name ="Layout">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapGridService.svc.cs"/>
+    </Samples>
+    <Samples name ="Localization">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapGridService.svc.cs"/>
+    </Samples>
+    <Samples name ="DrillPosition">
+      <dependantfiles displayname ="WCF" url="~\wcf\DrillPositionService.svc.cs"/>
+    </Samples>
+    <Samples name ="Hyperlink">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapGridService.svc.cs"/>
+    </Samples>
+    <Samples name ="Events">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapGridService.svc.cs"/>
+    </Samples>
+    <Samples name ="KPI">
+      <dependantfiles displayname ="WCF" url="~\wcf\KPIService.svc.cs"/>
+    </Samples>
+    <Samples name ="Paging">
+      <dependantfiles displayname ="WCF" url="~\wcf\PagingService.svc.cs"/>
+    </Samples>
+    <Samples name ="RTL">
+      <dependantfiles displayname ="WCF" url="~\wcf\OlapGridService.svc.cs"/>
+    </Samples>
+  </Controls>
+  <Controls foldername ="UploadBox">
+    <Samples name ="APIs" >
+      <dependantfiles displayname ="saveFiles.ashx.cs" url="~\UploadBox\saveFiles.ashx.cs"/>
+      <dependantfiles displayname ="removeFiles.ashx.cs" url="~\UploadBox\removeFiles.ashx.cs"/>
+    </Samples>
+    <Samples name ="DefaultFunctionalities" >
+      <dependantfiles displayname ="saveFiles.ashx.cs" url="~\UploadBox\saveFiles.ashx.cs"/>
+      <dependantfiles displayname ="removeFiles.ashx.cs" url="~\UploadBox\removeFiles.ashx.cs"/>
+    </Samples>
+    <Samples name ="Events" >
+      <dependantfiles displayname ="saveFiles.ashx.cs" url="~\UploadBox\saveFiles.ashx.cs"/>
+      <dependantfiles displayname ="removeFiles.ashx.cs" url="~\UploadBox\removeFiles.ashx.cs"/>
+    </Samples>
+    <Samples name ="FileInput" >
+      <dependantfiles displayname ="saveFiles.ashx.cs" url="~\UploadBox\saveFiles.ashx.cs"/>
+      <dependantfiles displayname ="removeFiles.ashx.cs" url="~\UploadBox\removeFiles.ashx.cs"/>
+    </Samples>    
+  </Controls>
+</SourceTabSettings>

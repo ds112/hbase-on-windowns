@@ -1,0 +1,4 @@
+REM Python package should be install to run python job
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK 
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\python\mllib\dataset_example
+spark-submit --driver-java-options -XX:MaxPermSize=1024m --master yarn %SYNCBDP_HOME%\SDK\Spark\examples\src\main\python\mllib\dataset_example.py /Data/Spark/MLLib/Sample_LibSVM_Data.txt

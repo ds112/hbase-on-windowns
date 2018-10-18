@@ -1,0 +1,47 @@
+﻿@section SampleHeading
+{
+   
+}
+<script></script>
+</script>
+@section ControlsSection{
+   @{Html.BeginForm("IterationDefault", "Iteration", FormMethod.Post);
+{
+        <p>
+            <strong>This sample demonstrates, how to fetch the records from the Hive table and iterate each tuple from the result and display the records</strong> <br />&nbsp;
+            <input class="dumpButton" id="dumpButton" type="submit" value="Fetch" style="width: 120px;float:right"  />
+        </p>
+       <div style="color:red;padding-top:3px;padding-bottom:10px">@MVCSampleBrowser.Controllers.IterationController.ErrorMessage</div>
+     
+    Html.EndForm();
+  }}
+<body>
+    <div id="showtable">
+        @{Html.EJ().RTE("rteSample").Width("100%").Height("500%").AllowEditing(false).Locale("en-US").ShowToolbar(false).ContentTemplate(@<p>
+        @if(ViewBag.DataSource!=null)   {
+         <table border="1">
+                <tr>
+                    <th>ContactId</th>
+                    <th>FullName</th>
+                    <th>Age</th>
+                    <th>Email Id</th>
+                    <th>Phone Number</th>
+                    <th>Last Modified Date</th>
+                </tr>
+                @foreach (PersonDetail Model in ViewBag.DataSource)
+                {
+                    <tr>
+                        <td> @Model.ContactId</td>
+                        <td> @Model.FullName</td>
+                        <td> @Model.Age</td>
+                        <td> @Model.EmailId</td>
+                        <td> @Model.PhoneNumber</td>
+                        <td> @Model.ModifiedDate</td>
+                    </tr>
+                }
+            </table>}
+        </p>).ShowFooter(false).Render();
+            }
+    </div>
+</body>
+}

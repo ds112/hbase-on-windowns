@@ -1,0 +1,9 @@
+REM test:used for file test operations.
+REM Syntax:hdfs dfs -test -[e] <filename>
+hdfs dfs -test -e /Data/WarPeace.txt
+
+REM Syntax:hdfs dfs -test -[d] <filename>
+hdfs dfs -test -d /Data/WarPeace.txt
+
+REM Syntax:hdfs dfs -test -[z] <filename>
+hdfs dfs -test -z /Data/WarPeace.txt

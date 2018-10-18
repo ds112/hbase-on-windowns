@@ -1,0 +1,8 @@
+REM JavaFlumeEventCount: Produces a count of events received from Flume
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK
+REM Sample source code is available at REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\java\org\apache\spark\examples\JavaFlumeEventCount
+REM Specify active name node hostname/IP address in place of hostname in below line to access data from the cluster.
+REM SYNTAX: "Usage: JavaFlumeEventCount <hostname> <port>"
+REM To build with Gradle run following command 
+REM gradle -p %SYNCBDP_HOME%\Samples\Java\Spark\Streaming\JavaFlumeEventCount build
+spark-submit --class org.apache.spark.examples.streaming.JavaFlumeEventCount --master yarn %SYNCBDP_HOME%\SDK\Spark\jars\spark-examples_2.11-2.0.0.jar localhost 9996

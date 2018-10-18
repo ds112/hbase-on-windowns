@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Products>
+
+<!--Region ShowCase-->
+<ShowcaseSample Name="Iteration" SourcePath="CSharp\C# Hive Samples\WPF\Samples\Iteration\CS"  />
+<ShowcaseSample Name="Data Binding" SourcePath="CSharp\C# Hive Samples\WPF\Samples\Data Binding\CS"  />
+<ShowcaseSample Name="Strongly Typed Binding" SourcePath="CSharp\C# Hive Samples\WPF\Samples\Strongly Typed Binding\CS" />
+<ShowcaseSample Name="Export" SourcePath="CSharp\C# Hive Samples\WPF\Samples\Export\CS" />
+<ShowcaseSample Name="Asynchronous" SourcePath="CSharp\C# Hive Samples\WPF\Samples\Asynchronous\CS" />
+</Products>

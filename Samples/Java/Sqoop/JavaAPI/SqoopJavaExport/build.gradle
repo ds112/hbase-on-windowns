@@ -1,0 +1,59 @@
+/* For the first time set SYNCBDP_HOME as System environment variable with below path based on your installation location.
+ * "<Install Drive>\Syncfusion\BigData\<Install Version>\BigDataSDK"
+ */
+
+ext.syncfusionPath = "$System.env.SYNCBDP_HOME"
+ext.syncfusionHadoopSDKPath = "$syncfusionPath/SDK/Hadoop"
+ext.syncfusionSqoopSDKPath = "$syncfusionPath/SDK/Sqoop"
+
+println(projectDir)
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'SqoopExportJob'
+sourceCompatibility = 1.7
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Sqoop Gradle',
+                   'Main-Class': 'SqoopExportJob'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	compile fileTree(dir: "$syncfusionHadoopSDKPath/etc/Hadoop", include: '*.*')
+    compile fileTree(dir: "$syncfusionSqoopSDKPath", include: '*.jar')
+    compile fileTree(dir: "$syncfusionSqoopSDKPath/lib", include: '*.jar')
+    compile fileTree(dir: "$syncfusionSqoopSDKPath/conf", include: '*.*')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/common", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/common/lib", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/hdfs", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/hdfs/lib", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/yarn", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/yarn/lib", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/tools", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/mapreduce", include: '*.jar')
+}
+
+
+run{
+    if(project.hasProperty("arguments")) {
+        args(arguments.split(' '))
+    }
+}
+
+task runJar(type:Exec) {
+    if(project.hasProperty("arguments")) {
+        args arguments
+    }
+    workingDir 'src/main/java'
+    environment 'JAVA_HOME' , "$syncfusionPath/Java/jdk1.7.0_51"
+    environment 'HADOOP_HOME', "$syncfusionHadoopSDKPath"
+    environment 'SQOOP_HOME', "$syncfusionSqoopSDKPath"
+    commandLine 'cmd', '/c', "$syncfusionPath/Java/jdk1.7.0_51/bin/java -cp $projectDir/build/libs/SqoopJavaExport.jar;$syncfusionSqoopSDKPath/*;$syncfusionSqoopSDKPath/conf/*;$syncfusionSqoopSDKPath/lib/*;$syncfusionHadoopSDKPath/etc/hadoop/*;$syncfusionHadoopSDKPath/share/hadoop/common/*;$syncfusionHadoopSDKPath/share/hadoop/common/lib/*;$syncfusionHadoopSDKPath/share/hadoop/hdfs/*;$syncfusionHadoopSDKPath/share/hadoop/hdfs/lib/*;$syncfusionHadoopSDKPath/share/hadoop/yarn/*;$syncfusionHadoopSDKPath/share/hadoop/yarn/lib/*;$syncfusionHadoopSDKPath/share/hadoop/tools/*;$syncfusionHadoopSDKPath/share/hadoop/mapreduce/* SqoopExportJob"
+}

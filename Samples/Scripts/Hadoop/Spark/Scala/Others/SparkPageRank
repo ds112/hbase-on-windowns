@@ -1,0 +1,8 @@
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\scala\org\apache\spark\examples\SparkPageRank
+REM Computes the PageRank of URLs from an input file. Input file should be in format of:
+REM URL  neighbor URL
+REM URL  neighbor URL
+REM URL  neighbor URL
+REM Usage: SparkPageRank <file> <iter>
+spark-submit --class org.apache.spark.examples.SparkPageRank --master yarn %SYNCBDP_HOME%\SDK\Spark\jars\spark-examples_2.11-2.0.0.jar /Data/Spark/MLLib/PageRank_Data.txt 0

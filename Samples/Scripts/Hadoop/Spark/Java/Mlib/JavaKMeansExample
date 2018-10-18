@@ -1,0 +1,7 @@
+REM JavaKMeans: Example using MLlib KMeans from Java
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\java\org\apache\spark\examples\mlib\JavaKMeans
+REM SYNTAX:"Usage: JavaKMeans <input_file> <k> <max_iterations> [<runs>]"
+REM To build with Gradle run following command 
+REM gradle -p %SYNCBDP_HOME%\Samples\Java\Spark\Mlib\JavaKMeans build
+spark-submit --class org.apache.spark.examples.mllib.JavaKMeansExample --master yarn %SYNCBDP_HOME%\SDK\Spark\jars\spark-examples_2.11-2.0.0.jar /Data/Spark/MLLib/KMeans_Data.txt 2 10

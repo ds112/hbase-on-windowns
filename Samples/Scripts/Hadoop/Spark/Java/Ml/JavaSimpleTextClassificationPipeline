@@ -1,0 +1,6 @@
+REM JavaSimpleTextClassificationPipeline: simple text classification pipeline that recognizes "spark" from input text
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\java\org\apache\spark\examples\ml\JavaSimpleTextClassificationPipeline
+REM To build with Gradle run following command 
+REM gradle -p %SYNCBDP_HOME%\Samples\Java\Spark\Ml\JavaSimpleTextClassificationPipeline build
+spark-submit --class org.apache.spark.examples.ml.JavaSimpleTextClassificationPipeline --master yarn %SYNCBDP_HOME%\SDK\Spark\jars\spark-examples_2.11-2.0.0.jar 

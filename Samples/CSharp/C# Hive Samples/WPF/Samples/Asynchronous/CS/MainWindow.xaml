@@ -1,0 +1,228 @@
+﻿<Window x:Class="Asynchronous.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:I="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:local="clr-namespace:Asynchronous"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+       Icon="/Assets/BigData.ico"
+        syncfusion:LayoutControl.SetMetroMode="True" Width="970" Height="442" MinHeight="397" MinWidth="980" ResizeMode="NoResize" MaxHeight="{DynamicResource {x:Static SystemParameters.MaximizedPrimaryScreenHeightKey}}" MaxWidth="{DynamicResource {x:Static SystemParameters.MaximizedPrimaryScreenWidthKey}}" SizeChanged="Window_SizeChanged">
+    
+    <syncfusion:WindowChrome.WindowChrome>
+        <syncfusion:WindowChrome />
+    </syncfusion:WindowChrome.WindowChrome>
+
+    <!--  Window DataContext Definition  -->
+    <Window.DataContext>
+        <local:ViewModel />
+    </Window.DataContext>
+    <Border BorderThickness="0.7"  BorderBrush="#666665">
+        <Grid Background="#FCFCFC">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="53*" />
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Rectangle Height="30" Grid.Row="0"   VerticalAlignment="Top" Fill="#FCFCFC"></Rectangle>
+            <TextBlock Text="Asynchronous" Height="30" Foreground="#2382C3" FontFamily="Segoe UI Semibold" Margin="30,5,0,0"  VerticalAlignment="Top" Grid.Row="0"  HorizontalAlignment="Left" FontSize="16"/>
+            <Image Source="/Assets/BigData.ico" Grid.Column="0" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Height="20"></Image>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"
+                        VerticalAlignment="Top" Margin="0 10 10 0"
+                        syncfusion:WindowChrome.IsHitTestVisibleInChrome="True">
+
+
+                <Button Width="20"  BorderThickness="0"   Content="0" Click="Minimize" FontFamily="Webdings">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Foreground" Value="#2382C3" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="Background" Value="Gray"></Setter>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button x:Name="btnRestore" Width="20"  BorderThickness="0" Visibility="Collapsed" Content="2" Click="Restore" FontFamily="Webdings">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Foreground" Value="#2382C3" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="Background" Value="Gray"></Setter>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button x:Name="btnMaximize" Width="20"  BorderThickness="0"  Content="1" Click="Maximize" FontFamily="Webdings">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Foreground" Value="#2382C3" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="Background" Value="Gray"></Setter>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button Width="20"  BorderThickness="0"  Content="r" FontFamily="Webdings" 
+                         Click="Close">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Foreground" Value="#2382C3" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="Background" Value="Gray"></Setter>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </StackPanel>
+            <!--  GridDataControl Definition  -->
+            <syncfusion:GridDataControl x:Name="grid" AllowEdit="False"
+                                            Grid.Row="0"
+                                            AllowSelection="Any"
+                                            AllowSort="True"
+                                            ApplySizingAfterLoad="True"
+                                            AutoPopulateColumns="False"
+                                            AutoPopulateRelations="False"
+                                            ColumnSizer="Star"
+                                            FilterBehavior="StringTyped"
+                                            ItemsSource="{Binding OrderDetails}"
+                                            NotifyPropertyChanges="True"
+                                            ShowAddNewRow="False"
+                                            ShowFilterBar="False"
+                                            syncfusion:LayoutControl.IgnoreStyle="True"
+                                            UpdateMode="PropertyChanged"
+                                            VisualStyle="Metro" Margin="20,93,10,0"
+                                            >
+
+                <!--  GridDataControl Visible Columns Definition  -->
+                <syncfusion:GridDataControl.VisibleColumns>
+
+                    <syncfusion:GridDataVisibleColumn HeaderText="Contact ID" MappingName="contactid" MaximumWidth="85">
+                        <syncfusion:GridDataVisibleColumn.ColumnStyle>
+                            <syncfusion:GridDataColumnStyle HorizontalAlignment="Left" />
+                        </syncfusion:GridDataVisibleColumn.ColumnStyle>
+                        <syncfusion:GridDataVisibleColumn.HeaderStyle>
+                            <syncfusion:GridDataColumnStyle HorizontalAlignment="Center" />
+                        </syncfusion:GridDataVisibleColumn.HeaderStyle>
+                    </syncfusion:GridDataVisibleColumn>
+
+                    <syncfusion:GridDataVisibleColumn HeaderText="Full Name" MappingName="fullname" MaximumWidth="170">
+                        <syncfusion:GridDataVisibleColumn.ColumnStyle>
+                            <syncfusion:GridDataColumnStyle HorizontalAlignment="Left" />
+                        </syncfusion:GridDataVisibleColumn.ColumnStyle>
+                        <syncfusion:GridDataVisibleColumn.HeaderStyle>
+                            <syncfusion:GridDataColumnStyle HorizontalAlignment="Center" />
+                        </syncfusion:GridDataVisibleColumn.HeaderStyle>
+                    </syncfusion:GridDataVisibleColumn>
+                    <syncfusion:GridDataVisibleColumn HeaderText="Age" MappingName="age" MaximumWidth="90">
+                        <syncfusion:GridDataVisibleColumn.ColumnStyle>
+                            <syncfusion:GridDataColumnStyle HorizontalAlignment="Left" />
+                        </syncfusion:GridDataVisibleColumn.ColumnStyle>
+                        <syncfusion:GridDataVisibleColumn.HeaderStyle>
+                            <syncfusion:GridDataColumnStyle HorizontalAlignment="Center" />
+                        </syncfusion:GridDataVisibleColumn.HeaderStyle>
+                    </syncfusion:GridDataVisibleColumn>
+
+                    <syncfusion:GridDataVisibleColumn HeaderText="Email Address" MappingName="emailaddress" MaximumWidth="250">
+                        <syncfusion:GridDataVisibleColumn.ColumnStyle>
+                            <syncfusion:GridDataColumnStyle HorizontalAlignment="Left" />
+                        </syncfusion:GridDataVisibleColumn.ColumnStyle>
+                        <syncfusion:GridDataVisibleColumn.HeaderStyle>
+                            <syncfusion:GridDataColumnStyle HorizontalAlignment="Center" />
+                        </syncfusion:GridDataVisibleColumn.HeaderStyle>
+                    </syncfusion:GridDataVisibleColumn>
+
+                    <syncfusion:GridDataVisibleColumn HeaderText="Phone No" MappingName="phoneno" MaximumWidth="170">
+                        <syncfusion:GridDataVisibleColumn.HeaderStyle>
+                            <syncfusion:GridDataColumnStyle HorizontalAlignment="Center" />
+                        </syncfusion:GridDataVisibleColumn.HeaderStyle>
+                        <syncfusion:GridDataVisibleColumn.ColumnStyle>
+                            <syncfusion:GridDataColumnStyle HorizontalAlignment="Left" />
+                        </syncfusion:GridDataVisibleColumn.ColumnStyle>
+                    </syncfusion:GridDataVisibleColumn>
+
+                    <syncfusion:GridDataVisibleColumn HeaderText="Modified Date" MappingName="modifieddate" MaximumWidth="170">
+                        <syncfusion:GridDataVisibleColumn.ColumnStyle>
+                            <syncfusion:GridDataColumnStyle HorizontalAlignment="Left"/>
+                        </syncfusion:GridDataVisibleColumn.ColumnStyle>
+                        <syncfusion:GridDataVisibleColumn.HeaderStyle>
+                            <syncfusion:GridDataColumnStyle HorizontalAlignment="Center" />
+                        </syncfusion:GridDataVisibleColumn.HeaderStyle>
+
+                    </syncfusion:GridDataVisibleColumn>
+
+                </syncfusion:GridDataControl.VisibleColumns>
+            </syncfusion:GridDataControl>
+            <!--  DataPager Definition  -->
+            <syncfusion:DataPagerExt x:Name="dataPager"
+                                         HorizontalAlignment="Right"
+                                         VerticalAlignment="Top"
+                                         AutoEllipsis="True"
+                                         DisplayMode="PreviousNext"
+                                         IsPagingOnDemand="True" 
+                                         
+                                         NumericButtonCount="10"
+                                         PageSize="25" Height="24" Width="52" Margin="0,0,10,0" Grid.Row="1" />
+            <Label Content="This sample demonstrates the asynchronous access of records from the Hive table." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,45,0,0" Foreground="#545453
+" FontSize="16"/>
+
+        </Grid>
+    </Border>
+    <!--</syncfusion:LayoutControl.GridView>
+    </syncfusion:LayoutControl>-->
+    <I:Interaction.Behaviors >
+        <local:SummaryCalculationBehavior  />
+    </I:Interaction.Behaviors>
+</Window>
+

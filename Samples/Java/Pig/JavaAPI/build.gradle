@@ -1,0 +1,55 @@
+/* For the first time set SYNCBDP_HOME as System environment variable with below path based on your installation location.
+ * "<Install Drive>\Syncfusion\BigData\<Install Version>\BigDataSDK"
+ */
+
+ext.syncfusionPath =  "$System.env.SYNCBDP_HOME"
+ext.syncfusionHadoopSDKPath = "$syncfusionPath/SDK/Hadoop"
+ext.syncfusionPigSDKPath = "$syncfusionPath/SDK/Pig"
+ext.syncfusionHadoopConf = "$syncfusionPath/SDK/Hadoop/etc/hadoop"
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'Pig'
+sourceCompatibility = 1.7
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Pig Gradle',
+                'Main-Class': 'Pig'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(dir: "$syncfusionPigSDKPath", include: '*.jar')
+    compile fileTree(dir: "$syncfusionPigSDKPath/lib", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopConf", include: '*.*')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/common", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/common/lib", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/hdfs", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/hdfs/lib", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/yarn", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/yarn/lib", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/tools", include: '*.jar')
+    compile fileTree(dir: "$syncfusionHadoopSDKPath/share/hadoop/mapreduce", include: '*.jar')
+}
+
+run{
+    environment 'HADOOP_HOME', "$syncfusionHadoopSDKPath"
+    environment 'PIG_HOME', "$syncfusionPigSDKPath"
+    if(project.hasProperty("arguments")) {
+        args(arguments.split(' '))
+    }
+}
+
+task runPig(type:Exec) {
+    if(project.hasProperty("arguments")) {
+        args(arguments.split(' '))
+    }
+    environment 'JAVA_HOME' , "$syncfusionPath/Java/jdk1.7.0_51"
+    environment 'HADOOP_HOME', "$syncfusionHadoopSDKPath"
+    commandLine 'cmd', '/c', "$syncfusionPath/Java/jdk1.7.0_51/bin/java -cp $projectDir/build/libs/JavaAPI.jar;$syncfusionPigSDKPath/*;$syncfusionPigSDKPath/lib/*;$syncfusionHadoopConf;$syncfusionHadoopSDKPath/share/hadoop/common/*;$syncfusionHadoopSDKPath/share/hadoop/common/lib/*;$syncfusionHadoopSDKPath/share/hadoop/hdfs/*;$syncfusionHadoopSDKPath/share/hadoop/hdfs/lib/*;$syncfusionHadoopSDKPath/share/hadoop/yarn/*;$syncfusionHadoopSDKPath/share/hadoop/yarn/lib/*;$syncfusionHadoopSDKPath/share/hadoop/tools/*;$syncfusionHadoopSDKPath/share/hadoop/mapreduce/* Pig",args[0]
+}

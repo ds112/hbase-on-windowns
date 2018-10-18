@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Products>
+
+<!--Region ShowCase-->
+<ShowcaseSample Name="KMeansModel" SourcePath="CSharp\C# Analytics Samples\WPF\KMeansModel"  />
+<ShowcaseSample Name="LinearRegressionModel" SourcePath="CSharp\C# Analytics Samples\WPF\LinearRegressionModel"  />
+<ShowcaseSample Name="RidgeRegressionModel" SourcePath="CSharp\C# Analytics Samples\WPF\RidgeRegressionModel" />
+<ShowcaseSample Name="LassoModel" SourcePath="CSharp\C# Analytics Samples\WPF\LassoModel" />
+<ShowcaseSample Name="SVMModel" SourcePath="CSharp\C# Analytics Samples\WPF\SVMModel" />
+<ShowcaseSample Name="Binary LogisticRegressionModel" SourcePath="CSharp\C# Analytics Samples\WPF\Binary LogisticRegressionModel" />
+</Products>

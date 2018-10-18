@@ -1,0 +1,16 @@
+/*----------------------OLAP Definition------------------*/
+/*----------------------Reportviewer Definition start------------------*/
+/*----------------------Reportviewer Definition End------------------*/
+/*-----------------------SymbolPalette Definition-----------------*/
+/*-----------------------Datepicker Definition-----------------*/
+/*-----------------------Bootstrap support-----------------*/
+/*------------------------ Ribbon Definition---------------------*/
+.e-nb.e-nb-layout.e-nb-right,
+.e-nb.e-nb-layout.e-nb-left {
+  background: #1f1f1f;
+  /* Old browsers */
+
+  color: #aaaaaa;
+  border: 1px solid #303030;
+  box-shadow: -1px 0 10px 0 black;
+}

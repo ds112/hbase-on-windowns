@@ -1,0 +1,46 @@
+/* For the first time set SYNCBDP_HOME as System environment variable with below path based on your installation location.
+ * "<Install Drive>\Syncfusion\BigData\<Install Version>\BigDataSDK"
+ */
+
+ext.syncfusionPath = "$System.env.SYNCBDP_HOME"
+ext.syncfusionHadoopSDKPath = "$syncfusionPath/SDK/Hadoop" 
+ext.syncfusionHadoopCommonJar = "$syncfusionHadoopSDKPath/share/hadoop/common"
+ext.syncfusionHadoopHdfsJar = "$syncfusionHadoopSDKPath/share/hadoop/hdfs"
+ext.syncfusionHadoopMapreduceJar = "$syncfusionHadoopSDKPath/share/hadoop/mapreduce"
+ext.syncfusionHadoopYarnJar = "$syncfusionHadoopSDKPath/share/hadoop/yarn"
+ext.syncfusionHadoopToolsJar = "$syncfusionHadoopSDKPath/share/hadoop/tools"
+println syncfusionHadoopSDKPath
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'com.syncfusion.SecondarySort'
+sourceCompatibility = 1.7
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Quickstart',
+                   'Main-Class': 'com.syncfusion.SecondarySort'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	compile fileTree(dir: "$syncfusionHadoopCommonJar", include: '*.jar')
+	compile fileTree(dir: "$syncfusionHadoopCommonJar/lib", include: '*.jar')
+	compile fileTree(dir: "$syncfusionHadoopHdfsJar", include: '*.jar')
+	compile fileTree(dir: "$syncfusionHadoopMapreduceJar", include: '*.jar')
+	compile fileTree(dir: "$syncfusionHadoopYarnJar", include: '*.jar')
+	compile fileTree(dir: "$syncfusionHadoopToolsJar", include: '*.jar')
+}
+
+task runJar (type:Exec){
+ if(project.hasProperty("arguments")) {
+        args arguments.split(' ')
+    }
+	environment 'JAVA_HOME', '$syncfusionPath/Java/jdk1.7.0_51'
+	environment 'HADOOP_HOME', '$syncfusionHadoopSDKPath'
+	commandLine 'cmd', '/c', "$syncfusionHadoopSDKPath/bin/hadoop jar $projectDir/build/libs/SecondarySort.jar ",args[0]
+}

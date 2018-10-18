@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Products>
+
+<!--Region ShowCase-->
+<ShowcaseSample Name="Iteration" SourcePath="CSharp\C# Hive Samples\WF\Samples\Iteration\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+<ShowcaseSample Name="Data Binding" SourcePath="CSharp\C# Hive Samples\WF\Samples\Data Binding\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+<ShowcaseSample Name="Strongly Typed Binding" SourcePath="CSharp\C# Hive Samples\WF\Samples\Strongly Typed Binding\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+<ShowcaseSample Name="Export" SourcePath="CSharp\C# Hive Samples\WF\Samples\Export\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+<ShowcaseSample Name="Asynchronous" SourcePath="CSharp\C# Hive Samples\WF\Samples\Asynchronous\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+</Products>

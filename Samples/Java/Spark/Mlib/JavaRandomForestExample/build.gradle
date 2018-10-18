@@ -1,0 +1,47 @@
+/* For the first time set SYNCBDP_HOME as System environment variable with below path based on your installation location.
+ * "<Install Drive>\Syncfusion\BigData\<Install Version>\BigDataSDK"
+ */
+
+ext.syncfusionPath =  "$System.env.SYNCBDP_HOME"
+ext.syncfusionHadoopSDKPath = "$syncfusionPath/SDK/Hadoop"
+ext.syncfusionSparkSDKPath = "$syncfusionPath/SDK/Spark"
+ext.syncfusionHadoopCommonJar = "$syncfusionHadoopSDKPath/share/hadoop/common"
+ext.syncfusionHadoopHdfsJar = "$syncfusionHadoopSDKPath/share/hadoop/hdfs"
+ext.syncfusionHadoopMapreduceJar = "$syncfusionHadoopSDKPath/share/hadoop/mapreduce"
+ext.syncfusionHadoopYarnJar = "$syncfusionHadoopSDKPath/share/hadoop/yarn"
+ext.syncfusionHadoopToolsJar = "$syncfusionHadoopSDKPath/share/hadoop/tools"
+println syncfusionHadoopSDKPath
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'com.syncfusion.JavaRandomForestExample'
+sourceCompatibility = 1.7
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Quickstart',
+                   'Main-Class': 'com.syncfusion.JavaRandomForestExample'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	compile fileTree(dir: "$syncfusionSparkSDKPath/jars", include: '*.jar')
+}
+
+test {
+    systemProperties 'JAVA_HOME': '$syncfusionPath/Java/jdk1.7.0_51'
+    systemProperties 'HADOOP_HOME': '$syncfusionHadoopSDKPath'
+    systemProperties 'SPARK_HOME': '$syncfusionHadoopSDKPath'
+}
+
+uploadArchives {
+    repositories {
+       flatDir {
+           dirs 'repos'
+       }
+    }
+}

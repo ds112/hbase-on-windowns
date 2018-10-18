@@ -1,0 +1,6 @@
+REM Python package should be install to run python job
+REM A K-means clustering program using MLlib.
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK 
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\python\mllib\kmeans
+REM Usage: kmeans <file> <k>
+spark-submit --master yarn %SYNCBDP_HOME%\SDK\Spark\examples\src\main\python\mllib\kmeans.py /Data/Spark/MLLib/KMeans_Data.txt 2

@@ -1,0 +1,17 @@
+REM HDFS supports the fsck command to check for various inconsistencies. 
+REM It it is designed for reporting problems with various files, for example, missing blocks for a file or under-replicated blocks. 
+REM Unlike a traditional fsck utility for native file systems, this command does not correct the errors it detects. 
+REM Normally NameNode automatically corrects most of the recoverable failures. 
+REM By default fsck ignores open files but provides an option to select all files during reporting. 
+REM The HDFS fsck command is not a Hadoop shell command. It can be run as bin/hdfs fsck. 
+REM Usage: hdfs fsck <path>
+REM          [-list-corruptfileblocks |
+REM          [-move | -delete | -openforwrite]
+REM          [-files [-blocks [-locations | -racks]]]
+hdfs fsck / -list-corruptfileblocks
+hdfs fsck /Data -move
+hdfs fsck /Data -delete
+hdfs fsck /Data -openforwrite
+hdfs fsck /Data -files -blocks
+hdfs fsck /Data -files -locations
+hdfs fsck /Data -files -racks

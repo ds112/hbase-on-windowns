@@ -1,0 +1,16 @@
+REM 1. cat: To print the contents of the file on the terminal (stdout)
+REM Syntax: hdfs dfs -cat <pathfilename>
+hdfs dfs -cat /Data/WarPeace.txt
+
+REM 2. stat: Returns the stat information on the path.
+REM Syntax: hdfs dfs -stat <inputfilepath>
+hdfs dfs -stat /user/share/lib/
+
+REM 3. text: Displays last kilobyte of the file to stdout.
+REM Syntax: hdfs dfs -text <inputfielpath>
+hdfs dfs -text /Data/Ratings/Ratings.csv
+
+REM 3. Count the number of directories, files and bytes under the paths that match the specified file pattern. 
+REM Syntax: hdfs dfs -count [-q] <paths>
+hdfs dfs -count /Data /tmp
+hdfs dfs -count -q /Data

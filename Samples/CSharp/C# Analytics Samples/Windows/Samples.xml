@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Products>
+
+<!--Region ShowCase-->
+<ShowcaseSample Name="KMeans" SourcePath="CSharp\C# Analytics Samples\Windows\Samples\KMeansModel\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+<ShowcaseSample Name="LinearRegression" SourcePath="CSharp\C# Analytics Samples\Windows\Samples\LinearRegressionModel\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+<ShowcaseSample Name="RidgeRegression" SourcePath="CSharp\C# Analytics Samples\Windows\Samples\RidgeRegressionModel\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+<ShowcaseSample Name="Lasso" SourcePath="CSharp\C# Analytics Samples\Windows\Samples\LassoModel\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+<ShowcaseSample Name="SVM" SourcePath="CSharp\C# Analytics Samples\Windows\Samples\SVMModel\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+<ShowcaseSample Name="Binary LogisticRegression" SourcePath="CSharp\C# Analytics Samples\Windows\Samples\Binary LogisticRegressionModel\CS" RowSpan="1" ImagePath="CSharp\C# MapReduce Samples\Images\Invoice.png"/>
+</Products>

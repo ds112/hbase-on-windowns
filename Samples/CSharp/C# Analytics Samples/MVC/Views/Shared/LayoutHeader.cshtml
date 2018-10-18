@@ -1,0 +1,60 @@
+﻿        <div class="header">
+            <div class="sbheader">
+                <div class="title">
+                    <a title="Essential Studio for JavaScript" href=@Url.Content("~/")Introduction/IntroductionDefault class="anchorclass site-title">
+                        <div title="Big Data Studio for ASP.NET MVC HTML5" class="jslogo"></div>
+                    </a>
+                </div>
+                 <div class="deskmob" style="visibility:hidden">
+                      @*@Html.EJ().DropDownList("PlatformChoose").TargetID("samples").ClientSideEvents(dropEvt => dropEvt.Change("viewdemo")).SelectedItemIndex(0).Width("130px")*@
+                      <div id="samples">
+            <ul>
+                <li>Web</li>
+                <li>Mobile</li>
+            </ul>
+        </div>
+        </div>
+                <div style="float: right;">
+                       <div class="wrapper-demo">
+                        <a href="http://www.syncfusion.com/downloads/aspnetmvc" class="anchorclass">
+                            <button id="buybutton" class="float-right ejbutton downbutton" title="Download Trial" type="button"></button>
+                        </a>
+                    </div>
+                    <div class="themegallery">
+                        <button id="themebutton" class="ejbutton" title="Select Theme" type="button"></button>
+                       @* <div id="sbtooltipbox">
+                            <div class="sbtooltip"></div>
+                        </div>*@
+                         <div id="themeDialog" style="display: none;">
+                            <div class="themestyle">
+                                <input type="radio" id="metrotext" name="themestyle" class="themestyleradio" value="flat" />
+                                <label for="metrotext" class="skin-name">Flat</label>
+                                <input type="radio" id="gradienttext" name="themestyle" class="themestyleradio" value="gradient"/>
+                                <label for="gradienttext" class="skin-name">Gradient</label>
+                            </div>
+                            <div class="themevarient">
+                                <input type="radio" id="lighttext" name="themevarient" class="themevarientradio" value="light"/>
+                                <label for="lighttext" class="skin-name">Light</label>
+                                <input type="radio" id="darktext" name="themevarient" class="themevarientradio" value="dark"/>
+                                <label for="darktext" class="skin-name">Dark</label>
+                            </div>
+                            <div class="themecolors">
+                                <div id="themeazure" class="circlebaseouter colorsel">
+                                    <div class="circlebaseinner azure"></div>
+                                </div>
+                                <div id="themelime" class="circlebaseouter">
+                                    <div class="circlebaseinner lime"></div>
+                                </div>
+                                <div id="themesaffron" class="circlebaseouter">
+                                    <div class="circlebaseinner saffron"></div>
+                                </div>
+                            </div>
+                            <div class="bootstraptheme" >
+                                <input type="checkbox" id="bootstrapcheck" />
+                                <label for="bootstrapcheck" class="skin-name">Bootstrap</label>                                
+                            </div>                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

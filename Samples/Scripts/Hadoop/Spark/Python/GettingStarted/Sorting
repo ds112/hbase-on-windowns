@@ -1,0 +1,5 @@
+REM Python package should be install to run python job
+REM Output will be stored in the location hdfs://{hostname}:9000/Data/Output/SortingPython
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK 
+REM Sample source code is available at %SYNCBDP_HOME%\Samples\Python\Spark\Sorting
+spark-submit --master yarn %SYNCBDP_HOME%\Samples\Python\Spark\Sorting.py

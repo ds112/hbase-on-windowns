@@ -1,0 +1,85 @@
+﻿<div class="sampleheadingtext">
+    <span class="sampletitle">kmeans_data</span>
+</div>
+@section ControlsSection{
+<p>
+    <strong>This sample demonstrate the usage of PMML execution engine for prediction based on the existing dataset and PMML file using KMeans Model.</strong>
+</p><br />
+  <div class="tabview">
+    @(
+ Html.EJ().Tab("defaultTabs").Items(data =>
+       {
+           data.Add().ID("gridDiv").Text("Predicted Result").ContentTemplate(@<div>
+            <div class="tabHeight">
+
+                @*@(Html.EJ().Grid<object>("resultGrid").Datasource((IEnumerable<object>)
+                    (ViewBag.output ?? new List<object>() { new Dictionary<string, string>() { { "emptyGrid", "emptyGrid" } } }))*@
+                @(Html.EJ().Grid<List<List<String>>>("FlatGrid")
+        .Datasource((List<List<String>>)ViewBag.datasource)
+            .AllowSorting()
+            .AllowScrolling()
+            .ScrollSettings(scroll => { scroll.AllowVirtualScrolling().Height(300).Width(0).VirtualScrollMode(VirtualScrollMode.Normal); })
+        .Columns(col =>
+        {
+            col.Field("0").HeaderText("field_0").TextAlign(TextAlign.Center).Width(140).Add();
+            col.Field("1").HeaderText("field_1").TextAlign(TextAlign.Center).Width(140).Add();
+            col.Field("2").HeaderText("field_2").TextAlign(TextAlign.Center).Width(140).Add();
+            col.Field("3").HeaderText("Predicted").TextAlign(TextAlign.Center).Width(140).CssClass("predictedColumnColor").Add();
+           
+        }))    
+            </div>
+        </div>);
+           data.Add().ID("csCode").Text("C#").ContentTemplate
+
+               (@<div style="height:inherit">
+
+                <div class="tabHeight">
+                    <pre id="source" class="brush: csharp;">
+     @ViewBag.source
+</pre>
+            </div>
+            </div>);
+           data.Add().ID("spark").Text("Spark").ContentTemplate(@<div style="word-wrap: break-word; margin-top: -15px; padding-top: 15px;">
+            <div class="tabHeight">
+                <p></p>
+                <pre id="sparkCode" class="brush: perl;">
+              @ViewBag.spark
+ </pre>
+            </div>
+        </div>);
+           data.Add().ID("pmml").Text("PMML").ContentTemplate(@<div style="word-wrap: break-word; margin-top: -15px; padding-top:15px;">
+            <div class="tabHeight">
+                <pre id="pmmlCode" class="brush: perl;">
+                     @ViewBag.PMML               
+</pre>
+            </div>
+        </div>);
+       }).Height("700px"))
+</div>
+
+}
+@section ScriptSection{
+    <script type="text/javascript">
+        window.onresize = function () {
+            if ($("#VirtualScrolling .e-gridcontent").data("ejScroller"))
+                $("#VirtualScrolling .e-gridcontent").ejScroller("refresh");
+        };
+        $("#VirtualScrolling").ejGrid("option", { "scrollSettings": { "virtualScrollMode": "normal" } });
+        $("#sampleProperties").ejPropertiesPanel();
+               $(document).ready(function () {
+                   SyntaxHighlighter.highlight($("#sparkCode"));
+                   SyntaxHighlighter.highlight($("#source"));
+                   SyntaxHighlighter.highlight($("#pmmlCode"));
+               });             
+    </script>
+}
+@Html.EJ().ScriptManager()
+
+<style>
+   
+    .predictedColumnColor {
+        background-color: #d6d3d1 !important;
+    }
+
+   
+</style>

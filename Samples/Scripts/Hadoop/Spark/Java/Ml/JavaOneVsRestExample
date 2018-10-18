@@ -1,0 +1,6 @@
+REM JavaOneVsRestExample:  An example runner for Multiclass to Binary Reduction with One Vs Rest.
+REM The example uses Logistic Regression as the base classifier. 
+REM All parameters that can be specified on the base classifier can be passed in to the runner options.
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\java\org\apache\spark\examples\ml\JavaOneVsRestExample
+spark-submit --driver-java-options -XX:MaxPermSize=1024m --class org.apache.spark.examples.ml.JavaOneVsRestExample --master yarn %SYNCBDP_HOME%\SDK\Spark\jars\spark-examples_2.11-2.0.0.jar  -input /Data/Spark/MLLib/Sample_MultiClass_Classification_Data.txt

@@ -1,0 +1,7 @@
+REM Specify active name node hostname/IP address in place of {hostname} in below line to access data from the cluster.
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK
+REM Sample source code is available at REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\java\org\apache\spark\examples\JavaSparkSQL
+REM Make sure input data 'people.txt' are available at hdfs://{hostname}:9000/Data/Spark/Resources/People.txt
+REM To build with Gradle run following command 
+REM gradle -p %SYNCBDP_HOME%\Samples\Java\Spark\SQL\JavaSparkSQL build
+spark-submit --class org.apache.spark.examples.sql.JavaSparkSQLExample --master yarn %SYNCBDP_HOME%\SDK\Spark\jars\spark-examples_2.11-2.0.0.jar

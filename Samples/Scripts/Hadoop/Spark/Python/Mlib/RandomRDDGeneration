@@ -1,0 +1,6 @@
+REM Python package should be install to run python job
+REM Randomly generated RDDs.
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK 
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\python\mllib\random_rdd_generation
+REM Usage: random_rdd_generation
+spark-submit --driver-java-options -XX:MaxPermSize=1024m --master yarn %SYNCBDP_HOME%\SDK\Spark\examples\src\main\python\mllib\random_rdd_generation.py

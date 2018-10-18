@@ -1,0 +1,2094 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_2">
+    <Header description="logistic regression">
+        <Application name="Apache Spark MLlib" version="1.4.0"/>
+        <Timestamp>2015-08-12T14:24:22</Timestamp>
+    </Header>
+    <DataDictionary numberOfFields="693">
+        <DataField name="field_0" optype="continuous" dataType="double"/>
+        <DataField name="field_1" optype="continuous" dataType="double"/>
+        <DataField name="field_2" optype="continuous" dataType="double"/>
+        <DataField name="field_3" optype="continuous" dataType="double"/>
+        <DataField name="field_4" optype="continuous" dataType="double"/>
+        <DataField name="field_5" optype="continuous" dataType="double"/>
+        <DataField name="field_6" optype="continuous" dataType="double"/>
+        <DataField name="field_7" optype="continuous" dataType="double"/>
+        <DataField name="field_8" optype="continuous" dataType="double"/>
+        <DataField name="field_9" optype="continuous" dataType="double"/>
+        <DataField name="field_10" optype="continuous" dataType="double"/>
+        <DataField name="field_11" optype="continuous" dataType="double"/>
+        <DataField name="field_12" optype="continuous" dataType="double"/>
+        <DataField name="field_13" optype="continuous" dataType="double"/>
+        <DataField name="field_14" optype="continuous" dataType="double"/>
+        <DataField name="field_15" optype="continuous" dataType="double"/>
+        <DataField name="field_16" optype="continuous" dataType="double"/>
+        <DataField name="field_17" optype="continuous" dataType="double"/>
+        <DataField name="field_18" optype="continuous" dataType="double"/>
+        <DataField name="field_19" optype="continuous" dataType="double"/>
+        <DataField name="field_20" optype="continuous" dataType="double"/>
+        <DataField name="field_21" optype="continuous" dataType="double"/>
+        <DataField name="field_22" optype="continuous" dataType="double"/>
+        <DataField name="field_23" optype="continuous" dataType="double"/>
+        <DataField name="field_24" optype="continuous" dataType="double"/>
+        <DataField name="field_25" optype="continuous" dataType="double"/>
+        <DataField name="field_26" optype="continuous" dataType="double"/>
+        <DataField name="field_27" optype="continuous" dataType="double"/>
+        <DataField name="field_28" optype="continuous" dataType="double"/>
+        <DataField name="field_29" optype="continuous" dataType="double"/>
+        <DataField name="field_30" optype="continuous" dataType="double"/>
+        <DataField name="field_31" optype="continuous" dataType="double"/>
+        <DataField name="field_32" optype="continuous" dataType="double"/>
+        <DataField name="field_33" optype="continuous" dataType="double"/>
+        <DataField name="field_34" optype="continuous" dataType="double"/>
+        <DataField name="field_35" optype="continuous" dataType="double"/>
+        <DataField name="field_36" optype="continuous" dataType="double"/>
+        <DataField name="field_37" optype="continuous" dataType="double"/>
+        <DataField name="field_38" optype="continuous" dataType="double"/>
+        <DataField name="field_39" optype="continuous" dataType="double"/>
+        <DataField name="field_40" optype="continuous" dataType="double"/>
+        <DataField name="field_41" optype="continuous" dataType="double"/>
+        <DataField name="field_42" optype="continuous" dataType="double"/>
+        <DataField name="field_43" optype="continuous" dataType="double"/>
+        <DataField name="field_44" optype="continuous" dataType="double"/>
+        <DataField name="field_45" optype="continuous" dataType="double"/>
+        <DataField name="field_46" optype="continuous" dataType="double"/>
+        <DataField name="field_47" optype="continuous" dataType="double"/>
+        <DataField name="field_48" optype="continuous" dataType="double"/>
+        <DataField name="field_49" optype="continuous" dataType="double"/>
+        <DataField name="field_50" optype="continuous" dataType="double"/>
+        <DataField name="field_51" optype="continuous" dataType="double"/>
+        <DataField name="field_52" optype="continuous" dataType="double"/>
+        <DataField name="field_53" optype="continuous" dataType="double"/>
+        <DataField name="field_54" optype="continuous" dataType="double"/>
+        <DataField name="field_55" optype="continuous" dataType="double"/>
+        <DataField name="field_56" optype="continuous" dataType="double"/>
+        <DataField name="field_57" optype="continuous" dataType="double"/>
+        <DataField name="field_58" optype="continuous" dataType="double"/>
+        <DataField name="field_59" optype="continuous" dataType="double"/>
+        <DataField name="field_60" optype="continuous" dataType="double"/>
+        <DataField name="field_61" optype="continuous" dataType="double"/>
+        <DataField name="field_62" optype="continuous" dataType="double"/>
+        <DataField name="field_63" optype="continuous" dataType="double"/>
+        <DataField name="field_64" optype="continuous" dataType="double"/>
+        <DataField name="field_65" optype="continuous" dataType="double"/>
+        <DataField name="field_66" optype="continuous" dataType="double"/>
+        <DataField name="field_67" optype="continuous" dataType="double"/>
+        <DataField name="field_68" optype="continuous" dataType="double"/>
+        <DataField name="field_69" optype="continuous" dataType="double"/>
+        <DataField name="field_70" optype="continuous" dataType="double"/>
+        <DataField name="field_71" optype="continuous" dataType="double"/>
+        <DataField name="field_72" optype="continuous" dataType="double"/>
+        <DataField name="field_73" optype="continuous" dataType="double"/>
+        <DataField name="field_74" optype="continuous" dataType="double"/>
+        <DataField name="field_75" optype="continuous" dataType="double"/>
+        <DataField name="field_76" optype="continuous" dataType="double"/>
+        <DataField name="field_77" optype="continuous" dataType="double"/>
+        <DataField name="field_78" optype="continuous" dataType="double"/>
+        <DataField name="field_79" optype="continuous" dataType="double"/>
+        <DataField name="field_80" optype="continuous" dataType="double"/>
+        <DataField name="field_81" optype="continuous" dataType="double"/>
+        <DataField name="field_82" optype="continuous" dataType="double"/>
+        <DataField name="field_83" optype="continuous" dataType="double"/>
+        <DataField name="field_84" optype="continuous" dataType="double"/>
+        <DataField name="field_85" optype="continuous" dataType="double"/>
+        <DataField name="field_86" optype="continuous" dataType="double"/>
+        <DataField name="field_87" optype="continuous" dataType="double"/>
+        <DataField name="field_88" optype="continuous" dataType="double"/>
+        <DataField name="field_89" optype="continuous" dataType="double"/>
+        <DataField name="field_90" optype="continuous" dataType="double"/>
+        <DataField name="field_91" optype="continuous" dataType="double"/>
+        <DataField name="field_92" optype="continuous" dataType="double"/>
+        <DataField name="field_93" optype="continuous" dataType="double"/>
+        <DataField name="field_94" optype="continuous" dataType="double"/>
+        <DataField name="field_95" optype="continuous" dataType="double"/>
+        <DataField name="field_96" optype="continuous" dataType="double"/>
+        <DataField name="field_97" optype="continuous" dataType="double"/>
+        <DataField name="field_98" optype="continuous" dataType="double"/>
+        <DataField name="field_99" optype="continuous" dataType="double"/>
+        <DataField name="field_100" optype="continuous" dataType="double"/>
+        <DataField name="field_101" optype="continuous" dataType="double"/>
+        <DataField name="field_102" optype="continuous" dataType="double"/>
+        <DataField name="field_103" optype="continuous" dataType="double"/>
+        <DataField name="field_104" optype="continuous" dataType="double"/>
+        <DataField name="field_105" optype="continuous" dataType="double"/>
+        <DataField name="field_106" optype="continuous" dataType="double"/>
+        <DataField name="field_107" optype="continuous" dataType="double"/>
+        <DataField name="field_108" optype="continuous" dataType="double"/>
+        <DataField name="field_109" optype="continuous" dataType="double"/>
+        <DataField name="field_110" optype="continuous" dataType="double"/>
+        <DataField name="field_111" optype="continuous" dataType="double"/>
+        <DataField name="field_112" optype="continuous" dataType="double"/>
+        <DataField name="field_113" optype="continuous" dataType="double"/>
+        <DataField name="field_114" optype="continuous" dataType="double"/>
+        <DataField name="field_115" optype="continuous" dataType="double"/>
+        <DataField name="field_116" optype="continuous" dataType="double"/>
+        <DataField name="field_117" optype="continuous" dataType="double"/>
+        <DataField name="field_118" optype="continuous" dataType="double"/>
+        <DataField name="field_119" optype="continuous" dataType="double"/>
+        <DataField name="field_120" optype="continuous" dataType="double"/>
+        <DataField name="field_121" optype="continuous" dataType="double"/>
+        <DataField name="field_122" optype="continuous" dataType="double"/>
+        <DataField name="field_123" optype="continuous" dataType="double"/>
+        <DataField name="field_124" optype="continuous" dataType="double"/>
+        <DataField name="field_125" optype="continuous" dataType="double"/>
+        <DataField name="field_126" optype="continuous" dataType="double"/>
+        <DataField name="field_127" optype="continuous" dataType="double"/>
+        <DataField name="field_128" optype="continuous" dataType="double"/>
+        <DataField name="field_129" optype="continuous" dataType="double"/>
+        <DataField name="field_130" optype="continuous" dataType="double"/>
+        <DataField name="field_131" optype="continuous" dataType="double"/>
+        <DataField name="field_132" optype="continuous" dataType="double"/>
+        <DataField name="field_133" optype="continuous" dataType="double"/>
+        <DataField name="field_134" optype="continuous" dataType="double"/>
+        <DataField name="field_135" optype="continuous" dataType="double"/>
+        <DataField name="field_136" optype="continuous" dataType="double"/>
+        <DataField name="field_137" optype="continuous" dataType="double"/>
+        <DataField name="field_138" optype="continuous" dataType="double"/>
+        <DataField name="field_139" optype="continuous" dataType="double"/>
+        <DataField name="field_140" optype="continuous" dataType="double"/>
+        <DataField name="field_141" optype="continuous" dataType="double"/>
+        <DataField name="field_142" optype="continuous" dataType="double"/>
+        <DataField name="field_143" optype="continuous" dataType="double"/>
+        <DataField name="field_144" optype="continuous" dataType="double"/>
+        <DataField name="field_145" optype="continuous" dataType="double"/>
+        <DataField name="field_146" optype="continuous" dataType="double"/>
+        <DataField name="field_147" optype="continuous" dataType="double"/>
+        <DataField name="field_148" optype="continuous" dataType="double"/>
+        <DataField name="field_149" optype="continuous" dataType="double"/>
+        <DataField name="field_150" optype="continuous" dataType="double"/>
+        <DataField name="field_151" optype="continuous" dataType="double"/>
+        <DataField name="field_152" optype="continuous" dataType="double"/>
+        <DataField name="field_153" optype="continuous" dataType="double"/>
+        <DataField name="field_154" optype="continuous" dataType="double"/>
+        <DataField name="field_155" optype="continuous" dataType="double"/>
+        <DataField name="field_156" optype="continuous" dataType="double"/>
+        <DataField name="field_157" optype="continuous" dataType="double"/>
+        <DataField name="field_158" optype="continuous" dataType="double"/>
+        <DataField name="field_159" optype="continuous" dataType="double"/>
+        <DataField name="field_160" optype="continuous" dataType="double"/>
+        <DataField name="field_161" optype="continuous" dataType="double"/>
+        <DataField name="field_162" optype="continuous" dataType="double"/>
+        <DataField name="field_163" optype="continuous" dataType="double"/>
+        <DataField name="field_164" optype="continuous" dataType="double"/>
+        <DataField name="field_165" optype="continuous" dataType="double"/>
+        <DataField name="field_166" optype="continuous" dataType="double"/>
+        <DataField name="field_167" optype="continuous" dataType="double"/>
+        <DataField name="field_168" optype="continuous" dataType="double"/>
+        <DataField name="field_169" optype="continuous" dataType="double"/>
+        <DataField name="field_170" optype="continuous" dataType="double"/>
+        <DataField name="field_171" optype="continuous" dataType="double"/>
+        <DataField name="field_172" optype="continuous" dataType="double"/>
+        <DataField name="field_173" optype="continuous" dataType="double"/>
+        <DataField name="field_174" optype="continuous" dataType="double"/>
+        <DataField name="field_175" optype="continuous" dataType="double"/>
+        <DataField name="field_176" optype="continuous" dataType="double"/>
+        <DataField name="field_177" optype="continuous" dataType="double"/>
+        <DataField name="field_178" optype="continuous" dataType="double"/>
+        <DataField name="field_179" optype="continuous" dataType="double"/>
+        <DataField name="field_180" optype="continuous" dataType="double"/>
+        <DataField name="field_181" optype="continuous" dataType="double"/>
+        <DataField name="field_182" optype="continuous" dataType="double"/>
+        <DataField name="field_183" optype="continuous" dataType="double"/>
+        <DataField name="field_184" optype="continuous" dataType="double"/>
+        <DataField name="field_185" optype="continuous" dataType="double"/>
+        <DataField name="field_186" optype="continuous" dataType="double"/>
+        <DataField name="field_187" optype="continuous" dataType="double"/>
+        <DataField name="field_188" optype="continuous" dataType="double"/>
+        <DataField name="field_189" optype="continuous" dataType="double"/>
+        <DataField name="field_190" optype="continuous" dataType="double"/>
+        <DataField name="field_191" optype="continuous" dataType="double"/>
+        <DataField name="field_192" optype="continuous" dataType="double"/>
+        <DataField name="field_193" optype="continuous" dataType="double"/>
+        <DataField name="field_194" optype="continuous" dataType="double"/>
+        <DataField name="field_195" optype="continuous" dataType="double"/>
+        <DataField name="field_196" optype="continuous" dataType="double"/>
+        <DataField name="field_197" optype="continuous" dataType="double"/>
+        <DataField name="field_198" optype="continuous" dataType="double"/>
+        <DataField name="field_199" optype="continuous" dataType="double"/>
+        <DataField name="field_200" optype="continuous" dataType="double"/>
+        <DataField name="field_201" optype="continuous" dataType="double"/>
+        <DataField name="field_202" optype="continuous" dataType="double"/>
+        <DataField name="field_203" optype="continuous" dataType="double"/>
+        <DataField name="field_204" optype="continuous" dataType="double"/>
+        <DataField name="field_205" optype="continuous" dataType="double"/>
+        <DataField name="field_206" optype="continuous" dataType="double"/>
+        <DataField name="field_207" optype="continuous" dataType="double"/>
+        <DataField name="field_208" optype="continuous" dataType="double"/>
+        <DataField name="field_209" optype="continuous" dataType="double"/>
+        <DataField name="field_210" optype="continuous" dataType="double"/>
+        <DataField name="field_211" optype="continuous" dataType="double"/>
+        <DataField name="field_212" optype="continuous" dataType="double"/>
+        <DataField name="field_213" optype="continuous" dataType="double"/>
+        <DataField name="field_214" optype="continuous" dataType="double"/>
+        <DataField name="field_215" optype="continuous" dataType="double"/>
+        <DataField name="field_216" optype="continuous" dataType="double"/>
+        <DataField name="field_217" optype="continuous" dataType="double"/>
+        <DataField name="field_218" optype="continuous" dataType="double"/>
+        <DataField name="field_219" optype="continuous" dataType="double"/>
+        <DataField name="field_220" optype="continuous" dataType="double"/>
+        <DataField name="field_221" optype="continuous" dataType="double"/>
+        <DataField name="field_222" optype="continuous" dataType="double"/>
+        <DataField name="field_223" optype="continuous" dataType="double"/>
+        <DataField name="field_224" optype="continuous" dataType="double"/>
+        <DataField name="field_225" optype="continuous" dataType="double"/>
+        <DataField name="field_226" optype="continuous" dataType="double"/>
+        <DataField name="field_227" optype="continuous" dataType="double"/>
+        <DataField name="field_228" optype="continuous" dataType="double"/>
+        <DataField name="field_229" optype="continuous" dataType="double"/>
+        <DataField name="field_230" optype="continuous" dataType="double"/>
+        <DataField name="field_231" optype="continuous" dataType="double"/>
+        <DataField name="field_232" optype="continuous" dataType="double"/>
+        <DataField name="field_233" optype="continuous" dataType="double"/>
+        <DataField name="field_234" optype="continuous" dataType="double"/>
+        <DataField name="field_235" optype="continuous" dataType="double"/>
+        <DataField name="field_236" optype="continuous" dataType="double"/>
+        <DataField name="field_237" optype="continuous" dataType="double"/>
+        <DataField name="field_238" optype="continuous" dataType="double"/>
+        <DataField name="field_239" optype="continuous" dataType="double"/>
+        <DataField name="field_240" optype="continuous" dataType="double"/>
+        <DataField name="field_241" optype="continuous" dataType="double"/>
+        <DataField name="field_242" optype="continuous" dataType="double"/>
+        <DataField name="field_243" optype="continuous" dataType="double"/>
+        <DataField name="field_244" optype="continuous" dataType="double"/>
+        <DataField name="field_245" optype="continuous" dataType="double"/>
+        <DataField name="field_246" optype="continuous" dataType="double"/>
+        <DataField name="field_247" optype="continuous" dataType="double"/>
+        <DataField name="field_248" optype="continuous" dataType="double"/>
+        <DataField name="field_249" optype="continuous" dataType="double"/>
+        <DataField name="field_250" optype="continuous" dataType="double"/>
+        <DataField name="field_251" optype="continuous" dataType="double"/>
+        <DataField name="field_252" optype="continuous" dataType="double"/>
+        <DataField name="field_253" optype="continuous" dataType="double"/>
+        <DataField name="field_254" optype="continuous" dataType="double"/>
+        <DataField name="field_255" optype="continuous" dataType="double"/>
+        <DataField name="field_256" optype="continuous" dataType="double"/>
+        <DataField name="field_257" optype="continuous" dataType="double"/>
+        <DataField name="field_258" optype="continuous" dataType="double"/>
+        <DataField name="field_259" optype="continuous" dataType="double"/>
+        <DataField name="field_260" optype="continuous" dataType="double"/>
+        <DataField name="field_261" optype="continuous" dataType="double"/>
+        <DataField name="field_262" optype="continuous" dataType="double"/>
+        <DataField name="field_263" optype="continuous" dataType="double"/>
+        <DataField name="field_264" optype="continuous" dataType="double"/>
+        <DataField name="field_265" optype="continuous" dataType="double"/>
+        <DataField name="field_266" optype="continuous" dataType="double"/>
+        <DataField name="field_267" optype="continuous" dataType="double"/>
+        <DataField name="field_268" optype="continuous" dataType="double"/>
+        <DataField name="field_269" optype="continuous" dataType="double"/>
+        <DataField name="field_270" optype="continuous" dataType="double"/>
+        <DataField name="field_271" optype="continuous" dataType="double"/>
+        <DataField name="field_272" optype="continuous" dataType="double"/>
+        <DataField name="field_273" optype="continuous" dataType="double"/>
+        <DataField name="field_274" optype="continuous" dataType="double"/>
+        <DataField name="field_275" optype="continuous" dataType="double"/>
+        <DataField name="field_276" optype="continuous" dataType="double"/>
+        <DataField name="field_277" optype="continuous" dataType="double"/>
+        <DataField name="field_278" optype="continuous" dataType="double"/>
+        <DataField name="field_279" optype="continuous" dataType="double"/>
+        <DataField name="field_280" optype="continuous" dataType="double"/>
+        <DataField name="field_281" optype="continuous" dataType="double"/>
+        <DataField name="field_282" optype="continuous" dataType="double"/>
+        <DataField name="field_283" optype="continuous" dataType="double"/>
+        <DataField name="field_284" optype="continuous" dataType="double"/>
+        <DataField name="field_285" optype="continuous" dataType="double"/>
+        <DataField name="field_286" optype="continuous" dataType="double"/>
+        <DataField name="field_287" optype="continuous" dataType="double"/>
+        <DataField name="field_288" optype="continuous" dataType="double"/>
+        <DataField name="field_289" optype="continuous" dataType="double"/>
+        <DataField name="field_290" optype="continuous" dataType="double"/>
+        <DataField name="field_291" optype="continuous" dataType="double"/>
+        <DataField name="field_292" optype="continuous" dataType="double"/>
+        <DataField name="field_293" optype="continuous" dataType="double"/>
+        <DataField name="field_294" optype="continuous" dataType="double"/>
+        <DataField name="field_295" optype="continuous" dataType="double"/>
+        <DataField name="field_296" optype="continuous" dataType="double"/>
+        <DataField name="field_297" optype="continuous" dataType="double"/>
+        <DataField name="field_298" optype="continuous" dataType="double"/>
+        <DataField name="field_299" optype="continuous" dataType="double"/>
+        <DataField name="field_300" optype="continuous" dataType="double"/>
+        <DataField name="field_301" optype="continuous" dataType="double"/>
+        <DataField name="field_302" optype="continuous" dataType="double"/>
+        <DataField name="field_303" optype="continuous" dataType="double"/>
+        <DataField name="field_304" optype="continuous" dataType="double"/>
+        <DataField name="field_305" optype="continuous" dataType="double"/>
+        <DataField name="field_306" optype="continuous" dataType="double"/>
+        <DataField name="field_307" optype="continuous" dataType="double"/>
+        <DataField name="field_308" optype="continuous" dataType="double"/>
+        <DataField name="field_309" optype="continuous" dataType="double"/>
+        <DataField name="field_310" optype="continuous" dataType="double"/>
+        <DataField name="field_311" optype="continuous" dataType="double"/>
+        <DataField name="field_312" optype="continuous" dataType="double"/>
+        <DataField name="field_313" optype="continuous" dataType="double"/>
+        <DataField name="field_314" optype="continuous" dataType="double"/>
+        <DataField name="field_315" optype="continuous" dataType="double"/>
+        <DataField name="field_316" optype="continuous" dataType="double"/>
+        <DataField name="field_317" optype="continuous" dataType="double"/>
+        <DataField name="field_318" optype="continuous" dataType="double"/>
+        <DataField name="field_319" optype="continuous" dataType="double"/>
+        <DataField name="field_320" optype="continuous" dataType="double"/>
+        <DataField name="field_321" optype="continuous" dataType="double"/>
+        <DataField name="field_322" optype="continuous" dataType="double"/>
+        <DataField name="field_323" optype="continuous" dataType="double"/>
+        <DataField name="field_324" optype="continuous" dataType="double"/>
+        <DataField name="field_325" optype="continuous" dataType="double"/>
+        <DataField name="field_326" optype="continuous" dataType="double"/>
+        <DataField name="field_327" optype="continuous" dataType="double"/>
+        <DataField name="field_328" optype="continuous" dataType="double"/>
+        <DataField name="field_329" optype="continuous" dataType="double"/>
+        <DataField name="field_330" optype="continuous" dataType="double"/>
+        <DataField name="field_331" optype="continuous" dataType="double"/>
+        <DataField name="field_332" optype="continuous" dataType="double"/>
+        <DataField name="field_333" optype="continuous" dataType="double"/>
+        <DataField name="field_334" optype="continuous" dataType="double"/>
+        <DataField name="field_335" optype="continuous" dataType="double"/>
+        <DataField name="field_336" optype="continuous" dataType="double"/>
+        <DataField name="field_337" optype="continuous" dataType="double"/>
+        <DataField name="field_338" optype="continuous" dataType="double"/>
+        <DataField name="field_339" optype="continuous" dataType="double"/>
+        <DataField name="field_340" optype="continuous" dataType="double"/>
+        <DataField name="field_341" optype="continuous" dataType="double"/>
+        <DataField name="field_342" optype="continuous" dataType="double"/>
+        <DataField name="field_343" optype="continuous" dataType="double"/>
+        <DataField name="field_344" optype="continuous" dataType="double"/>
+        <DataField name="field_345" optype="continuous" dataType="double"/>
+        <DataField name="field_346" optype="continuous" dataType="double"/>
+        <DataField name="field_347" optype="continuous" dataType="double"/>
+        <DataField name="field_348" optype="continuous" dataType="double"/>
+        <DataField name="field_349" optype="continuous" dataType="double"/>
+        <DataField name="field_350" optype="continuous" dataType="double"/>
+        <DataField name="field_351" optype="continuous" dataType="double"/>
+        <DataField name="field_352" optype="continuous" dataType="double"/>
+        <DataField name="field_353" optype="continuous" dataType="double"/>
+        <DataField name="field_354" optype="continuous" dataType="double"/>
+        <DataField name="field_355" optype="continuous" dataType="double"/>
+        <DataField name="field_356" optype="continuous" dataType="double"/>
+        <DataField name="field_357" optype="continuous" dataType="double"/>
+        <DataField name="field_358" optype="continuous" dataType="double"/>
+        <DataField name="field_359" optype="continuous" dataType="double"/>
+        <DataField name="field_360" optype="continuous" dataType="double"/>
+        <DataField name="field_361" optype="continuous" dataType="double"/>
+        <DataField name="field_362" optype="continuous" dataType="double"/>
+        <DataField name="field_363" optype="continuous" dataType="double"/>
+        <DataField name="field_364" optype="continuous" dataType="double"/>
+        <DataField name="field_365" optype="continuous" dataType="double"/>
+        <DataField name="field_366" optype="continuous" dataType="double"/>
+        <DataField name="field_367" optype="continuous" dataType="double"/>
+        <DataField name="field_368" optype="continuous" dataType="double"/>
+        <DataField name="field_369" optype="continuous" dataType="double"/>
+        <DataField name="field_370" optype="continuous" dataType="double"/>
+        <DataField name="field_371" optype="continuous" dataType="double"/>
+        <DataField name="field_372" optype="continuous" dataType="double"/>
+        <DataField name="field_373" optype="continuous" dataType="double"/>
+        <DataField name="field_374" optype="continuous" dataType="double"/>
+        <DataField name="field_375" optype="continuous" dataType="double"/>
+        <DataField name="field_376" optype="continuous" dataType="double"/>
+        <DataField name="field_377" optype="continuous" dataType="double"/>
+        <DataField name="field_378" optype="continuous" dataType="double"/>
+        <DataField name="field_379" optype="continuous" dataType="double"/>
+        <DataField name="field_380" optype="continuous" dataType="double"/>
+        <DataField name="field_381" optype="continuous" dataType="double"/>
+        <DataField name="field_382" optype="continuous" dataType="double"/>
+        <DataField name="field_383" optype="continuous" dataType="double"/>
+        <DataField name="field_384" optype="continuous" dataType="double"/>
+        <DataField name="field_385" optype="continuous" dataType="double"/>
+        <DataField name="field_386" optype="continuous" dataType="double"/>
+        <DataField name="field_387" optype="continuous" dataType="double"/>
+        <DataField name="field_388" optype="continuous" dataType="double"/>
+        <DataField name="field_389" optype="continuous" dataType="double"/>
+        <DataField name="field_390" optype="continuous" dataType="double"/>
+        <DataField name="field_391" optype="continuous" dataType="double"/>
+        <DataField name="field_392" optype="continuous" dataType="double"/>
+        <DataField name="field_393" optype="continuous" dataType="double"/>
+        <DataField name="field_394" optype="continuous" dataType="double"/>
+        <DataField name="field_395" optype="continuous" dataType="double"/>
+        <DataField name="field_396" optype="continuous" dataType="double"/>
+        <DataField name="field_397" optype="continuous" dataType="double"/>
+        <DataField name="field_398" optype="continuous" dataType="double"/>
+        <DataField name="field_399" optype="continuous" dataType="double"/>
+        <DataField name="field_400" optype="continuous" dataType="double"/>
+        <DataField name="field_401" optype="continuous" dataType="double"/>
+        <DataField name="field_402" optype="continuous" dataType="double"/>
+        <DataField name="field_403" optype="continuous" dataType="double"/>
+        <DataField name="field_404" optype="continuous" dataType="double"/>
+        <DataField name="field_405" optype="continuous" dataType="double"/>
+        <DataField name="field_406" optype="continuous" dataType="double"/>
+        <DataField name="field_407" optype="continuous" dataType="double"/>
+        <DataField name="field_408" optype="continuous" dataType="double"/>
+        <DataField name="field_409" optype="continuous" dataType="double"/>
+        <DataField name="field_410" optype="continuous" dataType="double"/>
+        <DataField name="field_411" optype="continuous" dataType="double"/>
+        <DataField name="field_412" optype="continuous" dataType="double"/>
+        <DataField name="field_413" optype="continuous" dataType="double"/>
+        <DataField name="field_414" optype="continuous" dataType="double"/>
+        <DataField name="field_415" optype="continuous" dataType="double"/>
+        <DataField name="field_416" optype="continuous" dataType="double"/>
+        <DataField name="field_417" optype="continuous" dataType="double"/>
+        <DataField name="field_418" optype="continuous" dataType="double"/>
+        <DataField name="field_419" optype="continuous" dataType="double"/>
+        <DataField name="field_420" optype="continuous" dataType="double"/>
+        <DataField name="field_421" optype="continuous" dataType="double"/>
+        <DataField name="field_422" optype="continuous" dataType="double"/>
+        <DataField name="field_423" optype="continuous" dataType="double"/>
+        <DataField name="field_424" optype="continuous" dataType="double"/>
+        <DataField name="field_425" optype="continuous" dataType="double"/>
+        <DataField name="field_426" optype="continuous" dataType="double"/>
+        <DataField name="field_427" optype="continuous" dataType="double"/>
+        <DataField name="field_428" optype="continuous" dataType="double"/>
+        <DataField name="field_429" optype="continuous" dataType="double"/>
+        <DataField name="field_430" optype="continuous" dataType="double"/>
+        <DataField name="field_431" optype="continuous" dataType="double"/>
+        <DataField name="field_432" optype="continuous" dataType="double"/>
+        <DataField name="field_433" optype="continuous" dataType="double"/>
+        <DataField name="field_434" optype="continuous" dataType="double"/>
+        <DataField name="field_435" optype="continuous" dataType="double"/>
+        <DataField name="field_436" optype="continuous" dataType="double"/>
+        <DataField name="field_437" optype="continuous" dataType="double"/>
+        <DataField name="field_438" optype="continuous" dataType="double"/>
+        <DataField name="field_439" optype="continuous" dataType="double"/>
+        <DataField name="field_440" optype="continuous" dataType="double"/>
+        <DataField name="field_441" optype="continuous" dataType="double"/>
+        <DataField name="field_442" optype="continuous" dataType="double"/>
+        <DataField name="field_443" optype="continuous" dataType="double"/>
+        <DataField name="field_444" optype="continuous" dataType="double"/>
+        <DataField name="field_445" optype="continuous" dataType="double"/>
+        <DataField name="field_446" optype="continuous" dataType="double"/>
+        <DataField name="field_447" optype="continuous" dataType="double"/>
+        <DataField name="field_448" optype="continuous" dataType="double"/>
+        <DataField name="field_449" optype="continuous" dataType="double"/>
+        <DataField name="field_450" optype="continuous" dataType="double"/>
+        <DataField name="field_451" optype="continuous" dataType="double"/>
+        <DataField name="field_452" optype="continuous" dataType="double"/>
+        <DataField name="field_453" optype="continuous" dataType="double"/>
+        <DataField name="field_454" optype="continuous" dataType="double"/>
+        <DataField name="field_455" optype="continuous" dataType="double"/>
+        <DataField name="field_456" optype="continuous" dataType="double"/>
+        <DataField name="field_457" optype="continuous" dataType="double"/>
+        <DataField name="field_458" optype="continuous" dataType="double"/>
+        <DataField name="field_459" optype="continuous" dataType="double"/>
+        <DataField name="field_460" optype="continuous" dataType="double"/>
+        <DataField name="field_461" optype="continuous" dataType="double"/>
+        <DataField name="field_462" optype="continuous" dataType="double"/>
+        <DataField name="field_463" optype="continuous" dataType="double"/>
+        <DataField name="field_464" optype="continuous" dataType="double"/>
+        <DataField name="field_465" optype="continuous" dataType="double"/>
+        <DataField name="field_466" optype="continuous" dataType="double"/>
+        <DataField name="field_467" optype="continuous" dataType="double"/>
+        <DataField name="field_468" optype="continuous" dataType="double"/>
+        <DataField name="field_469" optype="continuous" dataType="double"/>
+        <DataField name="field_470" optype="continuous" dataType="double"/>
+        <DataField name="field_471" optype="continuous" dataType="double"/>
+        <DataField name="field_472" optype="continuous" dataType="double"/>
+        <DataField name="field_473" optype="continuous" dataType="double"/>
+        <DataField name="field_474" optype="continuous" dataType="double"/>
+        <DataField name="field_475" optype="continuous" dataType="double"/>
+        <DataField name="field_476" optype="continuous" dataType="double"/>
+        <DataField name="field_477" optype="continuous" dataType="double"/>
+        <DataField name="field_478" optype="continuous" dataType="double"/>
+        <DataField name="field_479" optype="continuous" dataType="double"/>
+        <DataField name="field_480" optype="continuous" dataType="double"/>
+        <DataField name="field_481" optype="continuous" dataType="double"/>
+        <DataField name="field_482" optype="continuous" dataType="double"/>
+        <DataField name="field_483" optype="continuous" dataType="double"/>
+        <DataField name="field_484" optype="continuous" dataType="double"/>
+        <DataField name="field_485" optype="continuous" dataType="double"/>
+        <DataField name="field_486" optype="continuous" dataType="double"/>
+        <DataField name="field_487" optype="continuous" dataType="double"/>
+        <DataField name="field_488" optype="continuous" dataType="double"/>
+        <DataField name="field_489" optype="continuous" dataType="double"/>
+        <DataField name="field_490" optype="continuous" dataType="double"/>
+        <DataField name="field_491" optype="continuous" dataType="double"/>
+        <DataField name="field_492" optype="continuous" dataType="double"/>
+        <DataField name="field_493" optype="continuous" dataType="double"/>
+        <DataField name="field_494" optype="continuous" dataType="double"/>
+        <DataField name="field_495" optype="continuous" dataType="double"/>
+        <DataField name="field_496" optype="continuous" dataType="double"/>
+        <DataField name="field_497" optype="continuous" dataType="double"/>
+        <DataField name="field_498" optype="continuous" dataType="double"/>
+        <DataField name="field_499" optype="continuous" dataType="double"/>
+        <DataField name="field_500" optype="continuous" dataType="double"/>
+        <DataField name="field_501" optype="continuous" dataType="double"/>
+        <DataField name="field_502" optype="continuous" dataType="double"/>
+        <DataField name="field_503" optype="continuous" dataType="double"/>
+        <DataField name="field_504" optype="continuous" dataType="double"/>
+        <DataField name="field_505" optype="continuous" dataType="double"/>
+        <DataField name="field_506" optype="continuous" dataType="double"/>
+        <DataField name="field_507" optype="continuous" dataType="double"/>
+        <DataField name="field_508" optype="continuous" dataType="double"/>
+        <DataField name="field_509" optype="continuous" dataType="double"/>
+        <DataField name="field_510" optype="continuous" dataType="double"/>
+        <DataField name="field_511" optype="continuous" dataType="double"/>
+        <DataField name="field_512" optype="continuous" dataType="double"/>
+        <DataField name="field_513" optype="continuous" dataType="double"/>
+        <DataField name="field_514" optype="continuous" dataType="double"/>
+        <DataField name="field_515" optype="continuous" dataType="double"/>
+        <DataField name="field_516" optype="continuous" dataType="double"/>
+        <DataField name="field_517" optype="continuous" dataType="double"/>
+        <DataField name="field_518" optype="continuous" dataType="double"/>
+        <DataField name="field_519" optype="continuous" dataType="double"/>
+        <DataField name="field_520" optype="continuous" dataType="double"/>
+        <DataField name="field_521" optype="continuous" dataType="double"/>
+        <DataField name="field_522" optype="continuous" dataType="double"/>
+        <DataField name="field_523" optype="continuous" dataType="double"/>
+        <DataField name="field_524" optype="continuous" dataType="double"/>
+        <DataField name="field_525" optype="continuous" dataType="double"/>
+        <DataField name="field_526" optype="continuous" dataType="double"/>
+        <DataField name="field_527" optype="continuous" dataType="double"/>
+        <DataField name="field_528" optype="continuous" dataType="double"/>
+        <DataField name="field_529" optype="continuous" dataType="double"/>
+        <DataField name="field_530" optype="continuous" dataType="double"/>
+        <DataField name="field_531" optype="continuous" dataType="double"/>
+        <DataField name="field_532" optype="continuous" dataType="double"/>
+        <DataField name="field_533" optype="continuous" dataType="double"/>
+        <DataField name="field_534" optype="continuous" dataType="double"/>
+        <DataField name="field_535" optype="continuous" dataType="double"/>
+        <DataField name="field_536" optype="continuous" dataType="double"/>
+        <DataField name="field_537" optype="continuous" dataType="double"/>
+        <DataField name="field_538" optype="continuous" dataType="double"/>
+        <DataField name="field_539" optype="continuous" dataType="double"/>
+        <DataField name="field_540" optype="continuous" dataType="double"/>
+        <DataField name="field_541" optype="continuous" dataType="double"/>
+        <DataField name="field_542" optype="continuous" dataType="double"/>
+        <DataField name="field_543" optype="continuous" dataType="double"/>
+        <DataField name="field_544" optype="continuous" dataType="double"/>
+        <DataField name="field_545" optype="continuous" dataType="double"/>
+        <DataField name="field_546" optype="continuous" dataType="double"/>
+        <DataField name="field_547" optype="continuous" dataType="double"/>
+        <DataField name="field_548" optype="continuous" dataType="double"/>
+        <DataField name="field_549" optype="continuous" dataType="double"/>
+        <DataField name="field_550" optype="continuous" dataType="double"/>
+        <DataField name="field_551" optype="continuous" dataType="double"/>
+        <DataField name="field_552" optype="continuous" dataType="double"/>
+        <DataField name="field_553" optype="continuous" dataType="double"/>
+        <DataField name="field_554" optype="continuous" dataType="double"/>
+        <DataField name="field_555" optype="continuous" dataType="double"/>
+        <DataField name="field_556" optype="continuous" dataType="double"/>
+        <DataField name="field_557" optype="continuous" dataType="double"/>
+        <DataField name="field_558" optype="continuous" dataType="double"/>
+        <DataField name="field_559" optype="continuous" dataType="double"/>
+        <DataField name="field_560" optype="continuous" dataType="double"/>
+        <DataField name="field_561" optype="continuous" dataType="double"/>
+        <DataField name="field_562" optype="continuous" dataType="double"/>
+        <DataField name="field_563" optype="continuous" dataType="double"/>
+        <DataField name="field_564" optype="continuous" dataType="double"/>
+        <DataField name="field_565" optype="continuous" dataType="double"/>
+        <DataField name="field_566" optype="continuous" dataType="double"/>
+        <DataField name="field_567" optype="continuous" dataType="double"/>
+        <DataField name="field_568" optype="continuous" dataType="double"/>
+        <DataField name="field_569" optype="continuous" dataType="double"/>
+        <DataField name="field_570" optype="continuous" dataType="double"/>
+        <DataField name="field_571" optype="continuous" dataType="double"/>
+        <DataField name="field_572" optype="continuous" dataType="double"/>
+        <DataField name="field_573" optype="continuous" dataType="double"/>
+        <DataField name="field_574" optype="continuous" dataType="double"/>
+        <DataField name="field_575" optype="continuous" dataType="double"/>
+        <DataField name="field_576" optype="continuous" dataType="double"/>
+        <DataField name="field_577" optype="continuous" dataType="double"/>
+        <DataField name="field_578" optype="continuous" dataType="double"/>
+        <DataField name="field_579" optype="continuous" dataType="double"/>
+        <DataField name="field_580" optype="continuous" dataType="double"/>
+        <DataField name="field_581" optype="continuous" dataType="double"/>
+        <DataField name="field_582" optype="continuous" dataType="double"/>
+        <DataField name="field_583" optype="continuous" dataType="double"/>
+        <DataField name="field_584" optype="continuous" dataType="double"/>
+        <DataField name="field_585" optype="continuous" dataType="double"/>
+        <DataField name="field_586" optype="continuous" dataType="double"/>
+        <DataField name="field_587" optype="continuous" dataType="double"/>
+        <DataField name="field_588" optype="continuous" dataType="double"/>
+        <DataField name="field_589" optype="continuous" dataType="double"/>
+        <DataField name="field_590" optype="continuous" dataType="double"/>
+        <DataField name="field_591" optype="continuous" dataType="double"/>
+        <DataField name="field_592" optype="continuous" dataType="double"/>
+        <DataField name="field_593" optype="continuous" dataType="double"/>
+        <DataField name="field_594" optype="continuous" dataType="double"/>
+        <DataField name="field_595" optype="continuous" dataType="double"/>
+        <DataField name="field_596" optype="continuous" dataType="double"/>
+        <DataField name="field_597" optype="continuous" dataType="double"/>
+        <DataField name="field_598" optype="continuous" dataType="double"/>
+        <DataField name="field_599" optype="continuous" dataType="double"/>
+        <DataField name="field_600" optype="continuous" dataType="double"/>
+        <DataField name="field_601" optype="continuous" dataType="double"/>
+        <DataField name="field_602" optype="continuous" dataType="double"/>
+        <DataField name="field_603" optype="continuous" dataType="double"/>
+        <DataField name="field_604" optype="continuous" dataType="double"/>
+        <DataField name="field_605" optype="continuous" dataType="double"/>
+        <DataField name="field_606" optype="continuous" dataType="double"/>
+        <DataField name="field_607" optype="continuous" dataType="double"/>
+        <DataField name="field_608" optype="continuous" dataType="double"/>
+        <DataField name="field_609" optype="continuous" dataType="double"/>
+        <DataField name="field_610" optype="continuous" dataType="double"/>
+        <DataField name="field_611" optype="continuous" dataType="double"/>
+        <DataField name="field_612" optype="continuous" dataType="double"/>
+        <DataField name="field_613" optype="continuous" dataType="double"/>
+        <DataField name="field_614" optype="continuous" dataType="double"/>
+        <DataField name="field_615" optype="continuous" dataType="double"/>
+        <DataField name="field_616" optype="continuous" dataType="double"/>
+        <DataField name="field_617" optype="continuous" dataType="double"/>
+        <DataField name="field_618" optype="continuous" dataType="double"/>
+        <DataField name="field_619" optype="continuous" dataType="double"/>
+        <DataField name="field_620" optype="continuous" dataType="double"/>
+        <DataField name="field_621" optype="continuous" dataType="double"/>
+        <DataField name="field_622" optype="continuous" dataType="double"/>
+        <DataField name="field_623" optype="continuous" dataType="double"/>
+        <DataField name="field_624" optype="continuous" dataType="double"/>
+        <DataField name="field_625" optype="continuous" dataType="double"/>
+        <DataField name="field_626" optype="continuous" dataType="double"/>
+        <DataField name="field_627" optype="continuous" dataType="double"/>
+        <DataField name="field_628" optype="continuous" dataType="double"/>
+        <DataField name="field_629" optype="continuous" dataType="double"/>
+        <DataField name="field_630" optype="continuous" dataType="double"/>
+        <DataField name="field_631" optype="continuous" dataType="double"/>
+        <DataField name="field_632" optype="continuous" dataType="double"/>
+        <DataField name="field_633" optype="continuous" dataType="double"/>
+        <DataField name="field_634" optype="continuous" dataType="double"/>
+        <DataField name="field_635" optype="continuous" dataType="double"/>
+        <DataField name="field_636" optype="continuous" dataType="double"/>
+        <DataField name="field_637" optype="continuous" dataType="double"/>
+        <DataField name="field_638" optype="continuous" dataType="double"/>
+        <DataField name="field_639" optype="continuous" dataType="double"/>
+        <DataField name="field_640" optype="continuous" dataType="double"/>
+        <DataField name="field_641" optype="continuous" dataType="double"/>
+        <DataField name="field_642" optype="continuous" dataType="double"/>
+        <DataField name="field_643" optype="continuous" dataType="double"/>
+        <DataField name="field_644" optype="continuous" dataType="double"/>
+        <DataField name="field_645" optype="continuous" dataType="double"/>
+        <DataField name="field_646" optype="continuous" dataType="double"/>
+        <DataField name="field_647" optype="continuous" dataType="double"/>
+        <DataField name="field_648" optype="continuous" dataType="double"/>
+        <DataField name="field_649" optype="continuous" dataType="double"/>
+        <DataField name="field_650" optype="continuous" dataType="double"/>
+        <DataField name="field_651" optype="continuous" dataType="double"/>
+        <DataField name="field_652" optype="continuous" dataType="double"/>
+        <DataField name="field_653" optype="continuous" dataType="double"/>
+        <DataField name="field_654" optype="continuous" dataType="double"/>
+        <DataField name="field_655" optype="continuous" dataType="double"/>
+        <DataField name="field_656" optype="continuous" dataType="double"/>
+        <DataField name="field_657" optype="continuous" dataType="double"/>
+        <DataField name="field_658" optype="continuous" dataType="double"/>
+        <DataField name="field_659" optype="continuous" dataType="double"/>
+        <DataField name="field_660" optype="continuous" dataType="double"/>
+        <DataField name="field_661" optype="continuous" dataType="double"/>
+        <DataField name="field_662" optype="continuous" dataType="double"/>
+        <DataField name="field_663" optype="continuous" dataType="double"/>
+        <DataField name="field_664" optype="continuous" dataType="double"/>
+        <DataField name="field_665" optype="continuous" dataType="double"/>
+        <DataField name="field_666" optype="continuous" dataType="double"/>
+        <DataField name="field_667" optype="continuous" dataType="double"/>
+        <DataField name="field_668" optype="continuous" dataType="double"/>
+        <DataField name="field_669" optype="continuous" dataType="double"/>
+        <DataField name="field_670" optype="continuous" dataType="double"/>
+        <DataField name="field_671" optype="continuous" dataType="double"/>
+        <DataField name="field_672" optype="continuous" dataType="double"/>
+        <DataField name="field_673" optype="continuous" dataType="double"/>
+        <DataField name="field_674" optype="continuous" dataType="double"/>
+        <DataField name="field_675" optype="continuous" dataType="double"/>
+        <DataField name="field_676" optype="continuous" dataType="double"/>
+        <DataField name="field_677" optype="continuous" dataType="double"/>
+        <DataField name="field_678" optype="continuous" dataType="double"/>
+        <DataField name="field_679" optype="continuous" dataType="double"/>
+        <DataField name="field_680" optype="continuous" dataType="double"/>
+        <DataField name="field_681" optype="continuous" dataType="double"/>
+        <DataField name="field_682" optype="continuous" dataType="double"/>
+        <DataField name="field_683" optype="continuous" dataType="double"/>
+        <DataField name="field_684" optype="continuous" dataType="double"/>
+        <DataField name="field_685" optype="continuous" dataType="double"/>
+        <DataField name="field_686" optype="continuous" dataType="double"/>
+        <DataField name="field_687" optype="continuous" dataType="double"/>
+        <DataField name="field_688" optype="continuous" dataType="double"/>
+        <DataField name="field_689" optype="continuous" dataType="double"/>
+        <DataField name="field_690" optype="continuous" dataType="double"/>
+        <DataField name="field_691" optype="continuous" dataType="double"/>
+        <DataField name="target" optype="categorical" dataType="string"/>
+    </DataDictionary>
+    <RegressionModel modelName="logistic regression" functionName="classification" normalizationMethod="logit">
+        <MiningSchema>
+            <MiningField name="field_0" usageType="active"/>
+            <MiningField name="field_1" usageType="active"/>
+            <MiningField name="field_2" usageType="active"/>
+            <MiningField name="field_3" usageType="active"/>
+            <MiningField name="field_4" usageType="active"/>
+            <MiningField name="field_5" usageType="active"/>
+            <MiningField name="field_6" usageType="active"/>
+            <MiningField name="field_7" usageType="active"/>
+            <MiningField name="field_8" usageType="active"/>
+            <MiningField name="field_9" usageType="active"/>
+            <MiningField name="field_10" usageType="active"/>
+            <MiningField name="field_11" usageType="active"/>
+            <MiningField name="field_12" usageType="active"/>
+            <MiningField name="field_13" usageType="active"/>
+            <MiningField name="field_14" usageType="active"/>
+            <MiningField name="field_15" usageType="active"/>
+            <MiningField name="field_16" usageType="active"/>
+            <MiningField name="field_17" usageType="active"/>
+            <MiningField name="field_18" usageType="active"/>
+            <MiningField name="field_19" usageType="active"/>
+            <MiningField name="field_20" usageType="active"/>
+            <MiningField name="field_21" usageType="active"/>
+            <MiningField name="field_22" usageType="active"/>
+            <MiningField name="field_23" usageType="active"/>
+            <MiningField name="field_24" usageType="active"/>
+            <MiningField name="field_25" usageType="active"/>
+            <MiningField name="field_26" usageType="active"/>
+            <MiningField name="field_27" usageType="active"/>
+            <MiningField name="field_28" usageType="active"/>
+            <MiningField name="field_29" usageType="active"/>
+            <MiningField name="field_30" usageType="active"/>
+            <MiningField name="field_31" usageType="active"/>
+            <MiningField name="field_32" usageType="active"/>
+            <MiningField name="field_33" usageType="active"/>
+            <MiningField name="field_34" usageType="active"/>
+            <MiningField name="field_35" usageType="active"/>
+            <MiningField name="field_36" usageType="active"/>
+            <MiningField name="field_37" usageType="active"/>
+            <MiningField name="field_38" usageType="active"/>
+            <MiningField name="field_39" usageType="active"/>
+            <MiningField name="field_40" usageType="active"/>
+            <MiningField name="field_41" usageType="active"/>
+            <MiningField name="field_42" usageType="active"/>
+            <MiningField name="field_43" usageType="active"/>
+            <MiningField name="field_44" usageType="active"/>
+            <MiningField name="field_45" usageType="active"/>
+            <MiningField name="field_46" usageType="active"/>
+            <MiningField name="field_47" usageType="active"/>
+            <MiningField name="field_48" usageType="active"/>
+            <MiningField name="field_49" usageType="active"/>
+            <MiningField name="field_50" usageType="active"/>
+            <MiningField name="field_51" usageType="active"/>
+            <MiningField name="field_52" usageType="active"/>
+            <MiningField name="field_53" usageType="active"/>
+            <MiningField name="field_54" usageType="active"/>
+            <MiningField name="field_55" usageType="active"/>
+            <MiningField name="field_56" usageType="active"/>
+            <MiningField name="field_57" usageType="active"/>
+            <MiningField name="field_58" usageType="active"/>
+            <MiningField name="field_59" usageType="active"/>
+            <MiningField name="field_60" usageType="active"/>
+            <MiningField name="field_61" usageType="active"/>
+            <MiningField name="field_62" usageType="active"/>
+            <MiningField name="field_63" usageType="active"/>
+            <MiningField name="field_64" usageType="active"/>
+            <MiningField name="field_65" usageType="active"/>
+            <MiningField name="field_66" usageType="active"/>
+            <MiningField name="field_67" usageType="active"/>
+            <MiningField name="field_68" usageType="active"/>
+            <MiningField name="field_69" usageType="active"/>
+            <MiningField name="field_70" usageType="active"/>
+            <MiningField name="field_71" usageType="active"/>
+            <MiningField name="field_72" usageType="active"/>
+            <MiningField name="field_73" usageType="active"/>
+            <MiningField name="field_74" usageType="active"/>
+            <MiningField name="field_75" usageType="active"/>
+            <MiningField name="field_76" usageType="active"/>
+            <MiningField name="field_77" usageType="active"/>
+            <MiningField name="field_78" usageType="active"/>
+            <MiningField name="field_79" usageType="active"/>
+            <MiningField name="field_80" usageType="active"/>
+            <MiningField name="field_81" usageType="active"/>
+            <MiningField name="field_82" usageType="active"/>
+            <MiningField name="field_83" usageType="active"/>
+            <MiningField name="field_84" usageType="active"/>
+            <MiningField name="field_85" usageType="active"/>
+            <MiningField name="field_86" usageType="active"/>
+            <MiningField name="field_87" usageType="active"/>
+            <MiningField name="field_88" usageType="active"/>
+            <MiningField name="field_89" usageType="active"/>
+            <MiningField name="field_90" usageType="active"/>
+            <MiningField name="field_91" usageType="active"/>
+            <MiningField name="field_92" usageType="active"/>
+            <MiningField name="field_93" usageType="active"/>
+            <MiningField name="field_94" usageType="active"/>
+            <MiningField name="field_95" usageType="active"/>
+            <MiningField name="field_96" usageType="active"/>
+            <MiningField name="field_97" usageType="active"/>
+            <MiningField name="field_98" usageType="active"/>
+            <MiningField name="field_99" usageType="active"/>
+            <MiningField name="field_100" usageType="active"/>
+            <MiningField name="field_101" usageType="active"/>
+            <MiningField name="field_102" usageType="active"/>
+            <MiningField name="field_103" usageType="active"/>
+            <MiningField name="field_104" usageType="active"/>
+            <MiningField name="field_105" usageType="active"/>
+            <MiningField name="field_106" usageType="active"/>
+            <MiningField name="field_107" usageType="active"/>
+            <MiningField name="field_108" usageType="active"/>
+            <MiningField name="field_109" usageType="active"/>
+            <MiningField name="field_110" usageType="active"/>
+            <MiningField name="field_111" usageType="active"/>
+            <MiningField name="field_112" usageType="active"/>
+            <MiningField name="field_113" usageType="active"/>
+            <MiningField name="field_114" usageType="active"/>
+            <MiningField name="field_115" usageType="active"/>
+            <MiningField name="field_116" usageType="active"/>
+            <MiningField name="field_117" usageType="active"/>
+            <MiningField name="field_118" usageType="active"/>
+            <MiningField name="field_119" usageType="active"/>
+            <MiningField name="field_120" usageType="active"/>
+            <MiningField name="field_121" usageType="active"/>
+            <MiningField name="field_122" usageType="active"/>
+            <MiningField name="field_123" usageType="active"/>
+            <MiningField name="field_124" usageType="active"/>
+            <MiningField name="field_125" usageType="active"/>
+            <MiningField name="field_126" usageType="active"/>
+            <MiningField name="field_127" usageType="active"/>
+            <MiningField name="field_128" usageType="active"/>
+            <MiningField name="field_129" usageType="active"/>
+            <MiningField name="field_130" usageType="active"/>
+            <MiningField name="field_131" usageType="active"/>
+            <MiningField name="field_132" usageType="active"/>
+            <MiningField name="field_133" usageType="active"/>
+            <MiningField name="field_134" usageType="active"/>
+            <MiningField name="field_135" usageType="active"/>
+            <MiningField name="field_136" usageType="active"/>
+            <MiningField name="field_137" usageType="active"/>
+            <MiningField name="field_138" usageType="active"/>
+            <MiningField name="field_139" usageType="active"/>
+            <MiningField name="field_140" usageType="active"/>
+            <MiningField name="field_141" usageType="active"/>
+            <MiningField name="field_142" usageType="active"/>
+            <MiningField name="field_143" usageType="active"/>
+            <MiningField name="field_144" usageType="active"/>
+            <MiningField name="field_145" usageType="active"/>
+            <MiningField name="field_146" usageType="active"/>
+            <MiningField name="field_147" usageType="active"/>
+            <MiningField name="field_148" usageType="active"/>
+            <MiningField name="field_149" usageType="active"/>
+            <MiningField name="field_150" usageType="active"/>
+            <MiningField name="field_151" usageType="active"/>
+            <MiningField name="field_152" usageType="active"/>
+            <MiningField name="field_153" usageType="active"/>
+            <MiningField name="field_154" usageType="active"/>
+            <MiningField name="field_155" usageType="active"/>
+            <MiningField name="field_156" usageType="active"/>
+            <MiningField name="field_157" usageType="active"/>
+            <MiningField name="field_158" usageType="active"/>
+            <MiningField name="field_159" usageType="active"/>
+            <MiningField name="field_160" usageType="active"/>
+            <MiningField name="field_161" usageType="active"/>
+            <MiningField name="field_162" usageType="active"/>
+            <MiningField name="field_163" usageType="active"/>
+            <MiningField name="field_164" usageType="active"/>
+            <MiningField name="field_165" usageType="active"/>
+            <MiningField name="field_166" usageType="active"/>
+            <MiningField name="field_167" usageType="active"/>
+            <MiningField name="field_168" usageType="active"/>
+            <MiningField name="field_169" usageType="active"/>
+            <MiningField name="field_170" usageType="active"/>
+            <MiningField name="field_171" usageType="active"/>
+            <MiningField name="field_172" usageType="active"/>
+            <MiningField name="field_173" usageType="active"/>
+            <MiningField name="field_174" usageType="active"/>
+            <MiningField name="field_175" usageType="active"/>
+            <MiningField name="field_176" usageType="active"/>
+            <MiningField name="field_177" usageType="active"/>
+            <MiningField name="field_178" usageType="active"/>
+            <MiningField name="field_179" usageType="active"/>
+            <MiningField name="field_180" usageType="active"/>
+            <MiningField name="field_181" usageType="active"/>
+            <MiningField name="field_182" usageType="active"/>
+            <MiningField name="field_183" usageType="active"/>
+            <MiningField name="field_184" usageType="active"/>
+            <MiningField name="field_185" usageType="active"/>
+            <MiningField name="field_186" usageType="active"/>
+            <MiningField name="field_187" usageType="active"/>
+            <MiningField name="field_188" usageType="active"/>
+            <MiningField name="field_189" usageType="active"/>
+            <MiningField name="field_190" usageType="active"/>
+            <MiningField name="field_191" usageType="active"/>
+            <MiningField name="field_192" usageType="active"/>
+            <MiningField name="field_193" usageType="active"/>
+            <MiningField name="field_194" usageType="active"/>
+            <MiningField name="field_195" usageType="active"/>
+            <MiningField name="field_196" usageType="active"/>
+            <MiningField name="field_197" usageType="active"/>
+            <MiningField name="field_198" usageType="active"/>
+            <MiningField name="field_199" usageType="active"/>
+            <MiningField name="field_200" usageType="active"/>
+            <MiningField name="field_201" usageType="active"/>
+            <MiningField name="field_202" usageType="active"/>
+            <MiningField name="field_203" usageType="active"/>
+            <MiningField name="field_204" usageType="active"/>
+            <MiningField name="field_205" usageType="active"/>
+            <MiningField name="field_206" usageType="active"/>
+            <MiningField name="field_207" usageType="active"/>
+            <MiningField name="field_208" usageType="active"/>
+            <MiningField name="field_209" usageType="active"/>
+            <MiningField name="field_210" usageType="active"/>
+            <MiningField name="field_211" usageType="active"/>
+            <MiningField name="field_212" usageType="active"/>
+            <MiningField name="field_213" usageType="active"/>
+            <MiningField name="field_214" usageType="active"/>
+            <MiningField name="field_215" usageType="active"/>
+            <MiningField name="field_216" usageType="active"/>
+            <MiningField name="field_217" usageType="active"/>
+            <MiningField name="field_218" usageType="active"/>
+            <MiningField name="field_219" usageType="active"/>
+            <MiningField name="field_220" usageType="active"/>
+            <MiningField name="field_221" usageType="active"/>
+            <MiningField name="field_222" usageType="active"/>
+            <MiningField name="field_223" usageType="active"/>
+            <MiningField name="field_224" usageType="active"/>
+            <MiningField name="field_225" usageType="active"/>
+            <MiningField name="field_226" usageType="active"/>
+            <MiningField name="field_227" usageType="active"/>
+            <MiningField name="field_228" usageType="active"/>
+            <MiningField name="field_229" usageType="active"/>
+            <MiningField name="field_230" usageType="active"/>
+            <MiningField name="field_231" usageType="active"/>
+            <MiningField name="field_232" usageType="active"/>
+            <MiningField name="field_233" usageType="active"/>
+            <MiningField name="field_234" usageType="active"/>
+            <MiningField name="field_235" usageType="active"/>
+            <MiningField name="field_236" usageType="active"/>
+            <MiningField name="field_237" usageType="active"/>
+            <MiningField name="field_238" usageType="active"/>
+            <MiningField name="field_239" usageType="active"/>
+            <MiningField name="field_240" usageType="active"/>
+            <MiningField name="field_241" usageType="active"/>
+            <MiningField name="field_242" usageType="active"/>
+            <MiningField name="field_243" usageType="active"/>
+            <MiningField name="field_244" usageType="active"/>
+            <MiningField name="field_245" usageType="active"/>
+            <MiningField name="field_246" usageType="active"/>
+            <MiningField name="field_247" usageType="active"/>
+            <MiningField name="field_248" usageType="active"/>
+            <MiningField name="field_249" usageType="active"/>
+            <MiningField name="field_250" usageType="active"/>
+            <MiningField name="field_251" usageType="active"/>
+            <MiningField name="field_252" usageType="active"/>
+            <MiningField name="field_253" usageType="active"/>
+            <MiningField name="field_254" usageType="active"/>
+            <MiningField name="field_255" usageType="active"/>
+            <MiningField name="field_256" usageType="active"/>
+            <MiningField name="field_257" usageType="active"/>
+            <MiningField name="field_258" usageType="active"/>
+            <MiningField name="field_259" usageType="active"/>
+            <MiningField name="field_260" usageType="active"/>
+            <MiningField name="field_261" usageType="active"/>
+            <MiningField name="field_262" usageType="active"/>
+            <MiningField name="field_263" usageType="active"/>
+            <MiningField name="field_264" usageType="active"/>
+            <MiningField name="field_265" usageType="active"/>
+            <MiningField name="field_266" usageType="active"/>
+            <MiningField name="field_267" usageType="active"/>
+            <MiningField name="field_268" usageType="active"/>
+            <MiningField name="field_269" usageType="active"/>
+            <MiningField name="field_270" usageType="active"/>
+            <MiningField name="field_271" usageType="active"/>
+            <MiningField name="field_272" usageType="active"/>
+            <MiningField name="field_273" usageType="active"/>
+            <MiningField name="field_274" usageType="active"/>
+            <MiningField name="field_275" usageType="active"/>
+            <MiningField name="field_276" usageType="active"/>
+            <MiningField name="field_277" usageType="active"/>
+            <MiningField name="field_278" usageType="active"/>
+            <MiningField name="field_279" usageType="active"/>
+            <MiningField name="field_280" usageType="active"/>
+            <MiningField name="field_281" usageType="active"/>
+            <MiningField name="field_282" usageType="active"/>
+            <MiningField name="field_283" usageType="active"/>
+            <MiningField name="field_284" usageType="active"/>
+            <MiningField name="field_285" usageType="active"/>
+            <MiningField name="field_286" usageType="active"/>
+            <MiningField name="field_287" usageType="active"/>
+            <MiningField name="field_288" usageType="active"/>
+            <MiningField name="field_289" usageType="active"/>
+            <MiningField name="field_290" usageType="active"/>
+            <MiningField name="field_291" usageType="active"/>
+            <MiningField name="field_292" usageType="active"/>
+            <MiningField name="field_293" usageType="active"/>
+            <MiningField name="field_294" usageType="active"/>
+            <MiningField name="field_295" usageType="active"/>
+            <MiningField name="field_296" usageType="active"/>
+            <MiningField name="field_297" usageType="active"/>
+            <MiningField name="field_298" usageType="active"/>
+            <MiningField name="field_299" usageType="active"/>
+            <MiningField name="field_300" usageType="active"/>
+            <MiningField name="field_301" usageType="active"/>
+            <MiningField name="field_302" usageType="active"/>
+            <MiningField name="field_303" usageType="active"/>
+            <MiningField name="field_304" usageType="active"/>
+            <MiningField name="field_305" usageType="active"/>
+            <MiningField name="field_306" usageType="active"/>
+            <MiningField name="field_307" usageType="active"/>
+            <MiningField name="field_308" usageType="active"/>
+            <MiningField name="field_309" usageType="active"/>
+            <MiningField name="field_310" usageType="active"/>
+            <MiningField name="field_311" usageType="active"/>
+            <MiningField name="field_312" usageType="active"/>
+            <MiningField name="field_313" usageType="active"/>
+            <MiningField name="field_314" usageType="active"/>
+            <MiningField name="field_315" usageType="active"/>
+            <MiningField name="field_316" usageType="active"/>
+            <MiningField name="field_317" usageType="active"/>
+            <MiningField name="field_318" usageType="active"/>
+            <MiningField name="field_319" usageType="active"/>
+            <MiningField name="field_320" usageType="active"/>
+            <MiningField name="field_321" usageType="active"/>
+            <MiningField name="field_322" usageType="active"/>
+            <MiningField name="field_323" usageType="active"/>
+            <MiningField name="field_324" usageType="active"/>
+            <MiningField name="field_325" usageType="active"/>
+            <MiningField name="field_326" usageType="active"/>
+            <MiningField name="field_327" usageType="active"/>
+            <MiningField name="field_328" usageType="active"/>
+            <MiningField name="field_329" usageType="active"/>
+            <MiningField name="field_330" usageType="active"/>
+            <MiningField name="field_331" usageType="active"/>
+            <MiningField name="field_332" usageType="active"/>
+            <MiningField name="field_333" usageType="active"/>
+            <MiningField name="field_334" usageType="active"/>
+            <MiningField name="field_335" usageType="active"/>
+            <MiningField name="field_336" usageType="active"/>
+            <MiningField name="field_337" usageType="active"/>
+            <MiningField name="field_338" usageType="active"/>
+            <MiningField name="field_339" usageType="active"/>
+            <MiningField name="field_340" usageType="active"/>
+            <MiningField name="field_341" usageType="active"/>
+            <MiningField name="field_342" usageType="active"/>
+            <MiningField name="field_343" usageType="active"/>
+            <MiningField name="field_344" usageType="active"/>
+            <MiningField name="field_345" usageType="active"/>
+            <MiningField name="field_346" usageType="active"/>
+            <MiningField name="field_347" usageType="active"/>
+            <MiningField name="field_348" usageType="active"/>
+            <MiningField name="field_349" usageType="active"/>
+            <MiningField name="field_350" usageType="active"/>
+            <MiningField name="field_351" usageType="active"/>
+            <MiningField name="field_352" usageType="active"/>
+            <MiningField name="field_353" usageType="active"/>
+            <MiningField name="field_354" usageType="active"/>
+            <MiningField name="field_355" usageType="active"/>
+            <MiningField name="field_356" usageType="active"/>
+            <MiningField name="field_357" usageType="active"/>
+            <MiningField name="field_358" usageType="active"/>
+            <MiningField name="field_359" usageType="active"/>
+            <MiningField name="field_360" usageType="active"/>
+            <MiningField name="field_361" usageType="active"/>
+            <MiningField name="field_362" usageType="active"/>
+            <MiningField name="field_363" usageType="active"/>
+            <MiningField name="field_364" usageType="active"/>
+            <MiningField name="field_365" usageType="active"/>
+            <MiningField name="field_366" usageType="active"/>
+            <MiningField name="field_367" usageType="active"/>
+            <MiningField name="field_368" usageType="active"/>
+            <MiningField name="field_369" usageType="active"/>
+            <MiningField name="field_370" usageType="active"/>
+            <MiningField name="field_371" usageType="active"/>
+            <MiningField name="field_372" usageType="active"/>
+            <MiningField name="field_373" usageType="active"/>
+            <MiningField name="field_374" usageType="active"/>
+            <MiningField name="field_375" usageType="active"/>
+            <MiningField name="field_376" usageType="active"/>
+            <MiningField name="field_377" usageType="active"/>
+            <MiningField name="field_378" usageType="active"/>
+            <MiningField name="field_379" usageType="active"/>
+            <MiningField name="field_380" usageType="active"/>
+            <MiningField name="field_381" usageType="active"/>
+            <MiningField name="field_382" usageType="active"/>
+            <MiningField name="field_383" usageType="active"/>
+            <MiningField name="field_384" usageType="active"/>
+            <MiningField name="field_385" usageType="active"/>
+            <MiningField name="field_386" usageType="active"/>
+            <MiningField name="field_387" usageType="active"/>
+            <MiningField name="field_388" usageType="active"/>
+            <MiningField name="field_389" usageType="active"/>
+            <MiningField name="field_390" usageType="active"/>
+            <MiningField name="field_391" usageType="active"/>
+            <MiningField name="field_392" usageType="active"/>
+            <MiningField name="field_393" usageType="active"/>
+            <MiningField name="field_394" usageType="active"/>
+            <MiningField name="field_395" usageType="active"/>
+            <MiningField name="field_396" usageType="active"/>
+            <MiningField name="field_397" usageType="active"/>
+            <MiningField name="field_398" usageType="active"/>
+            <MiningField name="field_399" usageType="active"/>
+            <MiningField name="field_400" usageType="active"/>
+            <MiningField name="field_401" usageType="active"/>
+            <MiningField name="field_402" usageType="active"/>
+            <MiningField name="field_403" usageType="active"/>
+            <MiningField name="field_404" usageType="active"/>
+            <MiningField name="field_405" usageType="active"/>
+            <MiningField name="field_406" usageType="active"/>
+            <MiningField name="field_407" usageType="active"/>
+            <MiningField name="field_408" usageType="active"/>
+            <MiningField name="field_409" usageType="active"/>
+            <MiningField name="field_410" usageType="active"/>
+            <MiningField name="field_411" usageType="active"/>
+            <MiningField name="field_412" usageType="active"/>
+            <MiningField name="field_413" usageType="active"/>
+            <MiningField name="field_414" usageType="active"/>
+            <MiningField name="field_415" usageType="active"/>
+            <MiningField name="field_416" usageType="active"/>
+            <MiningField name="field_417" usageType="active"/>
+            <MiningField name="field_418" usageType="active"/>
+            <MiningField name="field_419" usageType="active"/>
+            <MiningField name="field_420" usageType="active"/>
+            <MiningField name="field_421" usageType="active"/>
+            <MiningField name="field_422" usageType="active"/>
+            <MiningField name="field_423" usageType="active"/>
+            <MiningField name="field_424" usageType="active"/>
+            <MiningField name="field_425" usageType="active"/>
+            <MiningField name="field_426" usageType="active"/>
+            <MiningField name="field_427" usageType="active"/>
+            <MiningField name="field_428" usageType="active"/>
+            <MiningField name="field_429" usageType="active"/>
+            <MiningField name="field_430" usageType="active"/>
+            <MiningField name="field_431" usageType="active"/>
+            <MiningField name="field_432" usageType="active"/>
+            <MiningField name="field_433" usageType="active"/>
+            <MiningField name="field_434" usageType="active"/>
+            <MiningField name="field_435" usageType="active"/>
+            <MiningField name="field_436" usageType="active"/>
+            <MiningField name="field_437" usageType="active"/>
+            <MiningField name="field_438" usageType="active"/>
+            <MiningField name="field_439" usageType="active"/>
+            <MiningField name="field_440" usageType="active"/>
+            <MiningField name="field_441" usageType="active"/>
+            <MiningField name="field_442" usageType="active"/>
+            <MiningField name="field_443" usageType="active"/>
+            <MiningField name="field_444" usageType="active"/>
+            <MiningField name="field_445" usageType="active"/>
+            <MiningField name="field_446" usageType="active"/>
+            <MiningField name="field_447" usageType="active"/>
+            <MiningField name="field_448" usageType="active"/>
+            <MiningField name="field_449" usageType="active"/>
+            <MiningField name="field_450" usageType="active"/>
+            <MiningField name="field_451" usageType="active"/>
+            <MiningField name="field_452" usageType="active"/>
+            <MiningField name="field_453" usageType="active"/>
+            <MiningField name="field_454" usageType="active"/>
+            <MiningField name="field_455" usageType="active"/>
+            <MiningField name="field_456" usageType="active"/>
+            <MiningField name="field_457" usageType="active"/>
+            <MiningField name="field_458" usageType="active"/>
+            <MiningField name="field_459" usageType="active"/>
+            <MiningField name="field_460" usageType="active"/>
+            <MiningField name="field_461" usageType="active"/>
+            <MiningField name="field_462" usageType="active"/>
+            <MiningField name="field_463" usageType="active"/>
+            <MiningField name="field_464" usageType="active"/>
+            <MiningField name="field_465" usageType="active"/>
+            <MiningField name="field_466" usageType="active"/>
+            <MiningField name="field_467" usageType="active"/>
+            <MiningField name="field_468" usageType="active"/>
+            <MiningField name="field_469" usageType="active"/>
+            <MiningField name="field_470" usageType="active"/>
+            <MiningField name="field_471" usageType="active"/>
+            <MiningField name="field_472" usageType="active"/>
+            <MiningField name="field_473" usageType="active"/>
+            <MiningField name="field_474" usageType="active"/>
+            <MiningField name="field_475" usageType="active"/>
+            <MiningField name="field_476" usageType="active"/>
+            <MiningField name="field_477" usageType="active"/>
+            <MiningField name="field_478" usageType="active"/>
+            <MiningField name="field_479" usageType="active"/>
+            <MiningField name="field_480" usageType="active"/>
+            <MiningField name="field_481" usageType="active"/>
+            <MiningField name="field_482" usageType="active"/>
+            <MiningField name="field_483" usageType="active"/>
+            <MiningField name="field_484" usageType="active"/>
+            <MiningField name="field_485" usageType="active"/>
+            <MiningField name="field_486" usageType="active"/>
+            <MiningField name="field_487" usageType="active"/>
+            <MiningField name="field_488" usageType="active"/>
+            <MiningField name="field_489" usageType="active"/>
+            <MiningField name="field_490" usageType="active"/>
+            <MiningField name="field_491" usageType="active"/>
+            <MiningField name="field_492" usageType="active"/>
+            <MiningField name="field_493" usageType="active"/>
+            <MiningField name="field_494" usageType="active"/>
+            <MiningField name="field_495" usageType="active"/>
+            <MiningField name="field_496" usageType="active"/>
+            <MiningField name="field_497" usageType="active"/>
+            <MiningField name="field_498" usageType="active"/>
+            <MiningField name="field_499" usageType="active"/>
+            <MiningField name="field_500" usageType="active"/>
+            <MiningField name="field_501" usageType="active"/>
+            <MiningField name="field_502" usageType="active"/>
+            <MiningField name="field_503" usageType="active"/>
+            <MiningField name="field_504" usageType="active"/>
+            <MiningField name="field_505" usageType="active"/>
+            <MiningField name="field_506" usageType="active"/>
+            <MiningField name="field_507" usageType="active"/>
+            <MiningField name="field_508" usageType="active"/>
+            <MiningField name="field_509" usageType="active"/>
+            <MiningField name="field_510" usageType="active"/>
+            <MiningField name="field_511" usageType="active"/>
+            <MiningField name="field_512" usageType="active"/>
+            <MiningField name="field_513" usageType="active"/>
+            <MiningField name="field_514" usageType="active"/>
+            <MiningField name="field_515" usageType="active"/>
+            <MiningField name="field_516" usageType="active"/>
+            <MiningField name="field_517" usageType="active"/>
+            <MiningField name="field_518" usageType="active"/>
+            <MiningField name="field_519" usageType="active"/>
+            <MiningField name="field_520" usageType="active"/>
+            <MiningField name="field_521" usageType="active"/>
+            <MiningField name="field_522" usageType="active"/>
+            <MiningField name="field_523" usageType="active"/>
+            <MiningField name="field_524" usageType="active"/>
+            <MiningField name="field_525" usageType="active"/>
+            <MiningField name="field_526" usageType="active"/>
+            <MiningField name="field_527" usageType="active"/>
+            <MiningField name="field_528" usageType="active"/>
+            <MiningField name="field_529" usageType="active"/>
+            <MiningField name="field_530" usageType="active"/>
+            <MiningField name="field_531" usageType="active"/>
+            <MiningField name="field_532" usageType="active"/>
+            <MiningField name="field_533" usageType="active"/>
+            <MiningField name="field_534" usageType="active"/>
+            <MiningField name="field_535" usageType="active"/>
+            <MiningField name="field_536" usageType="active"/>
+            <MiningField name="field_537" usageType="active"/>
+            <MiningField name="field_538" usageType="active"/>
+            <MiningField name="field_539" usageType="active"/>
+            <MiningField name="field_540" usageType="active"/>
+            <MiningField name="field_541" usageType="active"/>
+            <MiningField name="field_542" usageType="active"/>
+            <MiningField name="field_543" usageType="active"/>
+            <MiningField name="field_544" usageType="active"/>
+            <MiningField name="field_545" usageType="active"/>
+            <MiningField name="field_546" usageType="active"/>
+            <MiningField name="field_547" usageType="active"/>
+            <MiningField name="field_548" usageType="active"/>
+            <MiningField name="field_549" usageType="active"/>
+            <MiningField name="field_550" usageType="active"/>
+            <MiningField name="field_551" usageType="active"/>
+            <MiningField name="field_552" usageType="active"/>
+            <MiningField name="field_553" usageType="active"/>
+            <MiningField name="field_554" usageType="active"/>
+            <MiningField name="field_555" usageType="active"/>
+            <MiningField name="field_556" usageType="active"/>
+            <MiningField name="field_557" usageType="active"/>
+            <MiningField name="field_558" usageType="active"/>
+            <MiningField name="field_559" usageType="active"/>
+            <MiningField name="field_560" usageType="active"/>
+            <MiningField name="field_561" usageType="active"/>
+            <MiningField name="field_562" usageType="active"/>
+            <MiningField name="field_563" usageType="active"/>
+            <MiningField name="field_564" usageType="active"/>
+            <MiningField name="field_565" usageType="active"/>
+            <MiningField name="field_566" usageType="active"/>
+            <MiningField name="field_567" usageType="active"/>
+            <MiningField name="field_568" usageType="active"/>
+            <MiningField name="field_569" usageType="active"/>
+            <MiningField name="field_570" usageType="active"/>
+            <MiningField name="field_571" usageType="active"/>
+            <MiningField name="field_572" usageType="active"/>
+            <MiningField name="field_573" usageType="active"/>
+            <MiningField name="field_574" usageType="active"/>
+            <MiningField name="field_575" usageType="active"/>
+            <MiningField name="field_576" usageType="active"/>
+            <MiningField name="field_577" usageType="active"/>
+            <MiningField name="field_578" usageType="active"/>
+            <MiningField name="field_579" usageType="active"/>
+            <MiningField name="field_580" usageType="active"/>
+            <MiningField name="field_581" usageType="active"/>
+            <MiningField name="field_582" usageType="active"/>
+            <MiningField name="field_583" usageType="active"/>
+            <MiningField name="field_584" usageType="active"/>
+            <MiningField name="field_585" usageType="active"/>
+            <MiningField name="field_586" usageType="active"/>
+            <MiningField name="field_587" usageType="active"/>
+            <MiningField name="field_588" usageType="active"/>
+            <MiningField name="field_589" usageType="active"/>
+            <MiningField name="field_590" usageType="active"/>
+            <MiningField name="field_591" usageType="active"/>
+            <MiningField name="field_592" usageType="active"/>
+            <MiningField name="field_593" usageType="active"/>
+            <MiningField name="field_594" usageType="active"/>
+            <MiningField name="field_595" usageType="active"/>
+            <MiningField name="field_596" usageType="active"/>
+            <MiningField name="field_597" usageType="active"/>
+            <MiningField name="field_598" usageType="active"/>
+            <MiningField name="field_599" usageType="active"/>
+            <MiningField name="field_600" usageType="active"/>
+            <MiningField name="field_601" usageType="active"/>
+            <MiningField name="field_602" usageType="active"/>
+            <MiningField name="field_603" usageType="active"/>
+            <MiningField name="field_604" usageType="active"/>
+            <MiningField name="field_605" usageType="active"/>
+            <MiningField name="field_606" usageType="active"/>
+            <MiningField name="field_607" usageType="active"/>
+            <MiningField name="field_608" usageType="active"/>
+            <MiningField name="field_609" usageType="active"/>
+            <MiningField name="field_610" usageType="active"/>
+            <MiningField name="field_611" usageType="active"/>
+            <MiningField name="field_612" usageType="active"/>
+            <MiningField name="field_613" usageType="active"/>
+            <MiningField name="field_614" usageType="active"/>
+            <MiningField name="field_615" usageType="active"/>
+            <MiningField name="field_616" usageType="active"/>
+            <MiningField name="field_617" usageType="active"/>
+            <MiningField name="field_618" usageType="active"/>
+            <MiningField name="field_619" usageType="active"/>
+            <MiningField name="field_620" usageType="active"/>
+            <MiningField name="field_621" usageType="active"/>
+            <MiningField name="field_622" usageType="active"/>
+            <MiningField name="field_623" usageType="active"/>
+            <MiningField name="field_624" usageType="active"/>
+            <MiningField name="field_625" usageType="active"/>
+            <MiningField name="field_626" usageType="active"/>
+            <MiningField name="field_627" usageType="active"/>
+            <MiningField name="field_628" usageType="active"/>
+            <MiningField name="field_629" usageType="active"/>
+            <MiningField name="field_630" usageType="active"/>
+            <MiningField name="field_631" usageType="active"/>
+            <MiningField name="field_632" usageType="active"/>
+            <MiningField name="field_633" usageType="active"/>
+            <MiningField name="field_634" usageType="active"/>
+            <MiningField name="field_635" usageType="active"/>
+            <MiningField name="field_636" usageType="active"/>
+            <MiningField name="field_637" usageType="active"/>
+            <MiningField name="field_638" usageType="active"/>
+            <MiningField name="field_639" usageType="active"/>
+            <MiningField name="field_640" usageType="active"/>
+            <MiningField name="field_641" usageType="active"/>
+            <MiningField name="field_642" usageType="active"/>
+            <MiningField name="field_643" usageType="active"/>
+            <MiningField name="field_644" usageType="active"/>
+            <MiningField name="field_645" usageType="active"/>
+            <MiningField name="field_646" usageType="active"/>
+            <MiningField name="field_647" usageType="active"/>
+            <MiningField name="field_648" usageType="active"/>
+            <MiningField name="field_649" usageType="active"/>
+            <MiningField name="field_650" usageType="active"/>
+            <MiningField name="field_651" usageType="active"/>
+            <MiningField name="field_652" usageType="active"/>
+            <MiningField name="field_653" usageType="active"/>
+            <MiningField name="field_654" usageType="active"/>
+            <MiningField name="field_655" usageType="active"/>
+            <MiningField name="field_656" usageType="active"/>
+            <MiningField name="field_657" usageType="active"/>
+            <MiningField name="field_658" usageType="active"/>
+            <MiningField name="field_659" usageType="active"/>
+            <MiningField name="field_660" usageType="active"/>
+            <MiningField name="field_661" usageType="active"/>
+            <MiningField name="field_662" usageType="active"/>
+            <MiningField name="field_663" usageType="active"/>
+            <MiningField name="field_664" usageType="active"/>
+            <MiningField name="field_665" usageType="active"/>
+            <MiningField name="field_666" usageType="active"/>
+            <MiningField name="field_667" usageType="active"/>
+            <MiningField name="field_668" usageType="active"/>
+            <MiningField name="field_669" usageType="active"/>
+            <MiningField name="field_670" usageType="active"/>
+            <MiningField name="field_671" usageType="active"/>
+            <MiningField name="field_672" usageType="active"/>
+            <MiningField name="field_673" usageType="active"/>
+            <MiningField name="field_674" usageType="active"/>
+            <MiningField name="field_675" usageType="active"/>
+            <MiningField name="field_676" usageType="active"/>
+            <MiningField name="field_677" usageType="active"/>
+            <MiningField name="field_678" usageType="active"/>
+            <MiningField name="field_679" usageType="active"/>
+            <MiningField name="field_680" usageType="active"/>
+            <MiningField name="field_681" usageType="active"/>
+            <MiningField name="field_682" usageType="active"/>
+            <MiningField name="field_683" usageType="active"/>
+            <MiningField name="field_684" usageType="active"/>
+            <MiningField name="field_685" usageType="active"/>
+            <MiningField name="field_686" usageType="active"/>
+            <MiningField name="field_687" usageType="active"/>
+            <MiningField name="field_688" usageType="active"/>
+            <MiningField name="field_689" usageType="active"/>
+            <MiningField name="field_690" usageType="active"/>
+            <MiningField name="field_691" usageType="active"/>
+            <MiningField name="target" usageType="target"/>
+        </MiningSchema>
+        <RegressionTable intercept="1.0574183586571217" targetCategory="1">
+            <NumericPredictor name="field_0" coefficient="0.0"/>
+            <NumericPredictor name="field_1" coefficient="0.0"/>
+            <NumericPredictor name="field_2" coefficient="0.0"/>
+            <NumericPredictor name="field_3" coefficient="0.0"/>
+            <NumericPredictor name="field_4" coefficient="0.0"/>
+            <NumericPredictor name="field_5" coefficient="0.0"/>
+            <NumericPredictor name="field_6" coefficient="0.0"/>
+            <NumericPredictor name="field_7" coefficient="0.0"/>
+            <NumericPredictor name="field_8" coefficient="0.0"/>
+            <NumericPredictor name="field_9" coefficient="0.0"/>
+            <NumericPredictor name="field_10" coefficient="0.0"/>
+            <NumericPredictor name="field_11" coefficient="0.0"/>
+            <NumericPredictor name="field_12" coefficient="0.0"/>
+            <NumericPredictor name="field_13" coefficient="0.0"/>
+            <NumericPredictor name="field_14" coefficient="0.0"/>
+            <NumericPredictor name="field_15" coefficient="0.0"/>
+            <NumericPredictor name="field_16" coefficient="0.0"/>
+            <NumericPredictor name="field_17" coefficient="0.0"/>
+            <NumericPredictor name="field_18" coefficient="0.0"/>
+            <NumericPredictor name="field_19" coefficient="0.0"/>
+            <NumericPredictor name="field_20" coefficient="0.0"/>
+            <NumericPredictor name="field_21" coefficient="0.0"/>
+            <NumericPredictor name="field_22" coefficient="0.0"/>
+            <NumericPredictor name="field_23" coefficient="0.0"/>
+            <NumericPredictor name="field_24" coefficient="0.0"/>
+            <NumericPredictor name="field_25" coefficient="0.0"/>
+            <NumericPredictor name="field_26" coefficient="0.0"/>
+            <NumericPredictor name="field_27" coefficient="0.0"/>
+            <NumericPredictor name="field_28" coefficient="0.0"/>
+            <NumericPredictor name="field_29" coefficient="0.0"/>
+            <NumericPredictor name="field_30" coefficient="0.0"/>
+            <NumericPredictor name="field_31" coefficient="0.0"/>
+            <NumericPredictor name="field_32" coefficient="0.0"/>
+            <NumericPredictor name="field_33" coefficient="0.0"/>
+            <NumericPredictor name="field_34" coefficient="0.0"/>
+            <NumericPredictor name="field_35" coefficient="0.0"/>
+            <NumericPredictor name="field_36" coefficient="0.0"/>
+            <NumericPredictor name="field_37" coefficient="0.0"/>
+            <NumericPredictor name="field_38" coefficient="0.0"/>
+            <NumericPredictor name="field_39" coefficient="0.0"/>
+            <NumericPredictor name="field_40" coefficient="0.0"/>
+            <NumericPredictor name="field_41" coefficient="0.0"/>
+            <NumericPredictor name="field_42" coefficient="0.0"/>
+            <NumericPredictor name="field_43" coefficient="0.0"/>
+            <NumericPredictor name="field_44" coefficient="0.0"/>
+            <NumericPredictor name="field_45" coefficient="0.0"/>
+            <NumericPredictor name="field_46" coefficient="0.0"/>
+            <NumericPredictor name="field_47" coefficient="0.0"/>
+            <NumericPredictor name="field_48" coefficient="0.0"/>
+            <NumericPredictor name="field_49" coefficient="0.0"/>
+            <NumericPredictor name="field_50" coefficient="0.0"/>
+            <NumericPredictor name="field_51" coefficient="0.0"/>
+            <NumericPredictor name="field_52" coefficient="0.0"/>
+            <NumericPredictor name="field_53" coefficient="0.0"/>
+            <NumericPredictor name="field_54" coefficient="0.0"/>
+            <NumericPredictor name="field_55" coefficient="0.0"/>
+            <NumericPredictor name="field_56" coefficient="0.0"/>
+            <NumericPredictor name="field_57" coefficient="0.0"/>
+            <NumericPredictor name="field_58" coefficient="0.0"/>
+            <NumericPredictor name="field_59" coefficient="0.0"/>
+            <NumericPredictor name="field_60" coefficient="0.0"/>
+            <NumericPredictor name="field_61" coefficient="0.0"/>
+            <NumericPredictor name="field_62" coefficient="0.0"/>
+            <NumericPredictor name="field_63" coefficient="0.0"/>
+            <NumericPredictor name="field_64" coefficient="0.0"/>
+            <NumericPredictor name="field_65" coefficient="0.0"/>
+            <NumericPredictor name="field_66" coefficient="0.0"/>
+            <NumericPredictor name="field_67" coefficient="0.0"/>
+            <NumericPredictor name="field_68" coefficient="0.0"/>
+            <NumericPredictor name="field_69" coefficient="0.0"/>
+            <NumericPredictor name="field_70" coefficient="0.0"/>
+            <NumericPredictor name="field_71" coefficient="0.0"/>
+            <NumericPredictor name="field_72" coefficient="0.0"/>
+            <NumericPredictor name="field_73" coefficient="0.0"/>
+            <NumericPredictor name="field_74" coefficient="0.0"/>
+            <NumericPredictor name="field_75" coefficient="0.0"/>
+            <NumericPredictor name="field_76" coefficient="0.0"/>
+            <NumericPredictor name="field_77" coefficient="0.0"/>
+            <NumericPredictor name="field_78" coefficient="0.0"/>
+            <NumericPredictor name="field_79" coefficient="0.0"/>
+            <NumericPredictor name="field_80" coefficient="0.0"/>
+            <NumericPredictor name="field_81" coefficient="0.0"/>
+            <NumericPredictor name="field_82" coefficient="0.0"/>
+            <NumericPredictor name="field_83" coefficient="0.0"/>
+            <NumericPredictor name="field_84" coefficient="0.0"/>
+            <NumericPredictor name="field_85" coefficient="0.0"/>
+            <NumericPredictor name="field_86" coefficient="0.0"/>
+            <NumericPredictor name="field_87" coefficient="0.0"/>
+            <NumericPredictor name="field_88" coefficient="0.0"/>
+            <NumericPredictor name="field_89" coefficient="0.0"/>
+            <NumericPredictor name="field_90" coefficient="0.0"/>
+            <NumericPredictor name="field_91" coefficient="0.0"/>
+            <NumericPredictor name="field_92" coefficient="0.0"/>
+            <NumericPredictor name="field_93" coefficient="0.0"/>
+            <NumericPredictor name="field_94" coefficient="0.0"/>
+            <NumericPredictor name="field_95" coefficient="-0.0031750391830118463"/>
+            <NumericPredictor name="field_96" coefficient="-7.198469402779895E-4"/>
+            <NumericPredictor name="field_97" coefficient="0.0013290927914184109"/>
+            <NumericPredictor name="field_98" coefficient="0.003615551215855493"/>
+            <NumericPredictor name="field_99" coefficient="0.0030428126452384232"/>
+            <NumericPredictor name="field_100" coefficient="8.474413287909457E-4"/>
+            <NumericPredictor name="field_101" coefficient="-0.00469377315055285"/>
+            <NumericPredictor name="field_102" coefficient="-0.003077519335452396"/>
+            <NumericPredictor name="field_103" coefficient="0.0"/>
+            <NumericPredictor name="field_104" coefficient="0.0"/>
+            <NumericPredictor name="field_105" coefficient="0.0"/>
+            <NumericPredictor name="field_106" coefficient="0.0"/>
+            <NumericPredictor name="field_107" coefficient="0.0"/>
+            <NumericPredictor name="field_108" coefficient="0.0"/>
+            <NumericPredictor name="field_109" coefficient="0.0"/>
+            <NumericPredictor name="field_110" coefficient="0.0"/>
+            <NumericPredictor name="field_111" coefficient="0.0"/>
+            <NumericPredictor name="field_112" coefficient="0.0"/>
+            <NumericPredictor name="field_113" coefficient="0.0"/>
+            <NumericPredictor name="field_114" coefficient="0.0"/>
+            <NumericPredictor name="field_115" coefficient="0.0"/>
+            <NumericPredictor name="field_116" coefficient="0.0"/>
+            <NumericPredictor name="field_117" coefficient="0.0"/>
+            <NumericPredictor name="field_118" coefficient="0.0"/>
+            <NumericPredictor name="field_119" coefficient="0.007364359071394165"/>
+            <NumericPredictor name="field_120" coefficient="0.0024741917828794624"/>
+            <NumericPredictor name="field_121" coefficient="0.004742200917185637"/>
+            <NumericPredictor name="field_122" coefficient="-0.004354281936643503"/>
+            <NumericPredictor name="field_123" coefficient="0.0015387522314686212"/>
+            <NumericPredictor name="field_124" coefficient="0.0012036733235965484"/>
+            <NumericPredictor name="field_125" coefficient="8.890074382411987E-4"/>
+            <NumericPredictor name="field_126" coefficient="8.451156650527669E-4"/>
+            <NumericPredictor name="field_127" coefficient="9.357748371343841E-4"/>
+            <NumericPredictor name="field_128" coefficient="5.610803980615515E-4"/>
+            <NumericPredictor name="field_129" coefficient="-4.639435965482986E-4"/>
+            <NumericPredictor name="field_130" coefficient="-8.711473319457479E-5"/>
+            <NumericPredictor name="field_131" coefficient="7.772750759130378E-4"/>
+            <NumericPredictor name="field_132" coefficient="0.0020526325281293198"/>
+            <NumericPredictor name="field_133" coefficient="-7.179397999713626E-4"/>
+            <NumericPredictor name="field_134" coefficient="0.0"/>
+            <NumericPredictor name="field_135" coefficient="0.0"/>
+            <NumericPredictor name="field_136" coefficient="0.0"/>
+            <NumericPredictor name="field_137" coefficient="0.0"/>
+            <NumericPredictor name="field_138" coefficient="0.0"/>
+            <NumericPredictor name="field_139" coefficient="0.0"/>
+            <NumericPredictor name="field_140" coefficient="0.0"/>
+            <NumericPredictor name="field_141" coefficient="0.0"/>
+            <NumericPredictor name="field_142" coefficient="0.0"/>
+            <NumericPredictor name="field_143" coefficient="0.0"/>
+            <NumericPredictor name="field_144" coefficient="0.0"/>
+            <NumericPredictor name="field_145" coefficient="0.0"/>
+            <NumericPredictor name="field_146" coefficient="0.00763378684229883"/>
+            <NumericPredictor name="field_147" coefficient="0.002597388054226158"/>
+            <NumericPredictor name="field_148" coefficient="0.0019527289217457992"/>
+            <NumericPredictor name="field_149" coefficient="9.005013882924885E-4"/>
+            <NumericPredictor name="field_150" coefficient="-3.4979575352020054E-5"/>
+            <NumericPredictor name="field_151" coefficient="-2.1640124428922223E-5"/>
+            <NumericPredictor name="field_152" coefficient="4.470274600295254E-4"/>
+            <NumericPredictor name="field_153" coefficient="-6.0124871189657085E-5"/>
+            <NumericPredictor name="field_154" coefficient="-6.26850329658408E-4"/>
+            <NumericPredictor name="field_155" coefficient="-0.0010972138468463794"/>
+            <NumericPredictor name="field_156" coefficient="-8.963657647538854E-4"/>
+            <NumericPredictor name="field_157" coefficient="-5.79379164237397E-4"/>
+            <NumericPredictor name="field_158" coefficient="-5.542055844142609E-4"/>
+            <NumericPredictor name="field_159" coefficient="2.579795271739181E-4"/>
+            <NumericPredictor name="field_160" coefficient="4.941681935453507E-4"/>
+            <NumericPredictor name="field_161" coefficient="-4.5823034501107115E-4"/>
+            <NumericPredictor name="field_162" coefficient="-0.0018399844076143867"/>
+            <NumericPredictor name="field_163" coefficient="-5.458892394885017E-4"/>
+            <NumericPredictor name="field_164" coefficient="-0.0033143275254659027"/>
+            <NumericPredictor name="field_165" coefficient="0.0"/>
+            <NumericPredictor name="field_166" coefficient="0.0"/>
+            <NumericPredictor name="field_167" coefficient="0.0"/>
+            <NumericPredictor name="field_168" coefficient="0.0"/>
+            <NumericPredictor name="field_169" coefficient="0.0"/>
+            <NumericPredictor name="field_170" coefficient="0.0"/>
+            <NumericPredictor name="field_171" coefficient="0.0"/>
+            <NumericPredictor name="field_172" coefficient="0.0"/>
+            <NumericPredictor name="field_173" coefficient="0.0"/>
+            <NumericPredictor name="field_174" coefficient="0.0035769744061057373"/>
+            <NumericPredictor name="field_175" coefficient="9.95431860512809E-4"/>
+            <NumericPredictor name="field_176" coefficient="-5.96101697593475E-4"/>
+            <NumericPredictor name="field_177" coefficient="-5.370712340970744E-4"/>
+            <NumericPredictor name="field_178" coefficient="-1.225582644535844E-4"/>
+            <NumericPredictor name="field_179" coefficient="-1.44608314168155E-4"/>
+            <NumericPredictor name="field_180" coefficient="-5.26540530852772E-4"/>
+            <NumericPredictor name="field_181" coefficient="-2.986092490419301E-4"/>
+            <NumericPredictor name="field_182" coefficient="1.229328957163559E-4"/>
+            <NumericPredictor name="field_183" coefficient="1.6725214952464427E-4"/>
+            <NumericPredictor name="field_184" coefficient="-6.13102444977468E-4"/>
+            <NumericPredictor name="field_185" coefficient="-5.395237337612175E-4"/>
+            <NumericPredictor name="field_186" coefficient="-4.256077646702844E-4"/>
+            <NumericPredictor name="field_187" coefficient="-1.6717646608290166E-4"/>
+            <NumericPredictor name="field_188" coefficient="-4.193689397057828E-4"/>
+            <NumericPredictor name="field_189" coefficient="-9.923255883229666E-4"/>
+            <NumericPredictor name="field_190" coefficient="-3.5828763455693824E-4"/>
+            <NumericPredictor name="field_191" coefficient="-1.8560234142609057E-4"/>
+            <NumericPredictor name="field_192" coefficient="-3.1781222846933313E-4"/>
+            <NumericPredictor name="field_193" coefficient="0.0"/>
+            <NumericPredictor name="field_194" coefficient="0.0"/>
+            <NumericPredictor name="field_195" coefficient="0.0"/>
+            <NumericPredictor name="field_196" coefficient="0.0"/>
+            <NumericPredictor name="field_197" coefficient="0.0"/>
+            <NumericPredictor name="field_198" coefficient="0.0"/>
+            <NumericPredictor name="field_199" coefficient="0.0"/>
+            <NumericPredictor name="field_200" coefficient="0.0"/>
+            <NumericPredictor name="field_201" coefficient="0.0"/>
+            <NumericPredictor name="field_202" coefficient="-0.00608724485796758"/>
+            <NumericPredictor name="field_203" coefficient="-9.025108363466348E-4"/>
+            <NumericPredictor name="field_204" coefficient="-6.242890736604485E-4"/>
+            <NumericPredictor name="field_205" coefficient="-4.1167890374639837E-4"/>
+            <NumericPredictor name="field_206" coefficient="3.867846810219062E-5"/>
+            <NumericPredictor name="field_207" coefficient="-9.728871679705047E-4"/>
+            <NumericPredictor name="field_208" coefficient="-7.040261670586542E-4"/>
+            <NumericPredictor name="field_209" coefficient="-2.67414932487479E-4"/>
+            <NumericPredictor name="field_210" coefficient="9.835122230838534E-4"/>
+            <NumericPredictor name="field_211" coefficient="6.776341282988616E-4"/>
+            <NumericPredictor name="field_212" coefficient="1.1714923918214823E-4"/>
+            <NumericPredictor name="field_213" coefficient="-8.251340849629849E-4"/>
+            <NumericPredictor name="field_214" coefficient="-8.440625658113328E-4"/>
+            <NumericPredictor name="field_215" coefficient="-2.5742068559257285E-4"/>
+            <NumericPredictor name="field_216" coefficient="-6.232299367223332E-4"/>
+            <NumericPredictor name="field_217" coefficient="-5.034576562672652E-4"/>
+            <NumericPredictor name="field_218" coefficient="0.0010880470556117628"/>
+            <NumericPredictor name="field_219" coefficient="-1.919690899363902E-4"/>
+            <NumericPredictor name="field_220" coefficient="-1.8560234142609057E-4"/>
+            <NumericPredictor name="field_221" coefficient="0.0"/>
+            <NumericPredictor name="field_222" coefficient="0.0"/>
+            <NumericPredictor name="field_223" coefficient="0.0"/>
+            <NumericPredictor name="field_224" coefficient="0.0"/>
+            <NumericPredictor name="field_225" coefficient="0.0"/>
+            <NumericPredictor name="field_226" coefficient="0.0"/>
+            <NumericPredictor name="field_227" coefficient="0.0"/>
+            <NumericPredictor name="field_228" coefficient="0.0"/>
+            <NumericPredictor name="field_229" coefficient="-0.015527108471108645"/>
+            <NumericPredictor name="field_230" coefficient="-0.0023597234061265293"/>
+            <NumericPredictor name="field_231" coefficient="-0.0014631843022458247"/>
+            <NumericPredictor name="field_232" coefficient="-6.738577099746358E-4"/>
+            <NumericPredictor name="field_233" coefficient="3.1501556949137775E-4"/>
+            <NumericPredictor name="field_234" coefficient="-2.8253257492529617E-4"/>
+            <NumericPredictor name="field_235" coefficient="-0.0012162365679992818"/>
+            <NumericPredictor name="field_236" coefficient="-2.503857911137527E-4"/>
+            <NumericPredictor name="field_237" coefficient="6.435729647123708E-4"/>
+            <NumericPredictor name="field_238" coefficient="0.001168259716643077"/>
+            <NumericPredictor name="field_239" coefficient="6.008764545755719E-4"/>
+            <NumericPredictor name="field_240" coefficient="-4.504943610699978E-5"/>
+            <NumericPredictor name="field_241" coefficient="-5.285192183846361E-5"/>
+            <NumericPredictor name="field_242" coefficient="-7.102779490335487E-4"/>
+            <NumericPredictor name="field_243" coefficient="-3.091506530026542E-4"/>
+            <NumericPredictor name="field_244" coefficient="-7.957982566868217E-4"/>
+            <NumericPredictor name="field_245" coefficient="-9.298598540190125E-4"/>
+            <NumericPredictor name="field_246" coefficient="3.2792218154833054E-4"/>
+            <NumericPredictor name="field_247" coefficient="-7.621001531871845E-5"/>
+            <NumericPredictor name="field_248" coefficient="-1.8560234142609057E-4"/>
+            <NumericPredictor name="field_249" coefficient="0.0"/>
+            <NumericPredictor name="field_250" coefficient="0.0"/>
+            <NumericPredictor name="field_251" coefficient="0.0"/>
+            <NumericPredictor name="field_252" coefficient="0.0"/>
+            <NumericPredictor name="field_253" coefficient="0.0"/>
+            <NumericPredictor name="field_254" coefficient="0.0"/>
+            <NumericPredictor name="field_255" coefficient="0.0"/>
+            <NumericPredictor name="field_256" coefficient="0.0"/>
+            <NumericPredictor name="field_257" coefficient="-0.002293422567435435"/>
+            <NumericPredictor name="field_258" coefficient="-0.0015790838406890672"/>
+            <NumericPredictor name="field_259" coefficient="-0.0016767467795869853"/>
+            <NumericPredictor name="field_260" coefficient="-1.5623590453376466E-4"/>
+            <NumericPredictor name="field_261" coefficient="3.6300879123905876E-4"/>
+            <NumericPredictor name="field_262" coefficient="-1.525234315725878E-4"/>
+            <NumericPredictor name="field_263" coefficient="-9.766361931682738E-4"/>
+            <NumericPredictor name="field_264" coefficient="1.000020722412825E-4"/>
+            <NumericPredictor name="field_265" coefficient="9.908353175513045E-4"/>
+            <NumericPredictor name="field_266" coefficient="9.809489890755397E-4"/>
+            <NumericPredictor name="field_267" coefficient="7.858934244740957E-4"/>
+            <NumericPredictor name="field_268" coefficient="2.2120850971159327E-4"/>
+            <NumericPredictor name="field_269" coefficient="5.362413588931852E-4"/>
+            <NumericPredictor name="field_270" coefficient="1.3257716117625248E-4"/>
+            <NumericPredictor name="field_271" coefficient="-0.0010798330941310193"/>
+            <NumericPredictor name="field_272" coefficient="-0.0013523459552977485"/>
+            <NumericPredictor name="field_273" coefficient="-0.0013335674999890193"/>
+            <NumericPredictor name="field_274" coefficient="-5.316580209364874E-4"/>
+            <NumericPredictor name="field_275" coefficient="1.0435865432418963E-4"/>
+            <NumericPredictor name="field_276" coefficient="-1.8247753765045474E-4"/>
+            <NumericPredictor name="field_277" coefficient="0.0"/>
+            <NumericPredictor name="field_278" coefficient="0.0"/>
+            <NumericPredictor name="field_279" coefficient="0.0"/>
+            <NumericPredictor name="field_280" coefficient="0.0"/>
+            <NumericPredictor name="field_281" coefficient="0.0"/>
+            <NumericPredictor name="field_282" coefficient="0.0"/>
+            <NumericPredictor name="field_283" coefficient="0.0"/>
+            <NumericPredictor name="field_284" coefficient="0.0"/>
+            <NumericPredictor name="field_285" coefficient="-0.003672455923373048"/>
+            <NumericPredictor name="field_286" coefficient="-0.0016628230391022934"/>
+            <NumericPredictor name="field_287" coefficient="-9.827169965137838E-4"/>
+            <NumericPredictor name="field_288" coefficient="3.722612588876185E-4"/>
+            <NumericPredictor name="field_289" coefficient="2.9857504705536707E-4"/>
+            <NumericPredictor name="field_290" coefficient="-0.001249978201159683"/>
+            <NumericPredictor name="field_291" coefficient="-9.669463128114626E-4"/>
+            <NumericPredictor name="field_292" coefficient="3.6067547493686964E-4"/>
+            <NumericPredictor name="field_293" coefficient="9.622540465693016E-4"/>
+            <NumericPredictor name="field_294" coefficient="0.0015305514091032734"/>
+            <NumericPredictor name="field_295" coefficient="0.0014887308657201548"/>
+            <NumericPredictor name="field_296" coefficient="7.168153841764349E-4"/>
+            <NumericPredictor name="field_297" coefficient="9.858465182358605E-4"/>
+            <NumericPredictor name="field_298" coefficient="4.319702125876738E-4"/>
+            <NumericPredictor name="field_299" coefficient="-0.0016035753242193342"/>
+            <NumericPredictor name="field_300" coefficient="-0.001781498372627263"/>
+            <NumericPredictor name="field_301" coefficient="-0.0012539343849332888"/>
+            <NumericPredictor name="field_302" coefficient="-6.250078229843286E-4"/>
+            <NumericPredictor name="field_303" coefficient="-3.468147477100596E-4"/>
+            <NumericPredictor name="field_304" coefficient="-1.0855109168339838E-4"/>
+            <NumericPredictor name="field_305" coefficient="0.0"/>
+            <NumericPredictor name="field_306" coefficient="0.0"/>
+            <NumericPredictor name="field_307" coefficient="0.0"/>
+            <NumericPredictor name="field_308" coefficient="0.0"/>
+            <NumericPredictor name="field_309" coefficient="0.0"/>
+            <NumericPredictor name="field_310" coefficient="0.0"/>
+            <NumericPredictor name="field_311" coefficient="0.0"/>
+            <NumericPredictor name="field_312" coefficient="0.0"/>
+            <NumericPredictor name="field_313" coefficient="-0.0013557285771959918"/>
+            <NumericPredictor name="field_314" coefficient="-0.001169911775242516"/>
+            <NumericPredictor name="field_315" coefficient="4.322666466251692E-4"/>
+            <NumericPredictor name="field_316" coefficient="5.453082839212978E-4"/>
+            <NumericPredictor name="field_317" coefficient="-3.206109322675316E-4"/>
+            <NumericPredictor name="field_318" coefficient="-0.0010061431239373642"/>
+            <NumericPredictor name="field_319" coefficient="-0.0010521001439172265"/>
+            <NumericPredictor name="field_320" coefficient="4.5860954531803864E-5"/>
+            <NumericPredictor name="field_321" coefficient="0.0013649123720558148"/>
+            <NumericPredictor name="field_322" coefficient="0.0018726291602353664"/>
+            <NumericPredictor name="field_323" coefficient="0.001903098586313612"/>
+            <NumericPredictor name="field_324" coefficient="0.0012194629984233756"/>
+            <NumericPredictor name="field_325" coefficient="0.0015840439113039874"/>
+            <NumericPredictor name="field_326" coefficient="4.078744433691631E-4"/>
+            <NumericPredictor name="field_327" coefficient="-0.002297452303989994"/>
+            <NumericPredictor name="field_328" coefficient="-0.002135909238529036"/>
+            <NumericPredictor name="field_329" coefficient="-0.0011188713588780204"/>
+            <NumericPredictor name="field_330" coefficient="-6.329717390954601E-4"/>
+            <NumericPredictor name="field_331" coefficient="-6.753191184930636E-4"/>
+            <NumericPredictor name="field_332" coefficient="1.3973091161616968E-5"/>
+            <NumericPredictor name="field_333" coefficient="0.0"/>
+            <NumericPredictor name="field_334" coefficient="0.0"/>
+            <NumericPredictor name="field_335" coefficient="0.0"/>
+            <NumericPredictor name="field_336" coefficient="0.0"/>
+            <NumericPredictor name="field_337" coefficient="0.0"/>
+            <NumericPredictor name="field_338" coefficient="0.0"/>
+            <NumericPredictor name="field_339" coefficient="0.0"/>
+            <NumericPredictor name="field_340" coefficient="0.0"/>
+            <NumericPredictor name="field_341" coefficient="-0.0011088940976942394"/>
+            <NumericPredictor name="field_342" coefficient="-1.6146807921256685E-4"/>
+            <NumericPredictor name="field_343" coefficient="8.284728984696465E-4"/>
+            <NumericPredictor name="field_344" coefficient="3.3765010210236906E-6"/>
+            <NumericPredictor name="field_345" coefficient="-6.578377744902236E-4"/>
+            <NumericPredictor name="field_346" coefficient="-0.0014530131761243412"/>
+            <NumericPredictor name="field_347" coefficient="-8.998862680951077E-4"/>
+            <NumericPredictor name="field_348" coefficient="2.3592037474047222E-4"/>
+            <NumericPredictor name="field_349" coefficient="0.0015881585863769707"/>
+            <NumericPredictor name="field_350" coefficient="0.0022214600180291253"/>
+            <NumericPredictor name="field_351" coefficient="0.0024769737085070455"/>
+            <NumericPredictor name="field_352" coefficient="0.0024968649172891367"/>
+            <NumericPredictor name="field_353" coefficient="0.002192980694089177"/>
+            <NumericPredictor name="field_354" coefficient="-0.0010929551139878858"/>
+            <NumericPredictor name="field_355" coefficient="-0.0024325215879773044"/>
+            <NumericPredictor name="field_356" coefficient="-0.0020449349297692668"/>
+            <NumericPredictor name="field_357" coefficient="-0.0012055762194051424"/>
+            <NumericPredictor name="field_358" coefficient="-5.035476773383871E-4"/>
+            <NumericPredictor name="field_359" coefficient="-7.456368574476215E-4"/>
+            <NumericPredictor name="field_360" coefficient="-2.2582308698855484E-4"/>
+            <NumericPredictor name="field_361" coefficient="0.0"/>
+            <NumericPredictor name="field_362" coefficient="0.0"/>
+            <NumericPredictor name="field_363" coefficient="0.0"/>
+            <NumericPredictor name="field_364" coefficient="0.0"/>
+            <NumericPredictor name="field_365" coefficient="0.0"/>
+            <NumericPredictor name="field_366" coefficient="0.0"/>
+            <NumericPredictor name="field_367" coefficient="0.0"/>
+            <NumericPredictor name="field_368" coefficient="0.0"/>
+            <NumericPredictor name="field_369" coefficient="-6.688016942201314E-4"/>
+            <NumericPredictor name="field_370" coefficient="3.6575286732459957E-4"/>
+            <NumericPredictor name="field_371" coefficient="-2.486287681347531E-4"/>
+            <NumericPredictor name="field_372" coefficient="-0.0010421069290257028"/>
+            <NumericPredictor name="field_373" coefficient="-0.0013178757723420888"/>
+            <NumericPredictor name="field_374" coefficient="-0.0014194350347558513"/>
+            <NumericPredictor name="field_375" coefficient="-9.042014506861527E-4"/>
+            <NumericPredictor name="field_376" coefficient="3.599982619046773E-4"/>
+            <NumericPredictor name="field_377" coefficient="0.002301612125856574"/>
+            <NumericPredictor name="field_378" coefficient="0.002679482230785658"/>
+            <NumericPredictor name="field_379" coefficient="0.003009816375189585"/>
+            <NumericPredictor name="field_380" coefficient="0.0029502853850154076"/>
+            <NumericPredictor name="field_381" coefficient="0.0018951219632959808"/>
+            <NumericPredictor name="field_382" coefficient="-0.0022098083510322135"/>
+            <NumericPredictor name="field_383" coefficient="-0.0020558422169459144"/>
+            <NumericPredictor name="field_384" coefficient="-0.002013136890573546"/>
+            <NumericPredictor name="field_385" coefficient="-0.0013525310627390047"/>
+            <NumericPredictor name="field_386" coefficient="-4.6915244555611807E-4"/>
+            <NumericPredictor name="field_387" coefficient="-6.936538573562029E-4"/>
+            <NumericPredictor name="field_388" coefficient="-6.216611707959456E-4"/>
+            <NumericPredictor name="field_389" coefficient="0.0"/>
+            <NumericPredictor name="field_390" coefficient="0.0"/>
+            <NumericPredictor name="field_391" coefficient="0.0"/>
+            <NumericPredictor name="field_392" coefficient="0.0"/>
+            <NumericPredictor name="field_393" coefficient="0.0"/>
+            <NumericPredictor name="field_394" coefficient="0.0"/>
+            <NumericPredictor name="field_395" coefficient="0.0"/>
+            <NumericPredictor name="field_396" coefficient="-0.01481144843068698"/>
+            <NumericPredictor name="field_397" coefficient="-2.2737766148940802E-4"/>
+            <NumericPredictor name="field_398" coefficient="-4.3237480288779804E-4"/>
+            <NumericPredictor name="field_399" coefficient="-8.870112895160873E-4"/>
+            <NumericPredictor name="field_400" coefficient="-0.0012587456751199536"/>
+            <NumericPredictor name="field_401" coefficient="-9.617464164370476E-4"/>
+            <NumericPredictor name="field_402" coefficient="-0.0016024200576364887"/>
+            <NumericPredictor name="field_403" coefficient="-0.0013797788537375899"/>
+            <NumericPredictor name="field_404" coefficient="0.0010115598684347993"/>
+            <NumericPredictor name="field_405" coefficient="0.002411593967266435"/>
+            <NumericPredictor name="field_406" coefficient="0.0028231869644823986"/>
+            <NumericPredictor name="field_407" coefficient="0.0034091058182485956"/>
+            <NumericPredictor name="field_408" coefficient="0.0033102948654686565"/>
+            <NumericPredictor name="field_409" coefficient="0.0010435499985990784"/>
+            <NumericPredictor name="field_410" coefficient="-0.002853452290055623"/>
+            <NumericPredictor name="field_411" coefficient="-0.0017070209049222726"/>
+            <NumericPredictor name="field_412" coefficient="-0.002048464462893066"/>
+            <NumericPredictor name="field_413" coefficient="-0.0016359908992404106"/>
+            <NumericPredictor name="field_414" coefficient="-2.694282333187231E-4"/>
+            <NumericPredictor name="field_415" coefficient="-6.027817425861753E-4"/>
+            <NumericPredictor name="field_416" coefficient="-9.497243491748927E-4"/>
+            <NumericPredictor name="field_417" coefficient="0.0"/>
+            <NumericPredictor name="field_418" coefficient="0.0"/>
+            <NumericPredictor name="field_419" coefficient="0.0"/>
+            <NumericPredictor name="field_420" coefficient="0.0"/>
+            <NumericPredictor name="field_421" coefficient="0.0"/>
+            <NumericPredictor name="field_422" coefficient="0.0"/>
+            <NumericPredictor name="field_423" coefficient="0.0"/>
+            <NumericPredictor name="field_424" coefficient="-0.008412793517631086"/>
+            <NumericPredictor name="field_425" coefficient="-8.961723564843901E-4"/>
+            <NumericPredictor name="field_426" coefficient="-0.0011337556649017365"/>
+            <NumericPredictor name="field_427" coefficient="-9.438708645161815E-4"/>
+            <NumericPredictor name="field_428" coefficient="-0.0012689126205880652"/>
+            <NumericPredictor name="field_429" coefficient="-0.001323053609999066"/>
+            <NumericPredictor name="field_430" coefficient="-0.0018441687870219593"/>
+            <NumericPredictor name="field_431" coefficient="-0.003621609715966097"/>
+            <NumericPredictor name="field_432" coefficient="0.0018062280901902036"/>
+            <NumericPredictor name="field_433" coefficient="0.0028151659628142017"/>
+            <NumericPredictor name="field_434" coefficient="0.003014341664457238"/>
+            <NumericPredictor name="field_435" coefficient="0.0030639606819110893"/>
+            <NumericPredictor name="field_436" coefficient="0.0037400906726133883"/>
+            <NumericPredictor name="field_437" coefficient="-3.50450738172079E-4"/>
+            <NumericPredictor name="field_438" coefficient="-0.003285553330652969"/>
+            <NumericPredictor name="field_439" coefficient="-0.001543910711056723"/>
+            <NumericPredictor name="field_440" coefficient="-0.0019628022960734366"/>
+            <NumericPredictor name="field_441" coefficient="-0.0012265311821834488"/>
+            <NumericPredictor name="field_442" coefficient="-2.3540546002043483E-4"/>
+            <NumericPredictor name="field_443" coefficient="-6.601978116007655E-4"/>
+            <NumericPredictor name="field_444" coefficient="-0.001444192642812725"/>
+            <NumericPredictor name="field_445" coefficient="0.0"/>
+            <NumericPredictor name="field_446" coefficient="0.0"/>
+            <NumericPredictor name="field_447" coefficient="0.0"/>
+            <NumericPredictor name="field_448" coefficient="0.0"/>
+            <NumericPredictor name="field_449" coefficient="0.0"/>
+            <NumericPredictor name="field_450" coefficient="0.0"/>
+            <NumericPredictor name="field_451" coefficient="0.0"/>
+            <NumericPredictor name="field_452" coefficient="-0.0027042754438284106"/>
+            <NumericPredictor name="field_453" coefficient="-0.0010926947736832962"/>
+            <NumericPredictor name="field_454" coefficient="-0.001157656486924558"/>
+            <NumericPredictor name="field_455" coefficient="-9.887200709365368E-4"/>
+            <NumericPredictor name="field_456" coefficient="-0.0015762759905513677"/>
+            <NumericPredictor name="field_457" coefficient="-0.0012834942275505527"/>
+            <NumericPredictor name="field_458" coefficient="-0.002299222412364043"/>
+            <NumericPredictor name="field_459" coefficient="-0.001254486873200417"/>
+            <NumericPredictor name="field_460" coefficient="0.0015468739676866086"/>
+            <NumericPredictor name="field_461" coefficient="0.0026246655513966735"/>
+            <NumericPredictor name="field_462" coefficient="0.0030447602325028903"/>
+            <NumericPredictor name="field_463" coefficient="0.0028270593317934736"/>
+            <NumericPredictor name="field_464" coefficient="0.0023298992213111034"/>
+            <NumericPredictor name="field_465" coefficient="-8.014022590315719E-4"/>
+            <NumericPredictor name="field_466" coefficient="-0.0022471107027871424"/>
+            <NumericPredictor name="field_467" coefficient="-0.0018063501866611104"/>
+            <NumericPredictor name="field_468" coefficient="-0.0016895592956472662"/>
+            <NumericPredictor name="field_469" coefficient="-0.001307228878172001"/>
+            <NumericPredictor name="field_470" coefficient="-2.00204361080755E-4"/>
+            <NumericPredictor name="field_471" coefficient="-7.237670592297695E-4"/>
+            <NumericPredictor name="field_472" coefficient="-0.0012791081503928348"/>
+            <NumericPredictor name="field_473" coefficient="0.0"/>
+            <NumericPredictor name="field_474" coefficient="0.0"/>
+            <NumericPredictor name="field_475" coefficient="0.0"/>
+            <NumericPredictor name="field_476" coefficient="0.0"/>
+            <NumericPredictor name="field_477" coefficient="0.0"/>
+            <NumericPredictor name="field_478" coefficient="0.0"/>
+            <NumericPredictor name="field_479" coefficient="0.0"/>
+            <NumericPredictor name="field_480" coefficient="-0.0018490159347979377"/>
+            <NumericPredictor name="field_481" coefficient="-9.372073365152394E-4"/>
+            <NumericPredictor name="field_482" coefficient="-0.0010975464298664615"/>
+            <NumericPredictor name="field_483" coefficient="-0.001154791805688027"/>
+            <NumericPredictor name="field_484" coefficient="-0.0014243459539902156"/>
+            <NumericPredictor name="field_485" coefficient="-0.0012857298725476318"/>
+            <NumericPredictor name="field_486" coefficient="-0.003063625918774577"/>
+            <NumericPredictor name="field_487" coefficient="-1.622000401369528E-5"/>
+            <NumericPredictor name="field_488" coefficient="0.0012710635281093113"/>
+            <NumericPredictor name="field_489" coefficient="0.0025784364066662804"/>
+            <NumericPredictor name="field_490" coefficient="0.0032209925788759834"/>
+            <NumericPredictor name="field_491" coefficient="0.0025812819177335167"/>
+            <NumericPredictor name="field_492" coefficient="0.0016262786715074285"/>
+            <NumericPredictor name="field_493" coefficient="-0.0011013649038683936"/>
+            <NumericPredictor name="field_494" coefficient="-0.0014083739422341263"/>
+            <NumericPredictor name="field_495" coefficient="-0.0011804035558880537"/>
+            <NumericPredictor name="field_496" coefficient="-0.0014309627602289026"/>
+            <NumericPredictor name="field_497" coefficient="-0.0010399082936380917"/>
+            <NumericPredictor name="field_498" coefficient="-3.9363180014036236E-4"/>
+            <NumericPredictor name="field_499" coefficient="-7.769152252808605E-4"/>
+            <NumericPredictor name="field_500" coefficient="-0.0012371270131139268"/>
+            <NumericPredictor name="field_501" coefficient="0.0"/>
+            <NumericPredictor name="field_502" coefficient="0.0"/>
+            <NumericPredictor name="field_503" coefficient="0.0"/>
+            <NumericPredictor name="field_504" coefficient="0.0"/>
+            <NumericPredictor name="field_505" coefficient="0.0"/>
+            <NumericPredictor name="field_506" coefficient="0.0"/>
+            <NumericPredictor name="field_507" coefficient="0.0"/>
+            <NumericPredictor name="field_508" coefficient="-0.0013875667527293541"/>
+            <NumericPredictor name="field_509" coefficient="-9.128727164990262E-4"/>
+            <NumericPredictor name="field_510" coefficient="-0.001125722921688955"/>
+            <NumericPredictor name="field_511" coefficient="-0.0012519578306160496"/>
+            <NumericPredictor name="field_512" coefficient="-0.0012791571230371588"/>
+            <NumericPredictor name="field_513" coefficient="-8.737087102945936E-4"/>
+            <NumericPredictor name="field_514" coefficient="-0.0012747722647077685"/>
+            <NumericPredictor name="field_515" coefficient="-1.369046300632747E-4"/>
+            <NumericPredictor name="field_516" coefficient="0.0016126013270480936"/>
+            <NumericPredictor name="field_517" coefficient="0.0032144330088011755"/>
+            <NumericPredictor name="field_518" coefficient="0.0028531890713979326"/>
+            <NumericPredictor name="field_519" coefficient="0.0021281535146779056"/>
+            <NumericPredictor name="field_520" coefficient="6.6160763754108E-4"/>
+            <NumericPredictor name="field_521" coefficient="-0.0012340973993007166"/>
+            <NumericPredictor name="field_522" coefficient="-0.001601370779596407"/>
+            <NumericPredictor name="field_523" coefficient="-7.576424834233146E-4"/>
+            <NumericPredictor name="field_524" coefficient="-8.398614910024516E-4"/>
+            <NumericPredictor name="field_525" coefficient="1.9405622404814396E-5"/>
+            <NumericPredictor name="field_526" coefficient="-6.839464107143689E-4"/>
+            <NumericPredictor name="field_527" coefficient="-0.0010746155068150165"/>
+            <NumericPredictor name="field_528" coefficient="-0.0021707622967224493"/>
+            <NumericPredictor name="field_529" coefficient="0.0"/>
+            <NumericPredictor name="field_530" coefficient="0.0"/>
+            <NumericPredictor name="field_531" coefficient="0.0"/>
+            <NumericPredictor name="field_532" coefficient="0.0"/>
+            <NumericPredictor name="field_533" coefficient="0.0"/>
+            <NumericPredictor name="field_534" coefficient="0.0"/>
+            <NumericPredictor name="field_535" coefficient="0.0"/>
+            <NumericPredictor name="field_536" coefficient="-0.001759662260469358"/>
+            <NumericPredictor name="field_537" coefficient="-0.0015490602800202623"/>
+            <NumericPredictor name="field_538" coefficient="-0.0010249959686861956"/>
+            <NumericPredictor name="field_539" coefficient="-0.00117433852840169"/>
+            <NumericPredictor name="field_540" coefficient="-0.0016812109086698109"/>
+            <NumericPredictor name="field_541" coefficient="-5.766184445817971E-4"/>
+            <NumericPredictor name="field_542" coefficient="2.3562578003668975E-4"/>
+            <NumericPredictor name="field_543" coefficient="2.469061257903032E-4"/>
+            <NumericPredictor name="field_544" coefficient="0.0015671940861378601"/>
+            <NumericPredictor name="field_545" coefficient="0.0032589811148079724"/>
+            <NumericPredictor name="field_546" coefficient="0.002876275429693468"/>
+            <NumericPredictor name="field_547" coefficient="0.0018653382700243898"/>
+            <NumericPredictor name="field_548" coefficient="-3.2909621079885745E-4"/>
+            <NumericPredictor name="field_549" coefficient="-0.0011224796085909947"/>
+            <NumericPredictor name="field_550" coefficient="-6.846793973193727E-4"/>
+            <NumericPredictor name="field_551" coefficient="-1.1821512229724403E-4"/>
+            <NumericPredictor name="field_552" coefficient="7.457958311683873E-5"/>
+            <NumericPredictor name="field_553" coefficient="5.867425388067671E-6"/>
+            <NumericPredictor name="field_554" coefficient="-9.068090064682577E-4"/>
+            <NumericPredictor name="field_555" coefficient="-0.0012770367150606054"/>
+            <NumericPredictor name="field_556" coefficient="-0.004961842481489211"/>
+            <NumericPredictor name="field_557" coefficient="0.0"/>
+            <NumericPredictor name="field_558" coefficient="0.0"/>
+            <NumericPredictor name="field_559" coefficient="0.0"/>
+            <NumericPredictor name="field_560" coefficient="0.0"/>
+            <NumericPredictor name="field_561" coefficient="0.0"/>
+            <NumericPredictor name="field_562" coefficient="0.0"/>
+            <NumericPredictor name="field_563" coefficient="0.0"/>
+            <NumericPredictor name="field_564" coefficient="-0.0018150440401388374"/>
+            <NumericPredictor name="field_565" coefficient="-0.0015734871731211627"/>
+            <NumericPredictor name="field_566" coefficient="-0.0010061751014966635"/>
+            <NumericPredictor name="field_567" coefficient="-8.644534097175492E-4"/>
+            <NumericPredictor name="field_568" coefficient="-0.0013624489653363855"/>
+            <NumericPredictor name="field_569" coefficient="-7.788843899230474E-4"/>
+            <NumericPredictor name="field_570" coefficient="3.437659546241636E-4"/>
+            <NumericPredictor name="field_571" coefficient="2.787714834644837E-4"/>
+            <NumericPredictor name="field_572" coefficient="8.016144264366359E-4"/>
+            <NumericPredictor name="field_573" coefficient="0.0018192966247114499"/>
+            <NumericPredictor name="field_574" coefficient="0.0015707273058056875"/>
+            <NumericPredictor name="field_575" coefficient="2.8847308621740087E-4"/>
+            <NumericPredictor name="field_576" coefficient="-7.62037051869865E-4"/>
+            <NumericPredictor name="field_577" coefficient="-6.583831450933367E-4"/>
+            <NumericPredictor name="field_578" coefficient="8.182327810557834E-4"/>
+            <NumericPredictor name="field_579" coefficient="-2.282986629727477E-4"/>
+            <NumericPredictor name="field_580" coefficient="2.438583289148987E-5"/>
+            <NumericPredictor name="field_581" coefficient="-4.517482603208468E-4"/>
+            <NumericPredictor name="field_582" coefficient="-0.0011402945297160174"/>
+            <NumericPredictor name="field_583" coefficient="-0.0015767085960103875"/>
+            <NumericPredictor name="field_584" coefficient="0.0"/>
+            <NumericPredictor name="field_585" coefficient="0.0"/>
+            <NumericPredictor name="field_586" coefficient="0.0"/>
+            <NumericPredictor name="field_587" coefficient="0.0"/>
+            <NumericPredictor name="field_588" coefficient="0.0"/>
+            <NumericPredictor name="field_589" coefficient="0.0"/>
+            <NumericPredictor name="field_590" coefficient="0.0"/>
+            <NumericPredictor name="field_591" coefficient="0.0"/>
+            <NumericPredictor name="field_592" coefficient="0.0"/>
+            <NumericPredictor name="field_593" coefficient="3.005627721059849E-4"/>
+            <NumericPredictor name="field_594" coefficient="0.001043395335522008"/>
+            <NumericPredictor name="field_595" coefficient="1.0724095443908583E-4"/>
+            <NumericPredictor name="field_596" coefficient="-5.635544404801294E-4"/>
+            <NumericPredictor name="field_597" coefficient="-8.439857135906378E-4"/>
+            <NumericPredictor name="field_598" coefficient="-4.2345723205833497E-4"/>
+            <NumericPredictor name="field_599" coefficient="-2.269268513110723E-4"/>
+            <NumericPredictor name="field_600" coefficient="-5.613876942676845E-4"/>
+            <NumericPredictor name="field_601" coefficient="6.208404629655108E-5"/>
+            <NumericPredictor name="field_602" coefficient="-2.3824033199121105E-4"/>
+            <NumericPredictor name="field_603" coefficient="-2.3905573359865313E-4"/>
+            <NumericPredictor name="field_604" coefficient="-4.3621493975419914E-4"/>
+            <NumericPredictor name="field_605" coefficient="3.3372458115988034E-4"/>
+            <NumericPredictor name="field_606" coefficient="-2.2894473063384089E-4"/>
+            <NumericPredictor name="field_607" coefficient="-4.377821430643584E-4"/>
+            <NumericPredictor name="field_608" coefficient="-4.52551979308371E-4"/>
+            <NumericPredictor name="field_609" coefficient="-7.626554837755941E-4"/>
+            <NumericPredictor name="field_610" coefficient="-0.0016713847349298621"/>
+            <NumericPredictor name="field_611" coefficient="-0.0023517749208414873"/>
+            <NumericPredictor name="field_612" coefficient="0.0"/>
+            <NumericPredictor name="field_613" coefficient="0.0"/>
+            <NumericPredictor name="field_614" coefficient="0.0"/>
+            <NumericPredictor name="field_615" coefficient="0.0"/>
+            <NumericPredictor name="field_616" coefficient="0.0"/>
+            <NumericPredictor name="field_617" coefficient="0.0"/>
+            <NumericPredictor name="field_618" coefficient="0.0"/>
+            <NumericPredictor name="field_619" coefficient="0.0"/>
+            <NumericPredictor name="field_620" coefficient="0.0"/>
+            <NumericPredictor name="field_621" coefficient="0.0019176306172630682"/>
+            <NumericPredictor name="field_622" coefficient="0.0036390054214367204"/>
+            <NumericPredictor name="field_623" coefficient="0.001347508605742943"/>
+            <NumericPredictor name="field_624" coefficient="5.604899042898358E-4"/>
+            <NumericPredictor name="field_625" coefficient="-2.894099383007365E-4"/>
+            <NumericPredictor name="field_626" coefficient="-6.568030569229645E-4"/>
+            <NumericPredictor name="field_627" coefficient="-1.5293132898881802E-4"/>
+            <NumericPredictor name="field_628" coefficient="-1.430428199129719E-4"/>
+            <NumericPredictor name="field_629" coefficient="-5.816939648908069E-4"/>
+            <NumericPredictor name="field_630" coefficient="-7.030572591116304E-4"/>
+            <NumericPredictor name="field_631" coefficient="-3.239084722668296E-5"/>
+            <NumericPredictor name="field_632" coefficient="9.095619389364136E-5"/>
+            <NumericPredictor name="field_633" coefficient="-5.4955441478214004E-5"/>
+            <NumericPredictor name="field_634" coefficient="9.610549591238126E-5"/>
+            <NumericPredictor name="field_635" coefficient="-2.2089625490430035E-5"/>
+            <NumericPredictor name="field_636" coefficient="-5.292962340427737E-4"/>
+            <NumericPredictor name="field_637" coefficient="-6.039733359476411E-4"/>
+            <NumericPredictor name="field_638" coefficient="-1.6708372789824951E-4"/>
+            <NumericPredictor name="field_639" coefficient="0.0"/>
+            <NumericPredictor name="field_640" coefficient="0.0"/>
+            <NumericPredictor name="field_641" coefficient="0.0"/>
+            <NumericPredictor name="field_642" coefficient="0.0"/>
+            <NumericPredictor name="field_643" coefficient="0.0"/>
+            <NumericPredictor name="field_644" coefficient="0.0"/>
+            <NumericPredictor name="field_645" coefficient="0.0"/>
+            <NumericPredictor name="field_646" coefficient="0.0"/>
+            <NumericPredictor name="field_647" coefficient="0.0"/>
+            <NumericPredictor name="field_648" coefficient="0.0"/>
+            <NumericPredictor name="field_649" coefficient="0.0"/>
+            <NumericPredictor name="field_650" coefficient="0.0015226315839828085"/>
+            <NumericPredictor name="field_651" coefficient="0.0022703673777745804"/>
+            <NumericPredictor name="field_652" coefficient="0.0014601419696256917"/>
+            <NumericPredictor name="field_653" coefficient="8.787894179418774E-4"/>
+            <NumericPredictor name="field_654" coefficient="-1.0206246343274327E-4"/>
+            <NumericPredictor name="field_655" coefficient="-4.323255802171937E-4"/>
+            <NumericPredictor name="field_656" coefficient="-7.977547567743412E-4"/>
+            <NumericPredictor name="field_657" coefficient="-0.0010177349416312267"/>
+            <NumericPredictor name="field_658" coefficient="-8.81102004064605E-4"/>
+            <NumericPredictor name="field_659" coefficient="-3.571119497673697E-4"/>
+            <NumericPredictor name="field_660" coefficient="-5.391691170107224E-4"/>
+            <NumericPredictor name="field_661" coefficient="-6.0752572429101045E-5"/>
+            <NumericPredictor name="field_662" coefficient="4.147516230724386E-4"/>
+            <NumericPredictor name="field_663" coefficient="1.4563498296532386E-4"/>
+            <NumericPredictor name="field_664" coefficient="3.536952598045052E-4"/>
+            <NumericPredictor name="field_665" coefficient="0.0024781764776461487"/>
+            <NumericPredictor name="field_666" coefficient="-0.0024031843256574785"/>
+            <NumericPredictor name="field_667" coefficient="0.0"/>
+            <NumericPredictor name="field_668" coefficient="0.0"/>
+            <NumericPredictor name="field_669" coefficient="0.0"/>
+            <NumericPredictor name="field_670" coefficient="0.0"/>
+            <NumericPredictor name="field_671" coefficient="0.0"/>
+            <NumericPredictor name="field_672" coefficient="0.0"/>
+            <NumericPredictor name="field_673" coefficient="0.0"/>
+            <NumericPredictor name="field_674" coefficient="0.0"/>
+            <NumericPredictor name="field_675" coefficient="0.0"/>
+            <NumericPredictor name="field_676" coefficient="0.0"/>
+            <NumericPredictor name="field_677" coefficient="0.0"/>
+            <NumericPredictor name="field_678" coefficient="0.00393114276538929"/>
+            <NumericPredictor name="field_679" coefficient="6.579318435797973E-4"/>
+            <NumericPredictor name="field_680" coefficient="8.593740124384836E-4"/>
+            <NumericPredictor name="field_681" coefficient="0.0014147065717517848"/>
+            <NumericPredictor name="field_682" coefficient="2.2169971900344912E-4"/>
+            <NumericPredictor name="field_683" coefficient="-4.415357388179343E-4"/>
+            <NumericPredictor name="field_684" coefficient="-0.0014752485293055178"/>
+            <NumericPredictor name="field_685" coefficient="-0.002327411727435172"/>
+            <NumericPredictor name="field_686" coefficient="-0.0015515637506837868"/>
+            <NumericPredictor name="field_687" coefficient="-9.503349356853987E-4"/>
+            <NumericPredictor name="field_688" coefficient="-0.0015714656019726984"/>
+            <NumericPredictor name="field_689" coefficient="-0.0012172099682669646"/>
+            <NumericPredictor name="field_690" coefficient="-0.001521237700510859"/>
+            <NumericPredictor name="field_691" coefficient="-0.002612250258807307"/>
+        </RegressionTable>
+        <RegressionTable intercept="-0.0" targetCategory="0"/>
+    </RegressionModel>
+</PMML>

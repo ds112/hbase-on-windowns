@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Big Data Studio for ASP.NET MVC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Essential Studio for JavaScript">
+    <meta name="author" content="Syncfusion">
+    <meta charset="utf-8"> 
+    <link rel="shortcut icon" href="@Url.Content("~/Content/images/favicon.ico")">
+    <link href="@Url.Content("~/Content/ej/bootstrap.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/ej/ej.widgets.core.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/ej/flat-saffron/ej.theme.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/shCore.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/shCoreDefault.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/sampleBrowserSite.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/sampleBrowserSite-responsive.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/SourceTabFormatter.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/bootstrap-notify.css")" rel="stylesheet" />     
+    @RenderSection("StyleSection", required: false)
+    <script src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jsviews.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jsrender.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap-notify.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.easing-1.3.min.js")"></script>   
+    <script src="@Url.Content("~/Scripts/jquery.globalize.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/cultures/globalize.culture.en-US.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/ej/ej.web.all.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/sampleBrowserSite.js")"></script>
+    <script src="@Url.Content("~/Scripts/sampleslist.js")"></script>
+    <script src="@Url.Content("~/Scripts/properties.js")"></script>
+    <script src="@Url.Content("~/Scripts/xregexp.js")"></script>
+    <script src="@Url.Content("~/Scripts/shCore.js")"></script>
+    <script src="@Url.Content("~/Scripts/shBrushPerl.js")"></script>
+    <script src="@Url.Content("~/Scripts/shBrushCSharp.js")"></script>
+     @RenderSection("ScriptReferenceSection", required: false)   
+</head>
+<body onload="samplepageload()" >
+    <div class="htmljssamplebrowser saffron">
+        @Html.Partial("LayoutHeader")
+        <div class="content-container-fluid">
+            <div class="row">
+                @Html.Partial("LayoutLeftAccordion")
+                <span class="navigation collapsePanel"></span>
+                <div id="controlarea"  class="control-panel cols-content-fluid"  style="visibility:hidden;">
+                    <div class="row">
+                        @RenderBody()
+                       
+                        @if (IsSectionDefined("ControlsSection"))
+                        {
+                            <div class="cols-iframe">
+                                @if (IsSectionDefined("SampleHeading"))
+                                {
+                                    <div>
+                                        <div class="sampleheadingtext">
+                                            @RenderSection("SampleHeading", required: false)
+                                        </div>
+                                    </div>
+                                }
+                                <div>
+                                    <div id="samplefile" class="sample-container">
+
+                                        <div>
+                                            <div class="content-container-fluid">
+                                                <div class="row">
+                                                    <div class="cols-sample-area">
+                                                        @RenderSection("ControlsSection", required: false)
+                                                    </div>
+                                                    @if (IsSectionDefined("PropertiesSection"))
+                                                    {
+                                                        <div id="sampleProperties">
+                                                            <div class="prop-grid">
+                                                                @RenderSection("PropertiesSection", required: false)
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                    @if (IsSectionDefined("EventsDropDown"))
+                                                    {
+                                                        <div class="cols-prop-area event-tracer">
+                                                            <div>
+                                                                <div class="heading">
+                                                                    <span>Event Trace</span>
+                                                                    <div class="pull-right">
+                                                                        @RenderSection("EventsDropDown", required: false)
+                                                                    </div>
+                                                                </div>
+                                                                <div class="prop-grid content">
+                                                                    <div class="eventarea">
+                                                                        <div class="EventLog" id="EventLog">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="evtbtn">
+                                                                        <input type="button" class="eventclear e-btn" value="Clear" onclick="onClear()" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="bottom-links">
+                <div class="left">
+                    <div class="sync-text">
+                        Copyright © 2001-2016 Syncfusion Inc.
+                    </div>
+                </div>
+                <div class="right">
+                    <a href="http://www.syncfusion.com">
+                        <div class="syncfusion-image">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <style type="text/css">
+        #scrollcontainer .vScroll {
+            width: 8px;
+            position: relative;
+            right: 3px;
+            display: none;
+        }
+
+        #scrollcontainer .button {
+            visibility: hidden;
+        }
+
+        #scrollcontainer .vHandle {
+            border-radius: 4px;
+        }
+
+        .newwindow {
+            background-image: url("../Content/images/popout_icon_normal_state.png");
+            background-repeat: no-repeat;
+            float: right;
+            height: 20px;
+            width: 24px;
+            cursor: pointer;
+        }
+
+        .codewindow {
+            margin: 3px 3px 0 0;
+        }
+
+        .newwindow:hover {
+            background-image: url("../Content/images/popout_icon_hover_state.png");
+        }
+
+        .selectable {
+            -moz-user-select: text;
+            -webkit-user-select: text;
+            -ms-user-select: text;
+        }
+    </style>
+    @(Html.EJ().ScriptManager())
+    @if (IsSectionDefined("ScriptSection"))
+    {
+        @RenderSection("ScriptSection", required: false)
+    }
+    @if (Html.RequestedServer() == ServerMode.IIS)
+    {
+        Html.IncludeIISUriPrefix();
+    }
+    <script>
+        function samplepageload() {
+            $("#controlarea").css('visibility', 'visible');
+            $(".deskmob").css('visibility', 'visible');
+        }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+REM JavaPowerIterationClusteringExample: Java example for graph clustering using power iteration clustering (PIC).
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\java\org\apache\spark\examples\mlib\JavaPowerIterationClusteringExample
+spark-submit --class org.apache.spark.examples.mllib.JavaPowerIterationClusteringExample --master yarn %SYNCBDP_HOME%\SDK\Spark\jars\spark-examples_2.11-2.0.0.jar 

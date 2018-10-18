@@ -1,0 +1,26 @@
+# Command to create Namespace
+create_namespace 'Sample_Namespace'
+
+# Command to describe Namespace
+describe_namespace 'Sample_Namespace'
+
+# Command to alter Namespace
+alter_namespace 'Sample_Namespace', {METHOD => 'set',VERSIONS=>5}
+
+# Command to list the available Namespaces
+list_namespace
+
+# Command to create a table under Namespace
+create 'Sample_Namespace:Sample_table','columnFamily'
+
+# Command to list the tables under one Namespace
+list_namespace_tables 'Sample_Namespace'
+
+# command to disable table
+disable 'Sample_Namespace:Sample_table'
+
+# Command to drop table
+drop 'Sample_Namespace:Sample_table'
+
+# Command to drop namespace
+drop_namespace 'Sample_Namespace'

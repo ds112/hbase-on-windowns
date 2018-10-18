@@ -1,0 +1,7 @@
+REM JavaHdfsLR: Logistic regression based classification
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK
+REM Sample source code is available at REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\java\org\apache\spark\examples\JavaHdfsLR
+REM SYNTAX: "Usage: JavaHdfsLR <file> <iters>"
+REM To build with Gradle run following command 
+REM gradle -p %SYNCBDP_HOME%\Samples\Java\Spark\Others\JavaHdfsLR build
+spark-submit --class org.apache.spark.examples.JavaHdfsLR --master yarn %SYNCBDP_HOME%\SDK\Spark\jars\spark-examples_2.11-2.0.0.jar /Data/Spark/MLLib/LR_Data.txt 10

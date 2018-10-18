@@ -1,0 +1,7 @@
+REM Terasort: Runs the terasort. It requires output of TeraGen.
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK 
+REM Sample source code is available at %SYNCBDP_HOME%\Samples\Java\MapReduce\NativeMapReduce\src\main\java\org\apache\hadoop\examples\terasort
+REM Hadoop jar %SYNCBDP_HOME%\SDK\Hadoop\share\hadoop\mapreduce\hadoop- mapreduce-examples-<version>.jar terasort <input dir> <output dir>
+REM Command to build with Gradle : gradle -p %SYNCBDP_HOME%\Samples\Java\MapReduce\NativeMapReduce build
+REM Command to run with Gradle : gradle -p %SYNCBDP_HOME%\Samples\Java\MapReduce\NativeMapReduce RunJar  -Parguments="terasort /Data/teragen /Data/terasort"
+hadoop jar %SYNCBDP_HOME%\SDK\Hadoop\share\hadoop\mapreduce\hadoop-mapreduce-examples-*.jar terasort /Data/teragen /Data/terasort

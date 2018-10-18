@@ -1,0 +1,6 @@
+REM Python package should be install to run python job
+REM Parse a line of text into an MLlib LabeledPoint object.
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK 
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\python\mllib\logistic_regression
+REM Usage: logistic_regression <file> <iterations>
+spark-submit --driver-java-options -XX:MaxPermSize=1024m --master yarn %SYNCBDP_HOME%\SDK\Spark\examples\src\main\python\mllib\logistic_regression.py /Data/Spark/MLLib/LR_Data.txt 10

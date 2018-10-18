@@ -1,0 +1,11 @@
+REM Produces a count of events received from Flume
+REM This should be used in conjunction with an AvroSink in Flume. It will start
+REM an Avro server on at the request host:port address and listen for requests.
+REM Your Flume AvroSink should be pointed to this address.
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\scala\org\apache\spark\examples\Streaming\FlumeEventCount
+REM Specify active name node hostname/IP address in place of <hostname> in below line to access data from the cluster.
+REM Usage: FlumeEventCount <hostname> <port>
+REM <host> is the host the Flume receiver will be started on - a receiver creates a server and listens for flume events.
+REM <port> is the port the Flume receiver will listen on.
+ spark-submit --class org.apache.spark.examples.streaming.FlumeEventCount --master yarn %SYNCBDP_HOME%\SDK\Spark\jars\spark-examples_2.11-2.0.0.jar 127.0.1.1 9999

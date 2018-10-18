@@ -1,0 +1,6 @@
+REM Python package should be install to run python job
+REM Random Forest classification and regression using MLlib.
+REM SYNCBDP_HOME=<INSTALL-DRIVE>\Syncfusion\BigData\<version>\BigDataSDK 
+REM Sample source code is available at %SYNCBDP_HOME%\SDK\Spark\examples\src\main\python\mllib\random_forest_example
+REM Usage: random_forest_example
+spark-submit --driver-java-options -XX:MaxPermSize=1024m --master yarn %SYNCBDP_HOME%\SDK\Spark\examples\src\main\python\mllib\random_forest_example.py
