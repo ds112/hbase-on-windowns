@@ -1,0 +1,35 @@
+/* Please ensure that "SYNCBDP_HOME" path is set in system environment variable before building the application through Gradle.
+ * set SYNCBDP_HOME="<InstallDrive>\Syncfusion\BigData\<version>\BigDataSDK"
+ */
+
+ext.syncfusionPath = "$System.env.SYNCBDP_HOME"
+ext.syncfusionHadoopSDKPath = "$syncfusionPath/SDK/Hadoop"
+ext.syncfusionHbaseSDKPath = "$syncfusionPath/SDK/HBase"
+ext.syncfusionHiveSDKPath = "$syncfusionPath/SDK/Hive"
+ext.syncfusionPythonSDKPath = "$syncfusionPath/WinPython/python-2.7.10.amd64"
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'Client'
+sourceCompatibility = 1.7
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'HBase Gradle',
+                   'Main-Class': 'Client'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+task runPy(type:Exec) {
+    if(project.hasProperty("arguments")) {
+        args arguments.split(' ')
+    }
+    workingDir 'src/main/python'
+    environment 'HBASE_HOME' , "$syncfusionHbaseSDKPath"
+    environment 'PYTHONPATH', "$syncfusionPythonSDKPath;$syncfusionPythonSDKPath/Lib;$syncfusionHiveSDKPath/lib/py;$syncfusionHbaseSDKPath/lib/py"
+    commandLine "$syncfusionPythonSDKPath/python", "Client.py", args[0], args[1]
+}
