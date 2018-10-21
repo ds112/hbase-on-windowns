@@ -1,4 +1,4 @@
-# hbase-on-windowns
+# hbase-on-windows
 
 # Update Samples version 1810.18.03.20.PM https://github.com/ds112/hbase-on-windowns/blob/master/Samples
 
